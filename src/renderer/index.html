@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Relato</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <nav id="sidebar" aria-label="Abas">
+      <div id="tabs" role="tablist" aria-orientation="vertical"></div>
+      <div class="spacer"></div>
+      <button id="reload" class="icon-btn" title="Recarregar aba (Ctrl/⌘ + R)" aria-label="Recarregar aba">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7"/></svg>
+      </button>
+    </nav>
+
+    <main id="content">
+      <!-- As abas web são desenhadas pelo processo principal por cima desta área. -->
+      <section id="web-placeholder" aria-hidden="true"></section>
+
+      <section id="notes" hidden>
+        <!-- LISTA -->
+        <div id="list-view" class="scroll">
+          <div class="list-wrap">
+            <header class="list-header">
+              <div class="title-row">
+                <h1>Notas</h1>
+                <span id="count" class="muted"></span>
+                <div class="grow"></div>
+                <button id="btn-import" class="ghost" title="Importar notas de um arquivo .json">Importar</button>
+                <button id="btn-export" class="ghost" title="Exportar todas as notas para .json">Exportar</button>
+                <button id="btn-new" class="primary" title="Nova nota (Ctrl/⌘ + N)">
+                  <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+                  Nova nota
+                </button>
+              </div>
+              <div class="search-row">
+                <svg class="search-ico" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <input id="search" type="search" placeholder="Buscar por título, conteúdo ou tag…" autocomplete="off">
+              </div>
+              <div id="tag-filter" class="tag-filter"></div>
+            </header>
+            <div id="grid" class="grid"></div>
+            <div id="empty" class="empty" hidden></div>
+          </div>
+        </div>
+
+        <!-- DETALHE (mesma tela, sem modal) -->
+        <div id="detail-view" class="scroll" hidden>
+          <div class="detail-bar">
+            <button id="btn-back" class="crumb" title="Voltar para as notas (Esc)">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg>
+              Notas
+            </button>
+            <span class="crumb-sep">/</span>
+            <span id="crumb-title" class="crumb-title"></span>
+            <span id="save-state" class="save-state"></span>
+            <div class="grow"></div>
+            <div id="color-picker" class="color-picker" role="radiogroup" aria-label="Cor"></div>
+            <button id="btn-pin" class="ghost icon-text" title="Fixar no topo"></button>
+            <button id="btn-delete" class="ghost danger" title="Excluir nota">Excluir</button>
+          </div>
+
+          <div id="cover" class="cover"></div>
+
+          <article class="doc">
+            <textarea id="note-title" class="note-title" rows="1" placeholder="Sem título" spellcheck="true"></textarea>
+
+            <div class="props">
+              <div class="prop">
+                <span class="prop-k">Tags</span>
+                <div id="tags-edit" class="tags-edit">
+                  <input id="tag-input" placeholder="Adicionar tag…" autocomplete="off">
+                </div>
+              </div>
+              <div class="prop"><span class="prop-k">Criada</span><span id="prop-created" class="prop-v"></span></div>
+              <div class="prop"><span class="prop-k">Editada</span><span id="prop-updated" class="prop-v"></span></div>
+            </div>
+
+            <div id="toolbar" class="toolbar" role="toolbar" aria-label="Formatação">
+              <button data-cmd="h1" title="Título 1  (digite # e espaço)">H1</button>
+              <button data-cmd="h2" title="Título 2  (## e espaço)">H2</button>
+              <button data-cmd="h3" title="Título 3  (### e espaço)">H3</button>
+              <button data-cmd="p" title="Texto normal">¶</button>
+              <i class="sep"></i>
+              <button data-cmd="bold" title="Negrito (Ctrl/⌘ + B)"><b>B</b></button>
+              <button data-cmd="italic" title="Itálico (Ctrl/⌘ + I)"><i>I</i></button>
+              <button data-cmd="underline" title="Sublinhado (Ctrl/⌘ + U)"><u>U</u></button>
+              <button data-cmd="strikeThrough" title="Tachado"><s>S</s></button>
+              <button data-cmd="code" title="Código"><code>&lt;/&gt;</code></button>
+              <i class="sep"></i>
+              <button data-cmd="ul" title="Lista  (- e espaço)">•≡</button>
+              <button data-cmd="ol" title="Lista numerada  (1. e espaço)">1≡</button>
+              <button data-cmd="check" title="Checklist  ([] e espaço)">☑</button>
+              <button data-cmd="quote" title="Citação  (> e espaço)">❝</button>
+              <button data-cmd="hr" title="Divisor">―</button>
+              <button data-cmd="link" title="Link (selecione um texto)">🔗</button>
+              <span id="link-box" class="link-box" hidden>
+                <input id="link-input" placeholder="https://…" autocomplete="off">
+              </span>
+            </div>
+
+            <div id="note-body" class="note-body" contenteditable="true" spellcheck="true"
+                 data-placeholder="Comece a escrever… cole prints com Ctrl/⌘ + V"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

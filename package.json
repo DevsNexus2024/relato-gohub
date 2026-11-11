@@ -1,0 +1,42 @@
+{
+  "name": "relato",
+  "productName": "Relato",
+  "version": "1.0.0",
+  "description": "Relato — GoHub, Gmail e Notas em uma única janela (uso interno)",
+  "main": "src/main.js",
+  "private": true,
+  "author": "Uso interno",
+  "scripts": {
+    "start": "electron .",
+    "icon": "electron scripts/make-icon.js",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist": "electron-builder --mac --win"
+  },
+  "devDependencies": {
+    "electron": "44.9.3",
+    "electron-builder": "26.17.0"
+  },
+  "build": {
+    "appId": "internal.relato.app",
+    "productName": "Relato",
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "directories": { "output": "dist", "buildResources": "build" },
+    "files": ["src/**/*", "package.json"],
+    "asar": true,
+    "mac": {
+      "target": [{ "target": "zip", "arch": ["universal"] }],
+      "category": "public.app-category.productivity",
+      "identity": "-",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "signAndEditExecutable": true
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.exe"
+    }
+  }
+}
