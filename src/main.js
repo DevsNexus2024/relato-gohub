@@ -11,7 +11,15 @@ const fs = require('fs');
 // ---------------------------------------------------------------------------
 const SITES = [
   { id: 'gohub', name: 'GoHub', url: 'https://gohub.goritektools.com/' },
-  { id: 'gmail', name: 'Gmail', url: 'https://mail.google.com/mail/u/0/#inbox' },
+  {
+    id: 'gmail',
+    name: 'Gmail',
+    url: 'https://mail.google.com/mail/u/0/#inbox',
+    // Sem login, o Google às vezes manda para uma página de propaganda do Gmail.
+    // Nesse caso vamos direto para a tela de login, na própria aba.
+    signedOutPage: (u) => u.hostname === 'workspace.google.com' && /gmail/i.test(u.pathname),
+    loginUrl: 'https://accounts.google.com/ServiceLogin?service=mail&passive=true&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F',
+  },
 ];
 const NOTES_TAB = { id: 'notes', name: 'Notas' };
 
@@ -121,17 +129,26 @@ function hostMatches(host, domain) {
   return host === domain || host.endsWith(`.${domain}`);
 }
 
-// Domínios que precisam abrir DENTRO do app (compartilham a sessão/login).
-function isInAppHost(url) {
-  try {
-    const u = new URL(url);
-    if (u.protocol === 'about:' || u.protocol === 'blob:') return true;
-    const h = u.hostname;
-    return ['goritektools.com', 'cloudflareaccess.com', 'google.com', 'googleusercontent.com', 'gstatic.com', 'youtube.com']
-      .some((d) => hostMatches(h, d));
-  } catch {
-    return false;
-  }
+function parseUrl(url) {
+  try { return new URL(url); } catch { return null; }
+}
+function hostOf(url) {
+  const u = parseUrl(url);
+  return u ? u.hostname : '';
+}
+const matchesAny = (host, list) => list.some((d) => hostMatches(host, d));
+
+// Páginas de login: quando um site tenta abri-las "em nova aba", carregamos na
+// própria aba, para o login terminar onde o usuário está.
+const LOGIN_HOSTS = ['accounts.google.com', 'cloudflareaccess.com'];
+// Links "nova aba" destes domínios abrem numa janela do app (mesma sessão).
+// Ex.: "abrir em nova janela" e impressão do Gmail, anexos.
+const POPUP_HOSTS = ['goritektools.com', 'mail.google.com', 'googleusercontent.com'];
+
+// Aba dona de uma URL (mesmo host do site configurado)
+function siteForUrl(url) {
+  const h = hostOf(url);
+  return SITES.find((s) => hostOf(s.url) === h) || null;
 }
 
 // Links de redirecionamento do Gmail (google.com/url?q=...)
@@ -149,6 +166,19 @@ function openExternal(url) {
   if (/^(https?|mailto):/i.test(url)) shell.openExternal(url);
 }
 
+const POPUP_OPTIONS = {
+  width: 540,
+  height: 720,
+  autoHideMenuBar: true,
+  backgroundColor: '#ffffff',
+  webPreferences: {
+    partition: PARTITION,
+    sandbox: true,
+    contextIsolation: true,
+    nodeIntegration: false,
+  },
+};
+
 function attachWindowPolicy(contents) {
   contents.setWindowOpenHandler(({ url, disposition }) => {
     const target = unwrapGoogleRedirect(url);
@@ -156,32 +186,66 @@ function attachWindowPolicy(contents) {
       openExternal(target);
       return { action: 'deny' };
     }
-    // Popups (login Google, OAuth, "abrir em nova janela" do Gmail) ficam no app.
-    // Links comuns com target=_blank para sites de fora vão para o navegador padrão.
-    if (disposition === 'new-window' || isInAppHost(url)) {
-      return {
-        action: 'allow',
-        overrideBrowserWindowOptions: {
-          width: 540,
-          height: 720,
-          autoHideMenuBar: true,
-          backgroundColor: '#ffffff',
-          webPreferences: {
-            partition: PARTITION,
-            sandbox: true,
-            contextIsolation: true,
-            nodeIntegration: false,
-          },
-        },
-      };
+    const u = parseUrl(url);
+    const host = u ? u.hostname : '';
+    const isTabLink = disposition === 'foreground-tab' || disposition === 'background-tab';
+
+    // Botões "Fazer login" que abririam nova aba: carrega na própria aba.
+    if (isTabLink && matchesAny(host, LOGIN_HOSTS)) {
+      contents.loadURL(url);
+      return { action: 'deny' };
     }
+    // Popups de verdade (OAuth com tamanho definido) e páginas em branco
+    // (impressão do Gmail etc.) ficam numa janela do app.
+    const blank = !u || u.protocol === 'about:' || u.protocol === 'blob:';
+    if (disposition === 'new-window' || blank || (isTabLink && matchesAny(host, POPUP_HOSTS))) {
+      return { action: 'allow', overrideBrowserWindowOptions: POPUP_OPTIONS };
+    }
+    // Todo o resto vai para o navegador padrão.
     openExternal(url);
     return { action: 'deny' };
   });
 
   contents.on('did-create-window', (child) => {
     attachWindowPolicy(child.webContents);
+    watchLoginPopup(child);
   });
+}
+
+// Se um popup passou por uma tela de login e depois chegou em um dos nossos
+// sites (ex.: terminou o login e abriu o Gmail), fecha o popup e leva o
+// resultado para a aba correspondente.
+function watchLoginPopup(child) {
+  let sawLogin = false;
+  child.webContents.on('did-navigate', (_e, url) => {
+    if (matchesAny(hostOf(url), LOGIN_HOSTS)) {
+      sawLogin = true;
+      return;
+    }
+    const site = sawLogin && siteForUrl(url);
+    if (!site || child.isDestroyed()) return;
+    const view = views.get(site.id);
+    if (!view) return;
+    view.webContents.loadURL(url);
+    switchTab(site.id);
+    if (win) win.focus();
+    child.close();
+  });
+}
+
+// Página "deslogada" de um site (ex.: propaganda do Gmail) vai direto ao login.
+function attachSignedOutRedirect(site, wc) {
+  if (!site.signedOutPage || !site.loginUrl) return;
+  const check = (event, url) => {
+    const u = parseUrl(url);
+    if (!u || !site.signedOutPage(u)) return false;
+    if (event) event.preventDefault();
+    setImmediate(() => wc.loadURL(site.loginUrl));
+    return true;
+  };
+  wc.on('will-redirect', (e, url, _inPlace, isMainFrame) => { if (isMainFrame) check(e, url); });
+  wc.on('will-navigate', (e, url) => check(e, url));
+  wc.on('did-navigate', (_e, url) => check(null, url));
 }
 
 // ---------------------------------------------------------------------------
@@ -247,6 +311,7 @@ function createSiteView(site) {
   const wc = view.webContents;
 
   attachWindowPolicy(wc);
+  attachSignedOutRedirect(site, wc);
 
   wc.on('did-start-loading', () => pushTabState(site.id, { loading: true }));
   wc.on('did-stop-loading', () => pushTabState(site.id, { loading: false }));

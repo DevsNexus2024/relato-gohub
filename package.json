@@ -1,7 +1,7 @@
 {
   "name": "relato",
   "productName": "Relato",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Relato — GoHub, Gmail e Notas em uma única janela (uso interno)",
   "main": "src/main.js",
   "private": true,
