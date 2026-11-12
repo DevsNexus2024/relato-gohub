@@ -1,7 +1,7 @@
 'use strict';
 
 const {
-  app, BrowserWindow, WebContentsView, session, ipcMain, shell, Menu, dialog,
+  app, BrowserWindow, WebContentsView, session, ipcMain, shell, Menu, dialog, nativeTheme,
 } = require('electron');
 const path = require('path');
 const fs = require('fs');
@@ -10,7 +10,18 @@ const fs = require('fs');
 // Configuração — edite aqui para trocar/adicionar sites
 // ---------------------------------------------------------------------------
 const SITES = [
-  { id: 'gohub', name: 'GoHub', url: 'https://gohub.goritektools.com/' },
+  {
+    id: 'gohub',
+    name: 'GoHub',
+    url: 'https://gohub.goritektools.com/',
+    // Visual próprio aplicado por cima do site (src/skins). Pode ser desligado
+    // no menu Exibir caso o site mude e algo fique estranho.
+    skin: {
+      host: 'gohub.goritektools.com',
+      base: ['gohub.gen.css', 'gohub.css'],
+      dark: ['gohub-dark.gen.css', 'gohub-dark.css'],
+    },
+  },
   {
     id: 'gmail',
     name: 'Gmail',
@@ -69,6 +80,7 @@ const tabState = new Map(); // id -> { loading, title, favicon, unread }
 const userData = () => app.getPath('userData');
 const notesFile = () => path.join(userData(), 'notes.json');
 const stateFile = () => path.join(userData(), 'window-state.json');
+const settingsFile = () => path.join(userData(), 'settings.json');
 
 // ---------------------------------------------------------------------------
 // Utilidades de arquivo
@@ -85,6 +97,125 @@ function writeJSONAtomic(file, data) {
   const tmp = `${file}.tmp`;
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2), 'utf8');
   fs.renameSync(tmp, file);
+}
+
+// ---------------------------------------------------------------------------
+// Preferências (zoom por aba, tema do GoHub...)
+// ---------------------------------------------------------------------------
+let settings = null;
+function getSettings() {
+  if (!settings) settings = { zoom: {}, ...readJSON(settingsFile(), {}) };
+  return settings;
+}
+function saveSettings() {
+  try { writeJSONAtomic(settingsFile(), getSettings()); } catch { /* ignore */ }
+}
+
+// ---------------------------------------------------------------------------
+// Zoom (por aba, lembrado entre aberturas)
+// ---------------------------------------------------------------------------
+const ZOOM_STEPS = [0.5, 0.67, 0.75, 0.8, 0.9, 1, 1.1, 1.25, 1.5, 1.75, 2, 2.5, 3];
+
+function tabIdOf(wc) {
+  for (const [id, view] of views) if (view.webContents === wc) return id;
+  return NOTES_TAB.id;
+}
+
+function applyZoom(id) {
+  const view = views.get(id);
+  // Notas: o zoom é aplicado pela própria interface (só na área da nota, não na barra lateral)
+  if (!view || view.webContents.isDestroyed()) return;
+  view.webContents.setZoomFactor(getSettings().zoom[id] || 1);
+}
+
+function updateTitle() {
+  if (!win) return;
+  const tab = SITES.find((s) => s.id === activeTab) || NOTES_TAB;
+  const z = getSettings().zoom[activeTab] || 1;
+  win.setTitle(`Relato — ${tab.name}${Math.abs(z - 1) > 0.001 ? `  ·  ${Math.round(z * 100)}%` : ''}`);
+}
+
+// dir: 1 = aumentar, -1 = diminuir, 0 = voltar a 100%
+function zoomTab(id, dir) {
+  const cur = getSettings().zoom[id] || 1;
+  let next = 1;
+  if (dir > 0) next = ZOOM_STEPS.find((z) => z > cur + 0.001) || ZOOM_STEPS[ZOOM_STEPS.length - 1];
+  if (dir < 0) next = [...ZOOM_STEPS].reverse().find((z) => z < cur - 0.001) || ZOOM_STEPS[0];
+  getSettings().zoom[id] = next;
+  saveSettings();
+  applyZoom(id);
+  updateTitle();
+  sendToUI('zoom', { id, factor: next });
+}
+
+function setupZoom(wc) {
+  // Ctrl/⌘ + rolagem do mouse e gesto de pinça no trackpad
+  wc.on('zoom-changed', (_e, direction) => zoomTab(tabIdOf(wc), direction === 'in' ? 1 : -1));
+  // O Chromium reseta o zoom ao trocar de domínio; reaplica o da aba.
+  wc.on('did-navigate', () => applyZoom(tabIdOf(wc)));
+  wc.on('did-finish-load', () => applyZoom(tabIdOf(wc)));
+}
+
+// ---------------------------------------------------------------------------
+// Visual próprio para sites (CSS injetado) + tema claro/escuro
+// ---------------------------------------------------------------------------
+const SKINS_DIR = path.join(__dirname, 'skins');
+const skinKeys = new Map(); // webContents -> { base, dark }
+
+function skinPrefs() {
+  const st = getSettings();
+  return {
+    enabled: st.skinEnabled !== false,
+    theme: st.skinTheme || (nativeTheme.shouldUseDarkColors ? 'dark' : 'light'),
+  };
+}
+
+function readSkin(files) {
+  return [].concat(files).map((file) => {
+    try { return fs.readFileSync(path.join(SKINS_DIR, file), 'utf8'); } catch { return ''; }
+  }).join('\n');
+}
+
+async function applySkin(site, wc) {
+  if (!site.skin || wc.isDestroyed()) return;
+  const keys = skinKeys.get(wc) || {};
+  skinKeys.set(wc, keys);
+  const prefs = skinPrefs();
+  const onHost = hostOf(wc.getURL()) === site.skin.host;
+  const want = { base: onHost && prefs.enabled, dark: onHost && prefs.enabled && prefs.theme === 'dark' };
+  for (const part of ['base', 'dark']) {
+    if (want[part] && !keys[part]) {
+      const css = readSkin(site.skin[part]);
+      if (css) keys[part] = await wc.insertCSS(css);
+    } else if (!want[part] && keys[part]) {
+      await wc.removeInsertedCSS(keys[part]).catch(() => {});
+      keys[part] = null;
+    }
+  }
+  const view = views.get(site.id);
+  if (view) view.setBackgroundColor(want.dark ? '#0f1115' : '#ffffff');
+}
+
+function setupSkin(site, wc) {
+  if (!site.skin) return;
+  // Cada carregamento de página novo descarta o CSS injetado: reaplica.
+  wc.on('dom-ready', () => { skinKeys.set(wc, {}); applySkin(site, wc); });
+  wc.on('did-navigate-in-page', () => applySkin(site, wc));
+}
+
+function setSkinPrefs(patch) {
+  Object.assign(getSettings(), patch);
+  saveSettings();
+  for (const site of SITES) {
+    const view = views.get(site.id);
+    if (view && site.skin) applySkin(site, view.webContents);
+  }
+  buildMenu();
+  sendToUI('skin', skinPrefs());
+}
+
+function toggleSkinTheme() {
+  setSkinPrefs({ skinTheme: skinPrefs().theme === 'dark' ? 'light' : 'dark' });
 }
 
 // ---------------------------------------------------------------------------
@@ -277,8 +408,7 @@ function switchTab(id) {
   const view = views.get(id);
   if (view) view.webContents.focus();
   else win.webContents.focus();
-  const tab = SITES.find((s) => s.id === id) || NOTES_TAB;
-  win.setTitle(`Relato — ${tab.name}`);
+  updateTitle();
   sendToUI('tab:active', id);
 }
 
@@ -312,6 +442,25 @@ function createSiteView(site) {
 
   attachWindowPolicy(wc);
   attachSignedOutRedirect(site, wc);
+  setupZoom(wc);
+  setupSkin(site, wc);
+  // Só em desenvolvimento: salva a estrutura das páginas para criar o visual.
+  if (process.env.RELATO_INSPECT_DIR) {
+    try { require('../scripts/inspect-hook.js')(site, wc, process.env.RELATO_INSPECT_DIR, {
+      setSkinPrefs,
+      skinCss: () => {
+        const prefs = skinPrefs();
+        if (!prefs.enabled) return {};
+        return { base: readSkin(site.skin.base), dark: prefs.theme === 'dark' ? readSkin(site.skin.dark) : '' };
+      },
+      reapplySkin: async () => {
+        const keys = skinKeys.get(wc) || {};
+        for (const k of Object.values(keys)) if (k) await wc.removeInsertedCSS(k).catch(() => {});
+        skinKeys.set(wc, {});
+        await applySkin(site, wc);
+      },
+    }); } catch (err) { console.error(err); }
+  }
 
   wc.on('did-start-loading', () => pushTabState(site.id, { loading: true }));
   wc.on('did-stop-loading', () => pushTabState(site.id, { loading: false }));
@@ -348,6 +497,15 @@ function handleShortcut(event, input) {
   } else if (key === 'r') {
     event.preventDefault();
     reloadActive(input.shift);
+  } else if (key === '=' || key === '+' || input.code === 'NumpadAdd') {
+    event.preventDefault();
+    zoomTab(activeTab, 1);
+  } else if (key === '-' || key === '_' || input.code === 'NumpadSubtract') {
+    event.preventDefault();
+    zoomTab(activeTab, -1);
+  } else if (key === '0' || input.code === 'Numpad0') {
+    event.preventDefault();
+    zoomTab(activeTab, 0);
   }
 }
 
@@ -404,6 +562,7 @@ function createWindow() {
     return { action: 'deny' };
   });
   win.webContents.on('before-input-event', (event, input) => handleShortcut(event, input));
+  setupZoom(win.webContents);
 
   for (const site of SITES) createSiteView(site);
   switchTab(activeTab);
@@ -463,14 +622,30 @@ function buildMenu() {
         {
           label: 'Aumentar zoom',
           accelerator: 'CmdOrCtrl+=',
-          click: () => { const wc = activeContents(); wc.setZoomLevel(wc.getZoomLevel() + 0.5); },
+          click: () => zoomTab(activeTab, 1),
         },
         {
           label: 'Diminuir zoom',
           accelerator: 'CmdOrCtrl+-',
-          click: () => { const wc = activeContents(); wc.setZoomLevel(wc.getZoomLevel() - 0.5); },
+          click: () => zoomTab(activeTab, -1),
         },
-        { label: 'Zoom normal', accelerator: 'CmdOrCtrl+0', click: () => activeContents().setZoomLevel(0) },
+        { label: 'Zoom normal (100%)', accelerator: 'CmdOrCtrl+0', click: () => zoomTab(activeTab, 0) },
+        { type: 'separator' },
+        { type: 'separator' },
+        {
+          label: 'GoHub: visual melhorado',
+          type: 'checkbox',
+          checked: skinPrefs().enabled,
+          click: () => setSkinPrefs({ skinEnabled: !skinPrefs().enabled }),
+        },
+        {
+          label: 'GoHub: tema escuro',
+          type: 'checkbox',
+          accelerator: 'CmdOrCtrl+Shift+L',
+          checked: skinPrefs().theme === 'dark',
+          enabled: skinPrefs().enabled,
+          click: toggleSkinTheme,
+        },
         { type: 'separator' },
         { role: 'togglefullscreen', label: 'Tela cheia' },
         {
@@ -495,9 +670,13 @@ function setupIPC() {
     states: Object.fromEntries(tabState),
     platform: process.platform,
     version: app.getVersion(),
+    zoom: getSettings().zoom,
+    skin: skinPrefs(),
+    skinTabs: SITES.filter((x) => x.skin).map((x) => x.id),
   }));
   ipcMain.on('tab:switch', (_e, id) => switchTab(id));
   ipcMain.on('tab:reload', () => reloadActive(false));
+  ipcMain.on('skin:toggle-theme', () => toggleSkinTheme());
 
   ipcMain.handle('notes:load', () => readJSON(notesFile(), { notes: [] }));
   ipcMain.handle('notes:save', (_e, data) => {

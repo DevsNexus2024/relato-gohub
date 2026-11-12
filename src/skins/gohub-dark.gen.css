@@ -1,0 +1,1422 @@
+/* GERADO AUTOMATICAMENTE por scripts/gen-gohub-skin.js — cores do tema escuro.
+   Não edite à mão: ajustes vão em gohub.css / gohub-dark.css. */
+:root:root { --sidebar-bg: hsl(215 0.0% 23.9%); --sidebar-text: #cbd5e1; --sidebar-active: #f4b400; --sidebar-hover: rgba(244,180,0,.14); --bg: hsl(210 20.0% 15.5%); --surface: hsl(0 0.0% 10.5%); --border: hsl(214 12.7% 23.9%); --border-light: hsl(210 15.4% 14.6%); --primary: #f4b400; --primary-hover: #d99a00; --primary-light: hsl(48 45.0% 17.8%); --text: hsl(215 0.0% 81.4%); --text-muted: hsl(215 0.0% 60.0%); --success-bg: hsl(141 42.1% 16.9%); --success-text: hsl(142 71.8% 70.0%); --danger-bg: hsl(0 45.0% 16.5%); --danger-text: hsl(0 72.2% 70.0%); --warning-bg: hsl(48 45.0% 17.8%); --warning-text: #d97706; --neutral-bg: hsl(220 0.0% 13.8%); --neutral-text: hsl(220 0.0% 60.0%); --shadow: 0 1px 4px hsl(0 0.0% 0.0% / 0.176); --shadow-lg: 0 4px 16px hsl(0 0.0% 0.0% / 0.264); --gohub-yellow: #f4b400; --gohub-graphite: hsl(215 0.0% 81.4%); --gohub-teal: #0ea5a0; --primary-ink: hsl(39 75.0% 70.0%); --on-primary: hsl(215 0.0% 81.4%); --vg-forest: hsl(215 0.0% 81.4%); --vg-forest2: hsl(215 0.0% 74.0%); --vg-gold: #f4b400; --vg-coral: #e9856e }
+:root body { background: var(--bg); color: var(--text) }
+:root a { color: inherit; text-decoration: none }
+:root .sidebar { background: var(--sidebar-bg) }
+:root .sidebar-logo { border-bottom: 1px solid hsl(0 0.0% 20.0% / 0.07) }
+:root .sidebar-logo span { color: var(--sidebar-text) }
+:root .sidebar-logo h1 { color: rgb(255, 255, 255) }
+:root .sidebar-nav::-webkit-scrollbar-thumb { background: hsl(0 0.0% 10.5% / 0.2); border-radius: 3px }
+:root .sidebar-nav::-webkit-scrollbar-track { background: transparent }
+:root .nav-label { color: rgba(255, 255, 255, 0.3) }
+:root .nav-link { border-radius: 6px; color: var(--sidebar-text) }
+:root .nav-link:hover { background: var(--sidebar-hover); color: rgb(255, 255, 255) }
+:root .nav-link.active { background: var(--sidebar-hover); color: rgb(255, 255, 255) }
+:root .sidebar-footer { border-top: 1px solid hsl(0 0.0% 20.0% / 0.07); color: var(--sidebar-text) }
+:root .sidebar-toggle { background: transparent; border: 0px; color: var(--sidebar-text); border-radius: 6px }
+:root .sidebar-toggle:hover { background: var(--sidebar-hover); color: rgb(255, 255, 255) }
+@media (min-width: 769px) {
+:root .sidebar.recolhida .nav-section { border-top: 1px solid hsl(0 0.0% 20.0% / 0.07) }
+:root .sidebar.recolhida .nav-section:first-child { border-top: 0px }
+}
+:root .page-title { color: var(--text) }
+:root .page-subtitle { color: var(--text-muted) }
+:root .btn { border-radius: var(--radius); border-width: medium; border-style: none; border-color: currentcolor; border-image: none }
+:root .btn-primary { background: var(--primary); color: var(--on-primary) }
+:root .btn-primary:hover:not(:disabled) { background: var(--primary-hover) }
+:root .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border) }
+:root .btn-secondary:hover:not(:disabled) { background: var(--bg) }
+:root .btn-danger { background: var(--danger-bg); color: var(--danger-text) }
+:root .btn-danger:hover:not(:disabled) { background: hsl(0 45.0% 17.6%) }
+:root .btn-ghost { background: transparent; color: var(--text-muted); border: 1px solid transparent }
+:root .btn-ghost:hover { background: var(--bg); border-color: var(--border) }
+:root .card { background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border) }
+:root .card-title { color: var(--text-muted) }
+:root .badge { border-radius: 99px }
+:root .badge-aprovado { background: var(--success-bg); color: var(--success-text) }
+:root .badge-rejeitado { background: var(--danger-bg); color: var(--danger-text) }
+:root .badge-pendente { background: var(--neutral-bg); color: var(--neutral-text) }
+:root .badge-revisao { background: var(--warning-bg); color: var(--warning-text) }
+:root .badge-metas { background: hsl(251 45.0% 16.1%); color: rgb(124, 58, 237) }
+:root .badge-revshare { background: hsl(214 45.0% 16.8%); color: hsl(224 75.0% 70.0%) }
+:root .badge-hibrido { background: hsl(33 45.0% 15.9%); color: hsl(17 75.0% 70.0%) }
+:root .badge-info { background: hsl(214 45.0% 16.8%); color: hsl(224 75.0% 70.0%) }
+:root .dot { border-radius: 50%; background: currentcolor }
+:root .table-wrap--scroll thead th { background: var(--surface, hsl(0 0.0% 10.5%)) }
+:root table { border-collapse: collapse }
+:root thead th { color: var(--text-muted); border-bottom: 2px solid var(--border) }
+:root tbody td { border-bottom: 1px solid var(--border-light) }
+:root tbody tr:hover { background: var(--bg) }
+:root tbody tr:last-child td { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor }
+:root input.filter.dp-input { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); outline: none }
+:root input.filter.dp-input:focus { border-color: var(--primary) }
+:root .dp-btn { border: 0px; background: transparent; color: var(--text-muted); border-radius: 6px }
+:root .dp-btn:hover:not(:disabled) { background: var(--primary-light); color: var(--primary-ink) }
+:root .dp-pop { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg) }
+:root .dp-head button { border: 0px; background: transparent; border-radius: 6px; color: var(--text-muted) }
+:root .dp-head button:hover { background: var(--primary-light); color: var(--primary-ink) }
+:root .dp-dow { color: var(--text-muted) }
+:root .dp-dia { border: 0px; background: transparent; border-radius: 6px; color: var(--text) }
+:root .dp-dia:hover:not(:disabled) { background: var(--primary-light) }
+:root .dp-dia.hoje { box-shadow: inset 0 0 0 1px var(--primary) }
+:root .dp-dia.sel { background: var(--primary); color: var(--on-primary) }
+:root .dp-dia:disabled { color: var(--border) }
+:root .dp-foot { border-top: 1px solid var(--border-light) }
+:root .dp-foot button { border: 0px; background: transparent; color: var(--primary-ink); border-radius: 6px }
+:root .dp-foot button:hover { background: var(--primary-light) }
+@supports (appearance: base-select) {
+:root select::picker(select) { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-lg) }
+:root select option { border-radius: 6px; color: var(--text) }
+:root select option:hover { background: var(--primary-light) }
+:root select option:checked { background: var(--primary-light); color: var(--primary-ink) }
+}
+:root .pagination { color: var(--text-muted) }
+:root .pagination button { border: 1px solid var(--border); border-radius: 6px; background: var(--surface) }
+:root .pagination button.active { background: var(--primary); color: var(--on-primary); border-color: var(--primary) }
+:root .field label { color: var(--text-muted) }
+:root .field input, :root .field select, :root .field textarea { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); outline: none }
+:root .field input:focus, :root .field select:focus, :root .field textarea:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .field .error { color: var(--danger-text) }
+:root .required::after { color: var(--danger-text) }
+:root .form-section-title { color: var(--primary-ink); border-bottom: 2px solid var(--primary-light) }
+:root .etapas-contagem b { color: var(--text) }
+:root .etapas-contagem span { color: var(--text-muted) }
+:root .etapas-barra { border-radius: 999px; background: var(--border-light) }
+:root .etapas-barra i { border-radius: 999px; background: var(--primary) }
+:root .etapas-passo { border: 1px solid var(--border-light); border-radius: var(--radius); background: var(--surface); color: var(--text-muted) }
+:root .etapas-passo b { border-radius: 50%; background: var(--border-light); color: var(--text-muted) }
+:root .etapas-passo.feito b, :root .etapas-passo.atual b { background: var(--primary); color: var(--on-primary) }
+:root .etapas-passo.atual { border-color: var(--primary); color: var(--text) }
+:root .detail-label { color: var(--text-muted) }
+:root .detail-value { color: var(--text) }
+:root .detail-value a { color: var(--primary-ink); text-decoration: underline }
+:root .detail-value.empty { color: var(--text-muted) }
+:root .timeline-item { border-bottom: 1px solid var(--border-light) }
+:root .timeline-item:last-child { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor }
+:root .timeline-dot { border-radius: 50%; background: var(--primary) }
+:root .timeline-meta { color: var(--text-muted) }
+:root .modal-overlay { background: hsl(0 0.0% 7.0% / 0.45) }
+:root .modal { background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg) }
+:root .spinner { border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-top-color: var(--primary); border-radius: 50% }
+:root .empty-state { color: var(--text-muted) }
+:root .alert { border-radius: var(--radius) }
+:root .alert-error { background: var(--danger-bg); color: var(--danger-text) }
+:root .alert-warning { background: var(--warning-bg); color: var(--warning-text) }
+:root .sessao-aviso { border-radius: var(--radius); background: var(--warning-bg); color: hsl(23 75.0% 70.0%); border: 1px solid rgb(252, 211, 77); box-shadow: hsl(0 0.0% 0.0% / 0.396) 0px 6px 24px }
+:root .login-page { background: var(--sidebar-bg) }
+:root .login-subtitle { color: var(--text-muted) }
+:root .login-hint { color: var(--text-muted) }
+:root .user-badge { border-top: 1px solid hsl(0 0.0% 20.0% / 0.08) }
+:root .user-badge img { border-radius: 50% }
+:root .user-badge-info { text-decoration: none }
+:root .user-badge-info:hover .user-badge-name, :root .user-badge-info.active .user-badge-name { text-decoration: underline }
+:root .user-badge-role { color: var(--sidebar-text) }
+:root .user-badge-name { color: rgb(255, 255, 255) }
+:root .user-badge-email { color: var(--sidebar-text) }
+:root .user-badge button { background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: var(--sidebar-text) }
+:root .user-badge button:hover { color: rgb(255, 255, 255) }
+@media (max-width: 768px) {
+:root .mobile-bar { background: var(--sidebar-bg); color: rgb(255, 255, 255) }
+:root .mobile-menu-btn, :root .mobile-bell { background: transparent; border: 0px; color: rgb(255, 255, 255); border-radius: 6px }
+:root .sidebar.open { box-shadow: hsl(0 0.0% 0.0% / 0.6) 0px 0px 40px }
+:root .sidebar-backdrop { background: hsl(0 0.0% 7.0% / 0.45) }
+:root .sidebar-close { background: transparent; border: 0px; color: rgb(255, 255, 255) }
+}
+:root .vg { --vg-forest: hsl(215 0.0% 81.4%); --vg-forest2: hsl(215 0.0% 74.0%); --vg-gold: #d7b46a; --vg-coral: #e9856e }
+:root .vg-link { border: 0px; background: transparent; color: var(--primary-ink) }
+:root .vg::before { background: radial-gradient(900px 500px at 85% -5%, rgba(244, 180, 0, 0.1), transparent 60%), radial-gradient(700px 500px at 0% 100%, hsl(215 0.0% 23.9% / 0.07), transparent 60%) }
+:root .vg-chip { border-radius: 999px; border: 1px solid var(--border); background: hsl(0 0.0% 10.5% / 0.7); color: var(--text-muted) }
+:root .vg-chip-btn { color: var(--primary-ink) }
+:root .vg-chip-btn:hover { background: hsl(0 0.0% 10.5%) }
+:root .vg-card { background: hsl(0 0.0% 10.5% / 0.78); border: 1px solid hsl(0 0.0% 20.0% / 0.9); border-radius: 20px; box-shadow: hsl(161 35.0% 5.0% / 0.154) 0px 6px 22px, hsl(0 0.0% 100.0% / 0.048) 0px 1px inset }
+:root .vg-card-head small { color: var(--text-muted) }
+:root .vg-tabs { border-radius: 999px; background: var(--border-light) }
+:root .vg-tab { border: 0px; background: transparent; border-radius: 999px; color: var(--text-muted) }
+:root .vg-tab.on { background: var(--vg-forest); color: rgb(255, 255, 255) }
+:root .vg-th { color: var(--text-muted); border-bottom: 1px solid var(--border) }
+:root .vg-row { border-top: 0px; border-right: 0px; border-left: 0px; border-image: none; border-bottom: 1px solid var(--border-light); background: transparent; color: var(--text); border-radius: 10px }
+:root .vg-row:hover { background: rgba(22, 163, 74, 0.06) }
+:root .vg-cell-item small, :root .vg-cell-msg small { color: var(--text-muted) }
+:root .vg-cell-nivel em.crit { color: var(--danger-text) }
+:root .vg-cell-nivel em.warn { color: var(--warning-text) }
+:root .vg-bar { border-radius: 999px; background: var(--border-light) }
+:root .vg-bar i { border-radius: 999px }
+:root .vg-bar.crit i { background: var(--vg-coral) }
+:root .vg-bar.warn i { background: var(--vg-gold) }
+:root .vg-pill { border-radius: 999px; background: var(--primary-light); color: var(--primary-ink) }
+:root .vg-badge { border-radius: 999px }
+:root .vg-badge.ok { background: var(--success-bg); color: var(--success-text) }
+:root .vg-badge.warn { background: var(--warning-bg); color: var(--warning-text) }
+:root .vg-badge.crit { background: var(--danger-bg); color: var(--danger-text) }
+:root .vg-progress { border-radius: 999px; background: var(--border-light) }
+:root .vg-progress i { border-radius: 999px; background: linear-gradient(90deg,var(--vg-forest2),var(--primary)) }
+:root .vg-ringbox { border: 1px solid var(--border-light); border-radius: 14px; background: hsl(0 0.0% 10.5% / 0.7) }
+:root .vg-ringbox-t span { color: var(--text-muted) }
+:root .vg-ringbox-t small { color: var(--text-muted) }
+:root .vg-delta b { color: var(--primary-ink) }
+:root .vg-spark { border-bottom: 1px solid var(--border-light) }
+:root .vg-metrics > div:first-child { border-right: 1px solid var(--border-light) }
+:root .vg-metrics span { color: var(--text-muted) }
+:root .vg-metrics small { color: var(--text-muted) }
+:root .vg-pend-total span { color: var(--text-muted) }
+:root .vg-pend-row { border: 0px; background: transparent; color: var(--text); border-radius: 8px }
+:root .vg-pend-row:hover { background: rgba(22, 163, 74, 0.06) }
+:root .vg-bars { border-radius: 999px; background: var(--border-light) }
+:root .vg-bars i { border-radius: 999px; background: var(--vg-forest2) }
+:root .vg-insight { background: linear-gradient(145deg, hsl(215 0.0% 23.9% / 0.96), hsl(215 0.0% 30.0% / 0.94)); color: rgb(255, 255, 255); border-color: transparent }
+:root .vg-insight .vg-card-head small { color: rgb(169, 207, 193) }
+:root .vg-insight-txt { color: rgb(208, 226, 219) }
+:root .vg-insight .btn-primary { background: hsl(0 0.0% 10.5%); color: var(--vg-forest); border-color: hsl(0 0.0% 20.0%) }
+:root .vg-mod { border: 1px solid var(--border-light); border-radius: 14px; background: hsl(0 0.0% 10.5% / 0.7); color: var(--text) }
+:root .vg-mod:hover { border-color: var(--primary); background: hsl(0 0.0% 10.5%) }
+:root .vg-mi { border-radius: 10px; background: var(--primary-light); color: var(--vg-forest2) }
+:root .vg-mi svg { stroke: currentcolor; fill: none }
+:root .vg-mod-name small { color: var(--text-muted) }
+:root .vg-empty { color: var(--text-muted) }
+:root .vg-actitem { border-bottom: 1px solid var(--border-light) }
+:root .vg-actitem:last-child { border-bottom: 0px }
+:root .vg-ad { border-radius: 50%; background: var(--primary-light) }
+:root .vg-ad::after { border-radius: 50%; border: 1.5px solid var(--vg-forest2) }
+:root .vg-actitem small, :root .vg-actitem time { color: var(--text-muted) }
+:root .kb-sum { background: linear-gradient(135deg, hsl(215 0.0% 23.9%), hsl(215 0.0% 30.0%)); color: rgb(255, 255, 255); border-radius: 16px }
+:root .kb-sum span { color: rgb(203, 213, 225) }
+:root .kb-sum small { color: var(--vg-gold) }
+:root .kb-mini { background: var(--surface); border: 1px solid var(--border); border-radius: 12px }
+:root .kb-mini span { color: var(--text-muted) }
+:root .kb-mini small { color: var(--text-muted) }
+:root .kb-col { background: hsl(214 15.9% 17.4%); border-radius: 12px }
+:root .kb-col-head i { border-radius: 50% }
+:root .kb-col-head small { color: var(--text-muted) }
+:root .kb-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px }
+:root .kb-card:hover, :root .kb-card:focus-visible { box-shadow: hsl(156 0.0% 5.0% / 0.22) 0px 10px 20px; outline: none }
+:root .kb-id { color: var(--text-muted) }
+:root .kb-card p { color: var(--text-muted) }
+:root .kb-tag { border-radius: 6px; background: var(--success-bg); color: var(--success-text) }
+:root .kb-tag.bad { background: var(--danger-bg); color: var(--danger-text) }
+:root .kb-tag.neutral { background: var(--neutral-bg); color: var(--neutral-text) }
+:root .kb-tag.warn { background: var(--warning-bg); color: var(--warning-text) }
+:root .kb-tag.evid { background: hsl(212 37.5% 16.6%); color: hsl(212 70.6% 70.0%) }
+:root .kb-mais { border: 0px; background: transparent; color: var(--text-muted) }
+:root .kb-mais:hover { color: var(--text) }
+:root .kb-detalhes { border-top: 1px dashed var(--border); color: var(--text-muted) }
+:root .kb-detalhes b { color: var(--text) }
+:root .kb-card-foot { border-top: 1px solid var(--border-light); color: var(--text-muted) }
+:root .kb-own { border-radius: 50%; background: hsl(44 28.7% 22.4%); color: hsl(43 49.2% 70.0%) }
+:root .kb-resp .resp-btn { border-radius: 6px }
+:root .kb-move { border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text-muted) }
+:root .kb-empty { border: 1px dashed hsl(213 0.0% 27.2%); border-radius: 9px; color: var(--text-muted) }
+:root .kb-table { border-top: 1px solid var(--text-muted) }
+:root .pf-user img, :root .pf-avatar { border-radius: 50% }
+:root .pf-avatar { background: var(--primary-light); color: var(--primary-ink) }
+:root .pf-user span { color: var(--text-muted) }
+:root .pf-section > p { color: var(--text-muted) }
+:root .pf-row { border-bottom: 1px solid var(--border-light) }
+:root .pf-row:last-child { border-bottom: 0px }
+:root .pf-row small { color: var(--text-muted) }
+:root .pf-switch span { border-radius: 999px; background: var(--border) }
+:root .pf-switch span::after { border-radius: 50%; background: hsl(0 0.0% 10.5%); box-shadow: hsl(0 0.0% 0.0% / 0.55) 0px 1px 3px }
+:root .pf-switch input:checked + span { background: var(--primary) }
+:root .pf-switch input:focus-visible + span { outline: 2px solid var(--primary); outline-offset: 2px }
+:root .pf-nivel { border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text-muted) }
+:root .pf-nivel.on { background: var(--primary-light); border-color: var(--primary); color: var(--primary-ink) }
+:root .cf-legend { color: var(--text-muted) }
+:root .cf-note { color: var(--text-muted) }
+:root .cf-user { border: 1px solid var(--border-light); border-radius: 14px; background: var(--surface) }
+:root .cf-chip { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 999px }
+:root .cf-chip:hover:not(:disabled) { border-color: var(--primary-hover) }
+:root .cf-chip.on { background: var(--primary-light); border-color: var(--primary-hover); color: var(--primary-ink) }
+:root .cf-user-id b em { color: var(--primary-ink) }
+:root .cf-user-id small { color: var(--text-muted) }
+:root .cf-mod span { color: var(--text-muted) }
+:root .jur-tabs .vg-tab { text-decoration: none }
+:root .mn-note { color: var(--text-muted) }
+:root .mn-modelo-head small { color: var(--text-muted) }
+:root .mn-chip { background: var(--primary-light); color: var(--primary-ink); border-radius: 6px }
+:root .mn-envio { background: var(--bg); border-radius: 10px }
+:root .mn-versao { border-bottom: 1px solid var(--border-light) }
+:root .mn-versao:last-of-type { border-bottom: 0px }
+:root .mn-versao-info { color: var(--text-muted) }
+:root .mn-campos { border: 1px solid var(--border-light); border-radius: 10px }
+:root .mn-campos-grid span, :root .mn-field span { color: var(--text-muted) }
+:root .mn-meta { color: var(--text-muted) }
+:root .mn-doc { background: hsl(0 0.0% 10.5%); border: 1px solid var(--border); border-radius: 12px }
+:root .mn-doc-bar { background: hsl(0 0.0% 10.5%); border-bottom: 1px solid var(--border-light) }
+:root .mn-doc-bar small { color: var(--text-muted) }
+:root .mn-dirty { background: var(--warning-bg); color: var(--warning-text); border-radius: 8px }
+:root .mn-p.tab { border-left: 2px solid var(--border-light) }
+:root .mn-p.new { border-left: 2px solid var(--primary) }
+:root .mn-p.mod > .mn-ta { background: hsl(138 38.2% 15.8%); border-color: var(--primary) }
+:root .mn-p.del > .mn-ta { text-decoration: line-through; background: var(--danger-bg) }
+:root .mn-ta { border: 1px solid transparent; border-radius: 6px; color: var(--text); background: transparent }
+:root .mn-ta:hover { border-color: var(--border) }
+:root .mn-ta:focus { outline: none; border-color: var(--primary); background: hsl(0 0.0% 10.5%); box-shadow: hsl(142 76.2% 5.0% / 0.264) 0px 0px 0px 3px }
+:root .mn-ta.pend { background: var(--warning-bg) }
+:root .mn-p-act { background: hsl(0 0.0% 10.5%); border-radius: 6px; box-shadow: var(--shadow) }
+:root .form-control { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); outline: none }
+:root .form-control:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .form-control:disabled { background: var(--bg); color: var(--text-muted) }
+:root .form-group > label { color: var(--text-muted) }
+:root .alert-success { background: var(--success-bg); color: var(--success-text) }
+:root .cf-prazos span { color: var(--text-muted) }
+:root .sd-back { color: var(--text); text-decoration: none }
+:root .sd-back:hover { color: var(--primary-ink) }
+:root .sd-head-ico { border-radius: 18px; background: var(--primary-light); color: var(--primary-ink) }
+:root .sd-head-ico.warn { background: var(--warning-bg); color: var(--warning-text) }
+:root .sd-head-ico.crit { background: var(--danger-bg); color: var(--danger-text) }
+:root .sd-meta { color: var(--text-muted) }
+:root .sd-tabs { border-bottom: 1px solid var(--border) }
+:root .sd-tab { border-width: 0px 0px 2px; border-style: none none solid; border-color: currentcolor currentcolor transparent; border-image: none; background: none; color: var(--text-muted) }
+:root .sd-tab.on { color: var(--primary-ink); border-bottom-color: var(--primary) }
+:root .sd-kpis { background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px }
+:root .sd-kpi { border-left: 1px solid var(--border-light) }
+:root .sd-kpi:first-child { border-left: 0px }
+:root .sd-kpi-ico { border-radius: 50%; background: var(--primary-light) }
+:root .sd-kpi-ico.warn { background: var(--warning-bg) }
+:root .sd-kpi-ico.crit { background: var(--danger-bg) }
+:root .sd-kpi small { color: var(--text-muted) }
+@media (min-width: 561px) and (max-width: 1400px) {
+:root .sd-kpis-os .sd-kpi:nth-child(4) { border-left: 0px }
+:root .sd-kpis-os .sd-kpi:nth-child(n+4) { border-top: 1px solid var(--border-light) }
+}
+:root .sd-card { background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px }
+:root .sd-vazio { color: var(--text-muted) }
+:root .sd-dl small { color: var(--text-muted) }
+:root .sd-log { border-top: 1px solid var(--border-light) }
+:root .sd-card h3 + .sd-log { border-top: 0px }
+:root .sd-log small { color: var(--text-muted) }
+:root .sd-log small.sd-log-obs { color: var(--text) }
+:root .sd-log-dot { border-radius: 50%; background: var(--primary) }
+:root .sd-link { border: 0px; background: none; color: var(--primary-ink) }
+:root .sd-form select, :root .sd-form input, :root .sd-form textarea { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text) }
+:root .sd-aviso.publica { background: var(--warning-bg); color: var(--warning-text) }
+:root .sd-log small.sd-log-publica { border-radius: 99px; background: var(--warning-bg); color: var(--warning-text) }
+:root .sd-aviso { background: var(--primary-light); color: var(--primary-ink); border-radius: 12px }
+:root .ent-rola thead th { background: var(--surface, hsl(0 0.0% 10.5%)) }
+:root .sd-card.pj > .pn-sec { border: 0px }
+:root .sd-card .pn-acoes { background: none; border-top: 0px; border-bottom: 1px solid var(--border-light) }
+@media (max-width: 1100px) {
+:root .sd-kpi:nth-child(4) { border-left: 0px }
+:root .sd-kpi:nth-child(n+4) { border-top: 1px solid var(--border-light) }
+}
+@media (max-width: 560px) {
+:root .sd-kpi { border-left: 0px; border-top: 1px solid var(--border-light) }
+:root .sd-kpi:nth-child(-n+2) { border-top: 0px }
+:root .sd-kpi:nth-child(2n) { border-left: 1px solid var(--border-light) }
+}
+:root .kb-item { background: var(--surface); border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-left: 5px solid var(--primary); border-radius: 14px }
+:root .kb-item:hover, :root .kb-item:focus-visible { box-shadow: hsl(156 0.0% 5.0% / 0.22) 0px 8px 18px; outline: none }
+:root .kb-item.crit { border-left-color: var(--danger-text) }
+:root .kb-item.warn { border-left-color: var(--warning-text) }
+:root .kb-item.neutro, :root .kb-item.fim { border-left-color: var(--border) }
+:root .kb-item-nivel em { color: var(--success-text) }
+:root .kb-item-nivel em::before { border-radius: 50%; background: currentcolor }
+:root .kb-item-nivel em.crit { color: var(--danger-text) }
+:root .kb-item-nivel em.warn { color: var(--warning-text) }
+:root .kb-item-nivel em.neutro, :root .kb-item-nivel em.fim { color: var(--text-muted) }
+:root .kb-item-main small { color: var(--text-muted) }
+:root .kb-item-col small, :root .kb-item-data small { color: var(--text-muted) }
+:root .kb-item-col b i { border-radius: 50% }
+:root .kb-item-seta { color: var(--text-muted) }
+:root .resp-btn { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text-muted) }
+:root .resp-btn.on { color: var(--primary-ink); border-color: var(--primary-light); background: hsl(48 45.0% 16.0%) }
+:root .resp-menu { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: hsl(161 35.0% 5.0% / 0.396) 0px 14px 34px }
+:root .resp-menu-titulo { color: var(--text-muted) }
+:root .resp-op { border: 0px; border-radius: 10px; background: none; color: var(--text) }
+:root .resp-op:hover { background: var(--border-light) }
+:root .resp-op.sel { background: var(--primary-light); color: var(--primary-ink) }
+:root .resp-op.rem { color: var(--text-muted) }
+:root .resp-op:disabled { background: none }
+:root .resp-vazio { color: var(--text-muted) }
+:root .cg-busca { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; color: var(--text-muted) }
+:root .cg-busca input[type="search"] { border: 0px; outline: none; background: transparent; color: var(--text) }
+:root .cg-busca:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light) }
+:root .cg-chip { border: 1px solid var(--border); background: var(--surface); border-radius: 999px; color: var(--text-muted) }
+:root .cg-chip b { color: var(--text) }
+:root .cg-chip.on { background: var(--vg-forest); border-color: var(--vg-forest); color: rgb(255, 255, 255) }
+:root .cg-chip.on b { color: rgb(255, 255, 255) }
+:root .cg-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px }
+:root .cg-item:hover, :root .cg-item:focus-visible { box-shadow: hsl(156 0.0% 5.0% / 0.22) 0px 8px 18px; outline: none }
+:root .cg-item-tipo { color: var(--text-muted) }
+:root .cg-item-main small, :root .cg-item-data { color: var(--text-muted) }
+:root .cg-item-id, :root .cg-mono { color: var(--text-muted) }
+:root .cg-pag { color: var(--text-muted) }
+:root .cg-selo { border-radius: 99px }
+:root .cg-selo.ok { background: var(--success-bg); color: var(--success-text) }
+:root .cg-selo.aviso { background: var(--warning-bg); color: var(--warning-text) }
+:root .cg-selo.crit { background: var(--danger-bg); color: var(--danger-text) }
+:root .cg-selo.neutro { background: var(--neutral-bg); color: var(--neutral-text) }
+:root .cg-voltar { color: var(--text); text-decoration: none }
+:root .cg-voltar:hover { color: var(--primary-ink) }
+:root .cg-head p { color: var(--text-muted) }
+:root .cg-avatar { border-radius: 16px; background: var(--primary-light); color: var(--vg-forest2) }
+:root .cg-abas { border-bottom: 1px solid var(--border) }
+:root .cg-aba { border-width: 0px 0px 3px; border-style: none none solid; border-color: currentcolor currentcolor transparent; border-image: none; background: none; color: var(--text-muted) }
+:root .cg-aba.on { color: var(--vg-forest2); border-bottom-color: var(--vg-forest2) }
+:root .cg-kpis { background: var(--surface); border: 1px solid var(--border); border-radius: 14px }
+:root .cg-kpi { border-right: 1px solid var(--border-light) }
+:root .cg-kpi:last-child { border-right: 0px }
+:root .cg-kpi small { color: var(--text-muted) }
+:root .cg-kpi-ico { border-radius: 50%; background: var(--primary-light); color: var(--vg-forest2) }
+:root .cg-kpi-ico.aviso { background: var(--warning-bg); color: var(--warning-text) }
+:root .cg-kpi-ico.crit { background: var(--danger-bg); color: var(--danger-text) }
+:root .cg-resumo li i { border-radius: 50%; background: var(--neutral-text) }
+:root .cg-resumo li.ok i { background: var(--primary) }
+:root .cg-resumo li.aviso i { background: var(--warning-text) }
+:root .cg-resumo li.crit i { background: var(--danger-text) }
+:root .cg-resumo-dados { border-top: 1px solid var(--border-light) }
+:root .cg-resumo-dados small { color: var(--text-muted) }
+:root .cg-nota { color: var(--text-muted) }
+:root .cg-acao { border: 1px solid var(--border); border-radius: 10px; color: var(--text); text-decoration: none; background: var(--surface) }
+:root .cg-acao:hover { background: var(--border-light) }
+:root .cg-tempo li { border-left: 3px solid var(--border) }
+:root .cg-tempo small { color: var(--text-muted) }
+@media (max-width: 900px) {
+:root .cg-kpi { border-right: 0px; border-bottom: 1px solid var(--border-light) }
+}
+:root .sd-log-dot.com { background: var(--vg-gold, #d7b46a) }
+:root .pt-nota { border-left: 3px solid var(--vg-gold, #d7b46a); background: var(--warning-bg); border-radius: 0 var(--radius) var(--radius) 0; color: var(--text) }
+:root .pt-nota-meta { color: var(--warning-text) }
+:root .kb-col.alvo { background: hsl(142 18.6% 17.5%); box-shadow: inset 0 0 0 2px var(--primary) }
+:root .kb-col.possivel { outline: hsl(215 0.0% 35.7%) dashed 2px; outline-offset: -2px }
+:root .cg-ph3a-hist small { color: var(--text-muted) }
+:root .sdash-card > p { color: var(--text-muted) }
+:root .sdash-grid { stroke: var(--border-light) }
+:root .sdash-a, :root .sdash-b { fill: none }
+:root .sdash-a { stroke: var(--vg-forest, hsl(215 0.0% 74.0%)) }
+:root .sdash-b { stroke: rgb(215, 180, 106) }
+:root .sdash-pa { fill: var(--vg-forest, hsl(215 0.0% 74.0%)) }
+:root .sdash-pb { fill: rgb(215, 180, 106) }
+:root .sdash-tip { background: var(--vg-forest, hsl(215 0.0% 23.9%)); color: rgb(255, 255, 255); border-radius: 7px }
+:root .sdash-leg { color: var(--text-muted) }
+:root .sdash-leg i { border-radius: 2px; background: var(--vg-forest, hsl(215 0.0% 30.0%)) }
+:root .sdash-leg i.b { background: rgb(215, 180, 106) }
+:root .sdash-bar { color: var(--text-muted) }
+:root .sdash-bar .trk { border-radius: 999px; background: var(--border-light) }
+:root .sdash-bar .trk i { border-radius: 999px; background: var(--vg-forest, hsl(215 0.0% 30.0%)) }
+:root .sdash-bar.hot .trk i { background: rgb(215, 180, 106) }
+:root .sdash-bar b { color: var(--text) }
+:root .sdash-bar b small { color: var(--text-muted) }
+:root .sdash-nota { color: var(--text-muted) }
+:root .sdash-cmp { border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-left: 4px solid var(--border); border-radius: 10px }
+:root .sdash-cmp.ok { border-left-color: var(--vg-forest, #334155) }
+:root .sdash-cmp.crit { border-left-color: rgb(233, 133, 110) }
+:root .sdash-cmp span { color: var(--text-muted) }
+:root .sdash-topo { border-bottom: 1px solid var(--border-light) }
+:root .sdash-sub button { border-width: 0px 0px 2px; border-style: none none solid; border-color: currentcolor currentcolor transparent; border-image: none; background: transparent; color: var(--text-muted) }
+:root .sdash-sub button:hover { color: var(--text) }
+:root .sdash-sub button.on { color: var(--vg-forest, hsl(215 0.0% 81.4%)); border-bottom-color: var(--vg-forest, #1f2937) }
+:root .sdash-delta.ok { color: var(--vg-forest, hsl(215 0.0% 74.0%)) }
+:root .sdash-delta.crit { color: rgb(196, 96, 74) }
+:root .sdash-bar.tom-ok .trk i { background: var(--vg-forest, hsl(215 0.0% 30.0%)) }
+:root .sdash-bar.tom-aviso .trk i { background: rgb(215, 180, 106) }
+:root .sdash-bar.tom-crit .trk i { background: rgb(233, 133, 110) }
+:root .sdash-bar.tom-neutro .trk i { background: hsl(150 0.0% 40.3%) }
+:root .sdash-aten button { border-top: 0px; border-right: 0px; border-left: 0px; border-image: none; border-bottom: 1px solid var(--border-light); background: transparent; color: var(--text) }
+:root .sdash-aten button:hover { background: var(--border-light) }
+:root .sdash-aten small { color: var(--text-muted) }
+:root .sdash-aten em { border-radius: 999px; background: hsl(43 21.2% 17.9%); color: hsl(41 38.3% 70.0%) }
+:root .sdash-aten em.crit { background: hsl(17 27.8% 17.2%); color: hsl(12 19.5% 60.0%) }
+:root .as-brief { border-radius: 14px; background: linear-gradient(120deg, hsl(215 0.0% 23.9%), hsl(215 0.0% 30.0%)); color: rgb(255, 255, 255) }
+:root .as-brief-cap { color: rgb(169, 209, 192) }
+:root .as-brief p { color: rgb(210, 228, 220) }
+:root .as-brief-side { border-left: 1px solid hsl(0 0.0% 20.0% / 0.133) }
+:root .as-brief-side small { color: rgb(188, 212, 202) }
+:root .as-kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 14px }
+:root .as-kpi.att { border-left: 4px solid rgb(245, 158, 11) }
+:root .as-kpi.bad { border-left: 4px solid rgb(220, 38, 38) }
+:root .as-kpi .cap { color: var(--text-muted) }
+:root .as-kpi small { color: var(--text-muted) }
+:root .as-quick { border-top: 1px solid var(--border-light, hsl(140 0.0% 23.8%)) }
+:root .as-quick .tit { color: var(--text-muted) }
+:root .as-chip { border: 1px solid var(--border); background: hsl(120 0.0% 12.4%); color: hsl(147 0.0% 72.5%); border-radius: 8px }
+:root .as-chip:hover { background: hsl(133 18.0% 16.2%) }
+:root .as-chip.on { background: hsl(137 28.4% 16.8%); color: hsl(140 73.4% 70.0%); border-color: hsl(137 23.8% 30.0%) }
+:root .as-chip.warn { color: hsl(34 75.0% 70.0%) }
+:root .as-chip.danger { color: hsl(0 57.0% 70.0%) }
+:root .as-quick .meta { color: var(--text-muted) }
+:root .as-dots i { border-radius: 50%; background: hsl(216 0.0% 23.4%) }
+:root .as-dots i.ok { background: rgb(34, 197, 94) }
+:root .as-badge { border-radius: 99px }
+:root .as-badge.ext { background: var(--warning-bg); color: hsl(26 75.0% 70.0%) }
+:root .as-badge.int { background: hsl(214 45.0% 16.8%); color: hsl(224 75.0% 70.0%) }
+:root .as-badge.done { background: var(--success-bg); color: var(--success-text) }
+:root .as-badge.late { background: var(--danger-bg); color: hsl(0 73.7% 70.0%) }
+:root .as-sub { color: var(--text-muted) }
+:root .as-drawer-bg { background: hsl(0 0.0% 7.0% / 0.4) }
+:root .as-drawer { background: hsl(0 0.0% 10.5%); box-shadow: hsl(0 0.0% 0.0% / 0.293) -10px 0px 35px }
+:root .as-dhead { border-bottom: 1px solid var(--border); background: hsl(0 0.0% 10.5% / 0.933) }
+:root .as-dhead .close { border: 0px; background: none }
+:root .as-sbox { background: hsl(140 0.0% 13.2%); border-radius: 9px }
+:root .as-sbox small { color: var(--text-muted) }
+:root .as-signer { border: 1px solid var(--border); border-radius: 10px }
+:root .as-signer select { border: 1px solid var(--border); border-radius: 99px }
+:root .as-hint { border-radius: 9px; background: hsl(48 45.0% 16.0%); color: hsl(23 75.0% 70.0%) }
+:root .as-tl { border-left: 2px solid var(--border) }
+:root .as-tl > div::before { border-radius: 50%; background: var(--primary) }
+:root .as-tl small { color: var(--text-muted) }
+@media (max-width: 1000px) {
+:root .as-brief-side { border-left: 0px; border-top: 1px solid hsl(0 0.0% 20.0% / 0.133) }
+}
+@media (max-width: 768px) {
+:root .table-wrap:has(th:nth-child(5)) { background: linear-gradient(to right,var(--surface, hsl(0 0.0% 10.5%)) 30%,transparent) 0 0 / 40px 100% no-repeat local,linear-gradient(to left,var(--surface, hsl(0 0.0% 10.5%)) 30%,transparent) 100% 0 / 40px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,hsl(0 0.0% 7.0% / 0.18),transparent) 0 0 / 14px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,hsl(0 0.0% 7.0% / 0.18),transparent) 100% 0 / 14px 100% no-repeat scroll }
+}
+:root .cf-novo { background: var(--surface); color: var(--primary-ink); border: 1px solid var(--primary) }
+:root .cf-novo:hover { background: var(--bg) }
+:root .cf-perm input { accent-color: var(--primary) }
+:root .cf-excluir { background: var(--surface); color: var(--danger-text); border: 1px solid var(--danger-bg) }
+:root .cf-excluir:hover { background: var(--danger-bg) }
+:root .cf-ok { color: var(--success-text) }
+:root .cf-logs { border-collapse: collapse }
+:root .cf-logs th { color: var(--text-muted); border-bottom: 1px solid var(--border) }
+:root .cf-logs td { border-bottom: 1px solid var(--border-light) }
+:root .cf-logs td small { color: var(--text-muted) }
+:root .gs-warn { color: rgb(194, 87, 12) }
+:root .gs-s { fill: none }
+:root .gs-s.gs-criados, :root .gs-leg i.gs-criados { stroke: hsl(221 75.0% 70.0%); background: rgb(37, 99, 235) }
+:root .gs-s.gs-resolvidos, :root .gs-leg i.gs-resolvidos { stroke: var(--vg-forest, hsl(215 0.0% 74.0%)); background: var(--vg-forest, hsl(215 0.0% 30.0%)) }
+:root .gs-s.gs-backlog, :root .gs-leg i.gs-backlog { stroke: rgb(249, 115, 22); background: rgb(249, 115, 22) }
+:root .gs-eixo { color: var(--text-muted) }
+:root .etq { border-radius: 999px; background: var(--neutral-bg); color: var(--neutral-text) }
+:root .etq-top { background: var(--primary-light); color: var(--primary-ink) }
+:root .etq button { border: 0px; background: none; color: inherit }
+:root .ph3a-bloco h4 { color: var(--text-muted); border-bottom: 1px solid var(--border, hsl(220 0.0% 24.1%)) }
+:root .ph3a-rotulo { color: var(--text-muted) }
+:root .page { --vg-forest: hsl(215 0.0% 81.4%); --vg-forest2: hsl(215 0.0% 74.0%); --vg-gold: #d7b46a; --vg-coral: #e9856e }
+:root .page::before { background: radial-gradient(900px 500px at 85% -5%, rgba(244, 180, 0, 0.1), transparent 60%), radial-gradient(700px 500px at 0% 100%, hsl(215 0.0% 23.9% / 0.07), transparent 60%) }
+:root .card { background: hsl(0 0.0% 10.5% / 0.82); border: 1px solid hsl(0 0.0% 20.0% / 0.9); border-radius: 20px; box-shadow: hsl(161 35.0% 5.0% / 0.154) 0px 6px 22px, hsl(0 0.0% 100.0% / 0.048) 0px 1px inset }
+:root .sd-tabs { border-bottom: 1px solid var(--border-light) }
+:root .sd-tab:hover { color: var(--text) }
+:root .sidebar-logo h1 b, :root .login-title b { color: var(--gohub-yellow) }
+:root .login-page { background: linear-gradient(160deg,hsl(221 31.4% 18.0%),var(--gohub-graphite) 55%,hsl(215 24.2% 28.4%)) }
+:root .login-hero img { border-radius: 28px; box-shadow: hsl(0 0.0% 0.0% / 0.6) 0px 24px 60px }
+:root .login-card { background: hsl(0 0.0% 10.5%); border-color: transparent }
+:root input[type="checkbox"], :root input[type="radio"] { accent-color: var(--primary) }
+:root .nav-group-btn { background: transparent; border: 0px; border-radius: 6px; color: inherit }
+:root .nav-group-btn:hover { background: hsl(0 0.0% 10.5% / 0.05) }
+:root .nav-group-btn:hover .nav-label { color: rgba(255, 255, 255, 0.55) }
+:root .nav-chevron { color: rgba(255, 255, 255, 0.3) }
+:root .nav-fixo { border-top: 1px solid hsl(0 0.0% 20.0% / 0.07) }
+:root .sidebar.recolhida .nav-fixo { border-top: 1px solid hsl(0 0.0% 20.0% / 0.07) }
+:root .sidebar.recolhida .nav-inicio { border-top: 0px }
+:root .carregando { color: var(--text-muted, hsl(221 0.0% 60.0%)) }
+:root .carregando b { color: var(--text, hsl(215 0.0% 81.4%)) }
+:root .carregando.compacto .spinner { border-width: 2px }
+:root .carregando-faixa { background: var(--surface, hsl(0 0.0% 10.5%)); border: 1px solid var(--border, hsl(220 0.0% 24.1%)); border-radius: 12px; box-shadow: hsl(220 42.9% 5.0% / 0.396) 0px 8px 28px }
+:root .pg .fb-btn { border: 1px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--text) }
+:root .pg-gap { color: var(--text-muted) }
+:root .pj { --pj-surface2: hsl(214 0.0% 14.7%); --pj-accent: hsl(215 0.0% 74.0%); --pj-accent-soft: hsl(214 15.9% 17.4%); --pj-ok: hsl(142 71.8% 70.0%); --pj-ok-soft: hsl(141 42.1% 16.9%); --pj-warn: hsl(26 75.0% 70.0%); --pj-warn-soft: hsl(48 45.0% 17.8%); --pj-crit: hsl(0 73.7% 70.0%); --pj-crit-soft: hsl(0 45.0% 16.5%); --pj-done: hsl(142 71.8% 70.0%); --pj-wait: #c98a12; --pj-exec: #7fa6d1; --pj-req: #c3cbd6; --pj-val: hsl(142 71.8% 70.0%); --pj-apr: #7fa6d1; --pj-sol: #c98a12 }
+:root .pj .eyebrow { color: var(--pj-muted) }
+:root .pj .muted { color: var(--pj-muted) }
+:root .pj .panel { background: var(--pj-surface); border: 1px solid var(--pj-line); border-radius: 8px }
+:root .pj .empty { color: var(--pj-muted) }
+:root .pj .proto { border-radius: 8px; background: var(--pj-warn-soft); color: var(--pj-warn) }
+:root .pj .pill { border-radius: 999px }
+:root .pj .pill::before { border-radius: 50%; background: currentcolor }
+:root .pj .p-ok { background: var(--pj-ok-soft); color: var(--pj-ok) }
+:root .pj .p-warn { background: var(--pj-warn-soft); color: var(--pj-warn) }
+:root .pj .p-crit { background: var(--pj-crit-soft); color: var(--pj-crit) }
+:root .pj .p-info { background: var(--pj-accent-soft); color: var(--pj-accent) }
+:root .pj .p-mute { background: var(--pj-surface2); color: var(--pj-muted) }
+:root .pj .p-evid { background: hsl(212 37.5% 16.6%); color: hsl(212 70.6% 70.0%) }
+:root .pj .p-evid::before { background: none }
+:root .pj .sc { border-radius: 5px }
+:root .pj .sc-ok { background: var(--pj-ok-soft); color: var(--pj-ok) }
+:root .pj .sc-warn { background: var(--pj-warn-soft); color: var(--pj-warn) }
+:root .pj .sc-crit { background: var(--pj-crit-soft); color: var(--pj-crit) }
+:root .pj .b { border-radius: 6px; border: 1px solid var(--pj-line); background: var(--pj-surface); color: var(--pj-fg) }
+:root .pj .b:hover:not(:disabled) { border-color: var(--pj-accent) }
+:root .pj .b.ok { background: var(--pj-ok); border-color: var(--pj-ok); color: rgb(255, 255, 255) }
+:root .pj .b.no { color: var(--pj-crit); border-color: var(--pj-crit) }
+:root .pj .b.primary { background: var(--pj-accent); border-color: var(--pj-accent); color: rgb(255, 255, 255) }
+:root .pj .b.ghost { border-color: transparent; background: transparent; color: var(--pj-muted) }
+:root .pj input:not([type="checkbox"]), :root .pj select, :root .pj textarea { color: var(--pj-fg); background: var(--pj-surface); border: 1px solid var(--pj-line); border-radius: 6px }
+:root .pj input:focus-visible, :root .pj select:focus-visible, :root .pj textarea:focus-visible, :root .pj .b:focus-visible, :root .pj summary:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 2px }
+:root .pj .filters label { color: var(--pj-muted) }
+:root .pj .filters .chk { color: var(--pj-fg) }
+:root .pj .seg { border: 1px solid var(--pj-line); border-radius: 8px }
+:root .pj .seg .b { border: 0px; border-radius: 0px }
+:root .pj .seg .b + .b { border-left: 1px solid var(--pj-line) }
+:root .pj .seg .b.on { background: var(--pj-surface2) }
+:root .pj .chipf { border-radius: 999px }
+:root .pj .chipf.on { background: var(--pj-accent); border-color: var(--pj-accent); color: rgb(255, 255, 255) }
+:root .pj .kpi .s { color: var(--pj-muted) }
+:root .pj .kpi.crit { border-color: var(--pj-crit); background: var(--pj-crit-soft) }
+:root .pj .kpi.crit .v, :root .pj .kpi.crit .eyebrow { color: var(--pj-crit) }
+:root .pj .kpi.hl { border-color: var(--pj-accent); background: var(--pj-accent-soft) }
+:root .pj .kpi-bar { border-left: 4px solid var(--k) }
+:root .pj .kpi-bar .s { color: var(--pj-muted) }
+:root .pj table { border-collapse: collapse }
+:root .pj th { color: var(--pj-muted); border-bottom: 1px solid var(--pj-line) }
+:root .pj td { border-bottom: 1px solid var(--pj-line) }
+:root .pj tbody tr:hover td { background: var(--pj-surface2) }
+:root .pj tr.marcada td { background: var(--pj-accent-soft) }
+:root .pj td .sub { color: var(--pj-muted) }
+@media (max-width: 640px) {
+:root .pj .tbl-cartoes tr { border-bottom: 1px solid var(--pj-line) }
+:root .pj .tbl-cartoes td { border: 0px }
+:root .pj .tbl-cartoes tbody tr:hover td { background: none }
+}
+:root .pj tr.edit td { background: var(--pj-surface2) }
+:root .pj .bar { border-radius: 4px; background: var(--pj-surface2) }
+:root .pj .bar i { background: var(--pj-accent); border-radius: 4px }
+:root .pj .bar i.over { background: var(--pj-crit) }
+:root .pj .bar b { background: var(--pj-ok); border-radius: 4px }
+:root .pj .bk span { border-radius: 4px; background: var(--pj-surface2) }
+:root .pj .al { border-left: 3px solid var(--pj-warn); background: var(--pj-surface2); border-radius: 0px 6px 6px 0px }
+:root .pj .al.crit { border-left-color: var(--pj-crit) }
+:root .pj .cmp .track { background: var(--pj-surface2); border-radius: 3px }
+:root .pj .cmp .track i { background: var(--pj-accent-soft); border-right: 2px solid var(--pj-accent) }
+:root .pj .cmp .track b { background: var(--pj-ok); border-radius: 2px }
+:root .pj .legend { color: var(--pj-muted) }
+:root .pj .legend span::before { border-radius: 2px; background: var(--k) }
+:root .pj .stack { border-radius: 4px; background: var(--pj-surface2) }
+:root .pj .flag { color: var(--pj-crit); background: var(--pj-crit-soft); border-radius: 999px }
+:root .pj details.ia summary { color: var(--pj-accent) }
+:root .pj details.ia .txt { background: var(--pj-surface2); border-radius: 6px; color: var(--pj-fg) }
+:root .pj .card { border-radius: 8px; box-shadow: none }
+:root .pj .card.retro { border-left: 4px solid var(--pj-warn) }
+:root .pj .c-head { border-bottom: 1px solid var(--pj-line) }
+:root .pj .c-head .who .sub { color: var(--pj-muted) }
+:root .pj .facts { border-bottom: 1px solid var(--pj-line) }
+:root .pj .fact .k { color: var(--pj-muted) }
+:root .pj .scope { border-bottom: 1px solid var(--pj-line) }
+:root .pj .ia-box { border-bottom: 1px solid var(--pj-line); background: var(--pj-surface2) }
+:root .pj .people { border-bottom: 1px solid var(--pj-line) }
+:root .pj .sel { color: var(--pj-muted) }
+:root .pj .dec label, :root .pj .dec4 label, :root .pj .altbox label { color: var(--pj-muted) }
+:root .pj .hint { color: var(--pj-muted) }
+:root .pj .confirm { border-radius: 6px; background: var(--pj-accent-soft) }
+:root .pj .confirm.neg { background: var(--pj-crit-soft) }
+:root .pj .evid a { color: var(--pj-accent); text-decoration: underline }
+:root .pj .msg { border-radius: 6px }
+:root .pj .msg.ok { background: hsl(147 26.2% 16.0%); color: hsl(140 72.1% 70.0%) }
+:root .pj .msg.warn { background: var(--pj-warn-soft); color: var(--pj-warn) }
+:root .pj .msg.crit { background: var(--pj-crit-soft); color: var(--pj-crit) }
+:root .pj .bulk { border-radius: 8px; background: var(--pj-fg); color: rgb(255, 255, 255) }
+:root .pj .bulk .b { background: hsl(0 0.0% 10.5%); color: var(--pj-fg); border-color: hsl(0 0.0% 20.0%) }
+:root .pj .bulk .b.ghost { background: transparent; color: rgb(255, 255, 255); border-color: transparent }
+:root .pj .toast { background: var(--pj-fg); color: rgb(255, 255, 255); border-radius: 6px }
+:root .pj .toast.ok { background: rgb(31, 122, 86); box-shadow: hsl(0 0.0% 0.0% / 0.396) 0px 6px 20px }
+:root .pj footer.nota { color: var(--pj-muted) }
+:root .pj .method { color: var(--pj-muted) }
+:root .pj .method summary { color: var(--pj-fg) }
+:root .pj .cc-head { border-bottom: 1px solid var(--pj-line); border-left: 5px solid var(--pj-crit) }
+:root .pj .cc-head.warn { border-left-color: var(--pj-warn) }
+:root .pj .stat .k { color: var(--pj-muted) }
+:root .pj .stat .v.crit { color: var(--pj-crit) }
+:root .pj .c-body > div + div { border-left: 1px solid var(--pj-line) }
+:root .pj .c-body h3 { color: var(--pj-muted) }
+:root .pj .day { border: 1px solid var(--pj-line); border-radius: 6px }
+:root .pj .day .h { color: var(--pj-crit) }
+:root .pj .day li { border-top: 1px dashed var(--pj-line) }
+:root .pj .day li .d { color: var(--pj-muted) }
+:root .pj .tag { border-radius: 999px }
+:root .pj .t-val { background: var(--pj-ok-soft); color: var(--pj-val) }
+:root .pj .t-apr { background: var(--pj-accent-soft); color: var(--pj-accent) }
+:root .pj .t-sol { background: var(--pj-warn-soft); color: var(--pj-warn) }
+:root .pj .lead { color: var(--pj-muted) }
+:root .pj .chip { border-radius: 999px }
+:root .pj .h-pj { background: hsl(141 42.1% 16.9%); color: hsl(143 64.2% 70.0%) }
+:root .pj .h-sys { background: hsl(226 45.0% 16.5%); color: hsl(244 54.5% 70.0%) }
+:root .pj .h-fin { background: hsl(48 45.0% 17.8%); color: hsl(23 75.0% 70.0%) }
+:root .pj .lane-h { border-radius: 8px }
+:root .pj .n span { border-radius: 50%; background: var(--pj-fg); color: rgb(255, 255, 255) }
+:root .pj .step, :root .pj .decision { border: 1px solid var(--pj-line); border-radius: 8px; background: var(--pj-surface) }
+:root .pj .step.pj-l { border-top: 3px solid rgb(22, 163, 74) }
+:root .pj .step.sys { border-top: 3px solid rgb(79, 70, 229) }
+:root .pj .step.fin { border-top: 3px solid rgb(217, 119, 6) }
+:root .pj .decision { border-top: 3px solid rgb(217, 119, 6) }
+:root .pj .step .tag-l { color: var(--pj-muted) }
+:root .pj .mail { background: var(--pj-surface2); border-radius: 6px; color: var(--pj-muted) }
+:root .pj .hintbox { background: var(--pj-warn-soft); color: var(--pj-warn); border-radius: 6px }
+:root .pj .br { border-radius: 8px }
+:root .pj .br.ok { background: var(--pj-ok-soft) }
+:root .pj .br.no { background: var(--pj-crit-soft) }
+:root .pj .br.mid { background: var(--pj-warn-soft) }
+:root .pj .br .end { color: var(--pj-muted) }
+@media (max-width: 860px) {
+:root .pj .c-body > div + div { border-left: 0px; border-top: 1px solid var(--pj-line) }
+}
+:root .pj { --pj-accent: var(--vg-forest, hsl(215 0.0% 81.4%)); --pj-accent-soft: var(--border-light, hsl(210 15.4% 14.6%)); --pj-surface2: var(--border-light, hsl(210 20.0% 16.0%)) }
+:root .pj .panel { border-radius: var(--radius-lg, 12px); border-color: var(--border) }
+:root .pj .kpi { border-left: 4px solid var(--border); border-radius: 10px }
+:root .pj .kpi.hl { border-left-color: var(--success-text); background: var(--surface) }
+:root .pj .kpi.crit { border-left-color: var(--danger-text); background: var(--surface) }
+:root .pj .kpi.crit .v, :root .pj .kpi.crit .eyebrow { color: var(--danger-text) }
+:root .pj th { border-bottom: 2px solid var(--border) }
+:root .pj td { border-bottom-color: var(--border-light, hsl(210 12.3% 22.3%)) }
+:root .pj .b { border-radius: 8px; background: var(--surface) }
+:root .pj .b.primary { background: var(--vg-forest, hsl(215 0.0% 23.9%)); border-color: var(--vg-forest, #1f2937); color: rgb(255, 255, 255) }
+:root .pj .b.ok { background: hsl(142 57.4% 30.0%); border-color: rgb(21, 128, 61); color: rgb(255, 255, 255) }
+:root .pj .b.ok:hover:not(:disabled) { background: hsl(143 51.4% 30.0%); border-color: rgb(22, 101, 52) }
+:root .pj .b.no { background: var(--danger-bg); border-color: transparent; color: var(--danger-text) }
+:root .pj .h-pj { background: var(--success-bg); color: var(--success-text) }
+:root .pj .h-sys { background: hsl(251 45.0% 16.1%); color: hsl(263 70.0% 70.0%) }
+:root .pj .h-fin { background: var(--warning-bg); color: var(--warning-text) }
+:root .pj .kpi-bar { border-left-width: 4px }
+:root .pj .conn, :root .pj .method { border-radius: var(--radius-lg, 12px) }
+:root .pj input:not([type="checkbox"]), :root .pj select, :root .pj textarea { border-radius: 8px }
+:root .pj .seg { border-radius: 10px }
+:root .pj .bulk { background: var(--vg-forest, hsl(215 0.0% 23.9%)) }
+:root .pj .bar { border-radius: 999px }
+:root .pj .bar i, :root .pj .bar b { border-radius: 999px }
+:root .pj .card { border-radius: var(--radius-lg, 12px) }
+:root .pj .step, :root .pj .decision { border-radius: 10px }
+:root .pj a.kpi { color: inherit; text-decoration: none }
+:root .pj a.kpi:hover { border-color: var(--pj-accent) }
+:root .pj .mono a { color: var(--pj-accent); text-decoration: none }
+:root .pj .mono a:hover { text-decoration: underline }
+:root .fb { border-radius: 12px; background: var(--surface); border: 1px solid var(--border-light, var(--border)) }
+:root .fb-busca { border: 1px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--text-muted) }
+:root .fb-busca:focus-within { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .fb-busca input { border: 0px; outline: 0px; background: transparent; color: var(--text) }
+:root .fb-sel { border: 1px solid var(--border); border-radius: 9px; color: var(--text); outline: 0px; background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%231f2937' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 10px center }
+:root .fb-sel:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .fb-data { background-image: none }
+:root .fb-data span { color: var(--text-muted) }
+:root .fb-data input { border: 0px; outline: 0px; background: transparent; color: var(--text) }
+:root .fb-btn { border: 1px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--text-muted) }
+:root .fb-mais { color: hsl(221 75.0% 70.0%) }
+:root .fb-mais.on { background: hsl(218 45.0% 16.2%); border-color: hsl(220 48.8% 30.0%) }
+:root .fb-ativos-t { color: var(--text-muted) }
+:root .fb-chip { border-radius: 8px; background: hsl(218 0.0% 15.2%) }
+:root .fb-chip button { border: 0px; background: none; color: var(--text-muted) }
+:root .fb-limpar-todos { border: 0px; background: none; color: hsl(221 75.0% 70.0%) }
+:root .pj.compacto .alert, :root .pj.compacto .al { border-radius: 6px }
+:root .pj.compacto .card { border-radius: 8px }
+:root .pj.compacto .c-head { border-bottom: 0px }
+:root .pj.compacto .facts { border-bottom: 0px }
+:root .pj.compacto .scope { border-bottom: 0px }
+:root .pj.compacto .c-head .os-id { color: var(--pj-muted); border-radius: 6px; background: var(--pj-surface2) }
+:root .pj.compacto .cols-h { color: var(--pj-muted) }
+:root .pj.compacto .cols-h { color: var(--text-muted) }
+:root .pj.compacto .acts-sel select { border: 1px solid var(--pj-line); border-radius: 8px; background: var(--surface); color: var(--text) }
+:root .pj.compacto .acts-sel { color: var(--text-muted) }
+:root .pj.compacto .acts-sel select { border-radius: 10px; background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%231f2937' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 12px center }
+:root .dica { outline: 0px }
+:root .dica i { border-radius: 50%; border: 1px solid }
+:root .dica::after { border-radius: 8px; background: hsl(215 0.0% 23.9%); color: rgb(255, 255, 255); box-shadow: hsl(222 47.4% 5.0% / 0.55) 0px 6px 18px }
+:root .pj.compacto .dec > label, :root .pj.compacto .acts-sel { color: var(--text-muted) }
+:root .pj.compacto .dec select, :root .pj.compacto .dec textarea, :root .pj.compacto .acts-sel select { border: 1px solid var(--pj-line); border-radius: 10px; background-color: var(--surface); color: var(--text); outline: 0px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%231f2937' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") }
+:root .pj.compacto .dec textarea { background-image: none }
+:root .pj.compacto .dec select:focus, :root .pj.compacto .dec textarea:focus, :root .pj.compacto .acts-sel select:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .pj.compacto .dec .b, :root .pj.compacto .dec button { border-radius: 10px }
+:root .fb-f { border: 1px solid var(--border); border-radius: 10px; background: var(--surface) }
+:root .fb-f > span { color: var(--text-muted) }
+:root .fb-f select { border: 0px; outline: 0px; background: transparent; color: var(--text) }
+:root .fb-f::after { border-right: 1.8px solid var(--text); border-bottom: 1.8px solid var(--text) }
+:root .fb-f:focus-within, :root .fb-periodo:focus-within { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .fb-busca { border-radius: 10px }
+:root .fb-periodo { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text-muted) }
+:root .fb-periodo input { border: 0px; outline: 0px; background: transparent; color: var(--text) }
+:root .fb-barra { color: var(--text-muted) }
+:root .fb-ord select { border: 1px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--text) }
+:root .ot-wrap { border: 1px solid var(--border-light, var(--border)); border-radius: 12px; background: var(--surface) }
+:root .pj .ot { border-collapse: collapse }
+:root .pj .ot th { color: var(--text-muted); background: var(--bg-subtle, hsl(216 19.2% 15.6%)); border-bottom: 1px solid var(--border-light, var(--border)) }
+:root .pj .ot td { border-bottom: 1px solid var(--border-light, var(--border)) }
+:root .pj .ot-linha:hover { background: hsl(222 37.9% 18.2% / 0.024) }
+:root .pj .ot-linha.retro td:first-child { box-shadow: inset 3px 0 0 var(--pj-warn, hsl(32 94.6% 5.0% / 0.6)) }
+:root .pj .ot-linha.aberta td { border-bottom-color: transparent }
+:root .pj .ot-pess small { color: var(--text-muted) }
+:root .pj .ot-av { border-radius: 50%; background: hsl(218 0.0% 16.9%); color: hsl(216 0.0% 68.4%) }
+:root .pj .ot-ord { border: 0px; background: none; color: var(--text-muted) }
+:root .pj .ot-ord.on, :root .pj .ot-ord:hover { color: var(--text) }
+:root .pj .ot-seta { border: 1px solid var(--border); border-radius: 8px; background: var(--surface) }
+:root .pj .ot-det td { background: hsl(220 21.4% 15.3%); border-bottom: 1px solid var(--border-light, var(--border)) }
+:root .pj .ot-escopo .k { color: var(--text-muted) }
+:root .pj .ot-abas { border-bottom: 1px solid var(--border-light, var(--border)) }
+:root .pj .ot-abas button { border-width: 0px 0px 2px; border-style: none none solid; border-color: currentcolor currentcolor transparent; border-image: none; background: none; color: var(--text-muted) }
+:root .pj .ot-abas button.on { color: var(--text); border-bottom-color: var(--primary) }
+:root .pj .ot-vazio { color: var(--text-muted) }
+:root .pj .ot-novo input { border: 1px solid var(--border); border-radius: 9px; background: var(--surface) }
+:root .pj .ot-nota { color: var(--text-muted) }
+:root .pj .ot-det td { background: hsl(0 0.0% 10.5%) }
+:root .pj .ot-escopo > div { background: hsl(220 0.0% 14.0%); border-radius: 8px }
+:root .pj .ot-escopo .k { color: var(--text-muted) }
+:root .pj .ot-linha.aberta { background: hsl(0 0.0% 10.5%) }
+:root .pj .ot-linha.aberta td:first-child { box-shadow: inset 3px 0 0 var(--primary) }
+:root .pj .ot-cab { color: var(--text-muted) }
+:root .pj .ot-card { background: hsl(0 0.0% 10.5%); border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 10px; border-left: 3px solid var(--border) }
+:root .pj .ot-card.retro { border-left-color: var(--pj-warn, #d97706) }
+:root .pj .ot-emp { background: hsl(218 0.0% 15.2%); color: var(--text) }
+:root .pj .ot-criada small { color: var(--text-muted) }
+:root .pj .ot-cab { border-bottom: 1px solid var(--border-light, var(--border)); color: var(--text-muted) }
+:root .pj .ot-emp::before { background: hsl(218 0.0% 38.6%) }
+:root .pj .ot-card { background: hsl(0 0.0% 10.5%) }
+:root .pj .ot-card .ot-det-in { border-top: 1px solid var(--border-light, var(--border)); background: hsl(0 0.0% 10.5%) }
+:root .pj .ot-escopo > div { background: transparent; border-radius: 0px }
+:root .pj .ot-mais { border: 0px; background: none; color: hsl(221 75.0% 70.0%) }
+:root .cal-sub { color: var(--text-muted) }
+:root .cal-resumo { color: var(--text-muted) }
+:root .cal-resumo b { color: var(--text) }
+:root .cal-leg i { border-radius: 4px; border: 1px solid var(--border) }
+:root .cal-sem { color: var(--text-muted) }
+:root .cal-dia { border: 1px solid var(--border); border-radius: 10px; background: hsl(0 0.0% 10.5%); color: var(--text) }
+:root .cal-dia.vazio { border: 0px; background: none }
+:root .cal-dia.fds { border-style: dashed; background: hsl(225 0.0% 12.7%) }
+:root .cal-dia.h1, :root .cal-leg i.h1 { background: hsl(46 45.0% 16.7%) }
+:root .cal-dia.h2, :root .cal-leg i.h2 { background: hsl(46 45.0% 19.5%) }
+:root .cal-dia.h3, :root .cal-leg i.h3 { background: hsl(38 45.0% 22.2%) }
+:root .cal-leg i.h0 { background: hsl(0 0.0% 10.5%) }
+:root .cal-dia.h1 { border-color: hsl(46 42.7% 30.0%) }
+:root .cal-dia.h2 { border-color: hsl(43 45.7% 30.0%) }
+:root .cal-dia.h3 { border-color: rgb(233, 174, 77) }
+:root .cal-dia.hoje .cal-num b { background: var(--text); color: rgb(255, 255, 255); border-radius: 999px }
+:root .cal-dia.sel { outline: 2px solid var(--text); outline-offset: 1px }
+:root .cal-dia:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px }
+:root .sl { border-radius: 5px; color: rgb(255, 255, 255) }
+:root .sl-warn { background: rgb(224, 103, 79) }
+:root .sl-info { background: rgb(91, 127, 214) }
+:root .sl-ok { background: rgb(31, 157, 108) }
+:root .sl-no { background: hsl(219 0.0% 48.1%) }
+:root .cal-qtd { color: hsl(41 75.0% 70.0%) }
+:root .cal-chip { border-left: 3px solid hsl(0 0.0% 38.0%); border-radius: 4px; background: hsl(0 0.0% 10.5% / 0.75) }
+:root .cal-chips small { color: var(--text-muted) }
+:root .cal-rodape { color: var(--text-muted) }
+:root .cal-barra { border-radius: 3px; background: hsl(222 37.9% 18.2% / 0.1) }
+:root .cal-barra i { background: rgb(91, 127, 214) }
+:root .cal-detalhe { border: 1px solid var(--border); border-radius: 12px; background: hsl(0 0.0% 10.5%) }
+:root .cal-vazio { color: var(--text-muted) }
+:root .cal-item { border-top: 1px solid var(--border-light, var(--border)) }
+:root .cal-item .fb-btn { text-decoration: none }
+:root .cal-cor { border-radius: 3px }
+:root .cal-feriado { color: var(--text-muted) }
+:root .gt-quadro { border: 1px solid var(--border); border-radius: 12px; background: hsl(0 0.0% 10.5%) }
+:root .gt-linha { border-top: 1px solid var(--border-light, var(--border)) }
+:root .gt-cab { border-top: 0px; color: var(--text-muted); background: hsl(216 19.2% 15.6%) }
+:root .gt-dia.hoje { color: var(--text) }
+:root .gt-rot { color: var(--text); text-decoration: none }
+:root .gt-rot i { border-radius: 3px }
+:root .gt-rot:hover { text-decoration: underline }
+:root button.gt-rot { background: none; border: 0px }
+:root span.gt-rot:hover { text-decoration: none }
+:root .gt-cel { border-left: 1px solid var(--border-light, hsl(220 0.0% 22.5%)) }
+:root .gt-dia.fds, :root .gt-cel.fds { background: hsl(220 0.0% 14.3%) }
+:root .gt-cel.hoje { background: hsl(47 45.0% 17.0%) }
+:root .gt-barra { border-radius: 6px; background: var(--c) }
+:root .gt-barra.espera { background: transparent; border: 1.5px dashed var(--c) }
+:root .gt-barra.negada { background: repeating-linear-gradient(135deg, hsl(217 0.0% 23.5%) 0px, hsl(217 0.0% 23.5%) 5px, hsl(218 0.0% 17.7%) 5px, hsl(218 0.0% 17.7%) 10px); border: 1px solid hsl(218 0.0% 30.7%) }
+:root .pj .pc-abas button { border: 1px solid var(--pj-line); background: var(--surface); border-radius: 10px; color: var(--pj-fg) }
+:root .pj .pc-abas button.on { background: var(--pj-accent); border-color: var(--pj-accent); color: rgb(255, 255, 255) }
+:root .pj .pc-sub { color: var(--pj-muted) }
+:root .pj .pc-campos .k { color: var(--pj-muted) }
+:root .pj .pc-det summary { color: var(--pj-accent) }
+:root .pj .pc-rodape { color: var(--pj-muted) }
+:root .pj .cc { border-top: 1px solid var(--pj-line) }
+:root .pj .cc-grade label, :root .pj .cc-campo { color: var(--pj-muted) }
+:root .pj .cc-ro { color: var(--pj-fg) }
+:root .pj .cc-prog { color: var(--pj-muted) }
+:root .pj .cc-prog b { color: var(--pj-fg) }
+:root .pj .cc-lista { border: 1px solid var(--pj-line); border-radius: 10px }
+:root .pj .cc-lista legend { color: var(--pj-muted) }
+:root .pj .cc-chk { color: var(--pj-fg) }
+:root .pj .cc textarea, :root .pj .cc-add input:not([type="file"]), :root .pj .cc-add select { border: 1px solid var(--pj-line); border-radius: 9px; background: var(--surface); color: var(--pj-fg) }
+:root .pj .cc-ev { color: var(--pj-fg) }
+:root .pj .ot-ia { background: hsl(223 23.3% 15.7%); border-radius: 8px }
+:root .pj .ot-ia .crit { color: var(--pj-crit) }
+:root .pj .ot-ia .warn { color: var(--pj-warn) }
+:root .pj .ot-ia .ok { color: var(--pj-ok) }
+:root .ac { border: 1px solid var(--border-light, var(--border)); background: hsl(225 20.0% 15.5%); border-radius: 10px }
+:root .ac-vazio { color: var(--text-muted) }
+:root .ac-metricas small { color: var(--text-muted) }
+:root .ac-barra { border-radius: 3px; background: hsl(222 37.9% 18.2% / 0.1) }
+:root .ac-barra i { background: rgb(31, 157, 108) }
+:root .ac-itens .ok { color: hsl(156 59.5% 70.0%) }
+:root .pj .ot-topo input[type="checkbox"] { accent-color: var(--primary) }
+:root .pj .ot-card, :root .pj .ot-card.retro { border-left: 1px solid var(--border-light, var(--border)) }
+:root .pj .ot-card.ot-sel { background: hsl(45 45.0% 16.6%); border-color: hsl(43 43.9% 30.0%); box-shadow: hsl(43 79.7% 71.0% / 0.06) 0px 0px 0px 1px inset }
+:root .pj .ot-card.ot-sel .ot-det-in { background: hsl(45 45.0% 16.6%); border-top-color: hsl(43 43.9% 30.0%) }
+:root .fb-vis { border: 1px solid var(--border); border-radius: 10px; background: var(--surface) }
+:root .fb-vis button { border: 0px; background: transparent; color: var(--text-muted) }
+:root .fb-vis button.on { background: var(--primary); color: var(--on-primary, hsl(215 0.0% 81.4%)) }
+:root .pn { background: hsl(0 0.0% 10.5%); border: 1px solid var(--border-light, var(--border)); border-radius: 12px }
+:root .pn-x { border: 0px; background: none; color: var(--text-muted) }
+:root .pn-quem small { color: var(--text-muted) }
+:root .pn-sec { border: 1px solid var(--border-light, var(--border)); border-radius: 10px }
+:root .pn-sec-t small { color: var(--text-muted) }
+:root .pn-sec-t .fb-btn { text-decoration: none }
+:root .pn-info .k { color: var(--text-muted) }
+:root .pn-sinais { background: hsl(0 39.5% 15.9%); border-color: hsl(0 36.9% 30.0%) }
+:root .pn-sinais.ok { background: hsl(147 26.2% 16.0%); border-color: hsl(148 24.1% 30.0%) }
+:root .pn-sinais-t { color: hsl(4 75.0% 70.0%) }
+:root .pn-sinais.ok .pn-sinais-t { color: hsl(156 59.5% 70.0%) }
+:root .pn-evid { background: hsl(212 39.5% 15.9%); border-color: hsl(211 35.0% 30.0%) }
+:root .pn-sinal > span:last-child { color: var(--text-muted) }
+:root .pn-prog { border-radius: 3px; background: hsl(222 37.9% 18.2% / 0.1) }
+:root .pn-prog i { background: var(--primary) }
+:root .pn-chk input { accent-color: var(--primary) }
+:root .pn-chk-l small { color: var(--text-muted) }
+:root .pn-i { border-radius: 50%; border: 1px solid var(--text-muted); color: var(--text-muted) }
+:root .pn-parecer { background: hsl(223 23.3% 15.7%); border-radius: 8px }
+:root .pn-parecer.atencao { background: hsl(41 45.0% 16.7%); color: hsl(36 75.0% 70.0%) }
+:root .pn-obs { color: var(--text-muted) }
+:root .pn-obs textarea { border: 1px solid var(--border); border-radius: 9px; color: var(--text) }
+:root .pn-ia { border-radius: 10px; border: 1px solid hsl(41 43.6% 30.0%); background: hsl(43 45.0% 16.5%) }
+:root .pn-ia.ok { background: hsl(147 26.2% 16.0%); border-color: hsl(148 24.1% 30.0%) }
+:root .pn-ia.crit { background: hsl(0 39.5% 15.9%); border-color: hsl(0 36.9% 30.0%) }
+:root .pn-ia-topo span { color: var(--text-muted) }
+:root .pn-chave small { color: var(--text-muted) }
+:root .pn-txt .k { color: var(--text-muted) }
+:root .pn-ver { border: 0px; background: none; color: var(--primary) }
+:root .pn-ver:hover { text-decoration: underline }
+:root .pn-abrir { border-radius: 999px; background: hsl(218 45.0% 16.2%); color: hsl(221 75.0% 70.0%); text-decoration: none }
+:root .pn-abrir:hover { background: hsl(218 45.0% 17.1%) }
+:root .fb-barra .fb-ord select { border: 1px solid var(--border); border-radius: 10px; color: var(--text); outline: 0px; background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%231f2937' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 11px center }
+:root .fb-barra .fb-ord select:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .pj .ot-pill-btn { border: 0px }
+:root .pj .ot-pill-btn:hover { box-shadow: hsl(222 47.4% 5.0% / 0.264) 0px 0px 0px 2px }
+:root .pj .ot-pop { background: hsl(0 0.0% 10.5%); border: 1px solid var(--border); border-radius: 12px; box-shadow: hsl(222 47.4% 5.0% / 0.396) 0px 12px 30px }
+:root .pj .ot-pop .ot-pop-sec { border-bottom: 1px solid var(--border-light, var(--border)) }
+:root .pj .ot-pop .ot-pop-l { color: var(--text-muted) }
+:root .pj .ot-pop .ot-pop-sec small { color: var(--text-muted) }
+:root .pj.kb-dec .ot-pop-l { color: var(--text-muted) }
+:root .pj.kb-dec .ot-pop-sec { border-bottom: 1px solid var(--border-light, var(--border)) }
+:root .pj.kb-dec .ot-pop-sec small:not(.hp-t) { color: var(--text-muted) }
+:root .pg-num button { border: 1px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--text) }
+:root .pg-num button.on { background: var(--primary); border-color: var(--primary); color: var(--on-primary, hsl(215 0.0% 81.4%)) }
+:root .pg-info { color: var(--text-muted) }
+:root .pj .ot-ia-col { border-radius: 8px; background: hsl(43 45.0% 16.5%) }
+:root .pj .ot-ia-col.ok { background: hsl(147 26.2% 16.0%) }
+:root .pj .ot-ia-col.crit { background: hsl(0 39.5% 15.9%) }
+:root .pj .ot-ia-col small { color: var(--text-muted) }
+:root .pj .cp-dica { color: var(--pj-muted) }
+:root .pj .cp-nota { border-top: 1px solid var(--pj-line) }
+:root .pj .cp-txt small { color: var(--pj-muted) }
+:root .pj .cp-txt a { color: hsl(221 75.0% 70.0%) }
+:root .pj .cp-add select, :root .pj .cp-add input, :root .pj .cp-add textarea { border: 1px solid var(--pj-line); border-radius: 9px; background: var(--surface); color: var(--pj-fg) }
+:root .pj .ev { border: 1px solid var(--pj-line); border-radius: 10px; background: hsl(225 20.0% 15.5%) }
+:root .pj .ev-frame { border: 1px solid var(--pj-line); border-radius: 8px; background: hsl(0 0.0% 10.5%) }
+:root .ei-lista li { border: 1px solid var(--border); border-radius: 9px; background: var(--surface) }
+:root .ei-n { border-radius: 50%; background: hsl(218 0.0% 16.9%); color: hsl(216 0.0% 68.4%) }
+:root .ei-x { border: 0px; background: none; color: var(--text-muted) }
+:root .ei-x:hover { color: hsl(4 75.0% 70.0%) }
+:root .ei-mais { border: 0px; border-radius: 9px; background: var(--primary); color: var(--on-primary, hsl(215 0.0% 81.4%)) }
+:root .pj .ve-dica { color: var(--pj-muted) }
+:root .pj .ve-tab { border-collapse: collapse }
+:root .pj .ve-tab th { color: var(--pj-muted); border-bottom: 1px solid var(--pj-line) }
+:root .pj .ve-tab td { border-bottom: 1px solid var(--pj-line) }
+:root .pj .ve-tab td:first-child { color: var(--pj-muted) }
+:root .pj .ve-tab-hist td:first-child { color: var(--pj-fg) }
+:root .pj .ve-tab-envios td:first-child { color: var(--pj-fg) }
+@media (max-width: 560px) {
+:root .pj .ve-tab-hist tr { border-bottom: 1px solid var(--pj-line) }
+:root .pj .ve-tab-hist td { border: 0px }
+:root .pj .ve-tab-hist td:nth-child(2) { color: var(--pj-muted) }
+:root .pj .ve-tab-hist td:nth-child(3) { color: var(--pj-muted) }
+}
+:root .pj .ve-ev a { color: hsl(221 75.0% 70.0%) }
+:root .pj .ve-g { color: var(--pj-muted) }
+:root .pj .cp-olho small { color: var(--pj-muted) }
+:root .pj .cp-olho-b { border: 1px solid var(--pj-line); border-radius: 8px; background: var(--surface); color: var(--pj-muted) }
+:root .pj .cp-olho-b[aria-pressed="true"] { background: hsl(218 45.0% 16.2%); border-color: hsl(220 48.8% 30.0%); color: hsl(221 75.0% 70.0%) }
+:root .pj .cp-ok { color: hsl(156 59.5% 70.0%) }
+:root .pj .cp-pend-i { border: 1px solid var(--pj-line); border-radius: 9px }
+:root .mdl { background: hsl(222 37.9% 18.2% / 0.5) }
+:root .mdl-box { border-radius: 14px; background: hsl(0 0.0% 10.5%); box-shadow: hsl(222 47.4% 5.0% / 0.6) 0px 24px 60px }
+:root .mdl .pn { border: 0px; border-radius: 14px }
+@media (max-width: 560px) {
+:root .mdl-box { border-radius: 14px 14px 0px 0px }
+}
+:root .pn.pn-emb { border: 0px }
+:root .pj .hp-t { color: var(--pj-muted) }
+:root .kb-card .kb-status { border: 0px; border-radius: 999px; background: hsl(48 45.0% 17.8%); color: hsl(26 75.0% 70.0%) }
+:root .kb-card .kb-status::before { border-radius: 50%; background: currentcolor }
+:root .kb-card .kb-status.p-ok { background: hsl(141 42.1% 16.9%); color: hsl(142 71.8% 70.0%) }
+:root .kb-card .kb-status.p-crit { background: hsl(0 45.0% 16.5%); color: hsl(0 73.7% 70.0%) }
+:root .kb-card .kb-status.p-info { background: hsl(214 15.9% 17.4%); color: hsl(215 0.0% 74.0%) }
+:root .kb-card .kb-status.p-mute { background: hsl(214 0.0% 14.7%); color: var(--text-muted, hsl(221 0.0% 60.0%)) }
+:root .kb-card .kb-status:hover { box-shadow: hsl(222 47.4% 5.0% / 0.264) 0px 0px 0px 2px }
+:root .kb-card .kb-status:focus-visible { outline: 2px solid var(--primary, #f4b400); outline-offset: 2px }
+:root .kb-ia { border-radius: 8px; background: hsl(43 45.0% 16.5%); border: 1px solid hsl(41 43.6% 30.0%) }
+:root .kb-ia.ok { background: hsl(147 26.2% 16.0%); border-color: hsl(148 24.1% 30.0%) }
+:root .kb-ia.crit { background: hsl(0 39.5% 15.9%); border-color: hsl(0 36.9% 30.0%) }
+:root .kb-ia span { color: var(--text-muted, hsl(221 0.0% 60.0%)) }
+:root .cs-btn { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text) }
+:root .cs-btn:hover { border-color: hsl(217 0.0% 28.4%) }
+:root .cs.aberto .cs-btn, :root .cs-btn:focus-visible { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px; outline: 0px }
+:root .cs-rot { color: var(--text-muted) }
+:root .cs-lista { background: hsl(0 0.0% 10.5%); border: 1px solid var(--border); border-radius: 12px; box-shadow: hsl(222 47.4% 5.0% / 0.352) 0px 12px 30px }
+:root .cs-lista li { border-radius: 8px; color: var(--text) }
+:root .cs-lista li.ativo { background: hsl(220 0.0% 14.0%) }
+:root .cs-lista li.sel-i { background: hsl(44 45.0% 17.3%) }
+:root .cs-lista li.sel-i.ativo { background: hsl(44 45.0% 18.9%) }
+:root .cs-lista li b { color: hsl(42 75.0% 70.0%) }
+:root .cs-lista li.cs-busca { background: hsl(0 0.0% 10.5%) }
+:root .cs-lista li.cs-busca input { border: 1px solid var(--border); border-radius: 8px; background: hsl(0 0.0% 10.5%); color: var(--text) }
+:root .cs-lista li.cs-busca input:focus { outline: 0px; border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .cs-lista li.cs-vazio { color: hsl(220 0.0% 60.0%) }
+:root .fb-barra .fb-ord { color: var(--text-muted) }
+:root .pn-resumo2 > div { border: 1px solid var(--border-light, var(--border)); border-radius: 10px; background: hsl(0 0.0% 10.5%) }
+:root .pn-resumo2 small { color: var(--text-muted) }
+:root .pn-conf { border: 1px solid hsl(0 36.9% 30.0%); background: hsl(0 35.7% 15.7%); border-radius: 10px }
+:root .pn-conf:not(.neg) { border-color: hsl(41 43.6% 30.0%); background: hsl(43 45.0% 16.5%) }
+:root .pn-conf textarea { border: 1px solid var(--border); border-radius: 9px; background: hsl(0 0.0% 10.5%) }
+:root .pn-conf small { color: var(--text-muted) }
+:root .pj .co-vazio { color: var(--pj-muted) }
+:root .pj .co-item { border-top: 1px solid var(--pj-line) }
+:root .pj .co-dot { border-radius: 50%; background: hsl(218 0.0% 38.6%) }
+:root .pj .co-dot.pub { background: rgb(37, 99, 235) }
+:root .pj .co-item small { color: var(--pj-muted) }
+:root .pj .co-item .co-pub { color: hsl(221 75.0% 70.0%) }
+:root .pj .co-form { border-top: 1px solid var(--pj-line) }
+:root .pj .co-form label { color: var(--pj-muted) }
+:root .pj .co-form textarea, :root .pj .co-form select { border: 1px solid var(--pj-line); border-radius: 9px; background: var(--surface); color: var(--pj-fg) }
+:root .pj .co-aviso { border-radius: 8px; background: hsl(43 45.0% 16.5%); color: hsl(36 75.0% 70.0%) }
+:root .pj .co-form .co-ajuda { color: var(--pj-muted) }
+:root .pj .dsh .panel { border-radius: 16px }
+:root .pj .dsh-kpi { text-decoration: none; color: inherit }
+:root .pj .dsh-kpi small { color: var(--pj-muted) }
+:root .pj .dsh-kpi.crit b { color: var(--pj-crit) }
+:root .pj .dsh-sub { color: var(--pj-muted) }
+:root .pj .dsh-cab-dir { color: var(--pj-muted) }
+:root .pj .dsh-leg i, :root .pj .dsh-balao i, :root .pj .dsh-leg2 i { border-radius: 2px }
+:root .pj .dsh-barras { border-bottom: 1px solid var(--pj-line) }
+:root .pj .dsh-limite { border-top: 1px dashed hsl(217 0.0% 28.4%) }
+:root .pj .dsh-limite em { color: var(--pj-muted) }
+:root .pj .dsh-col { outline: 0px }
+:root .pj .dsh-pilha .seg { border-radius: 6px; background-image: repeating-linear-gradient(135deg, hsl(0 0.0% 10.5% / 0.28) 0px, hsl(0 0.0% 10.5% / 0.28) 3px, transparent 3px, transparent 6px) }
+:root .pj .dsh-pilha .seg.aprov { background-color: rgb(155, 197, 61) }
+:root .pj .dsh-pilha .seg.espera { background-color: rgb(244, 211, 94) }
+:root .pj .dsh-pilha .seg.neg { background-color: rgb(242, 166, 90) }
+:root .pj .dsh-vazio { border-radius: 6px; background: hsl(220 0.0% 14.3%) }
+:root .pj .dsh-x small { color: var(--pj-muted) }
+:root .pj .dsh-balao { background: hsl(0 0.0% 10.5%); border: 1px solid var(--pj-line); border-radius: 10px; box-shadow: hsl(222 47.4% 5.0% / 0.352) 0px 8px 22px }
+:root .pj .dsh-lado small { color: var(--pj-muted) }
+:root .pj .dsh-trend.ok { color: hsl(92 65.3% 70.0%) }
+:root .pj .dsh-trend.ruim { color: rgb(217, 130, 43) }
+:root .pj .dsh-trend.mute { color: var(--pj-muted) }
+:root .pj .dsh-t small { color: var(--pj-muted) }
+:root .pj .dsh-prog { border-radius: 6px; background: hsl(220 0.0% 14.9%) }
+:root .pj .dsh-prog i { border-radius: 6px; background-color: rgb(155, 197, 61); background-image: repeating-linear-gradient(135deg, hsl(0 0.0% 10.5% / 0.28) 0px, hsl(0 0.0% 10.5% / 0.28) 3px, transparent 3px, transparent 6px) }
+:root .pj .dsh-prog i.warn { background-color: rgb(242, 166, 90) }
+:root .pj .dsh-prog i.crit { background-color: rgb(224, 103, 79) }
+:root .pj .dsh-prog-rot { color: var(--pj-muted) }
+:root .pj .dsh-dica b small { color: var(--pj-muted) }
+:root .pj .dsh-link { color: var(--pj-fg); text-decoration: none }
+:root .pj .dsh-mosaico i { border-radius: 6px }
+:root .pj .dsh-seg i { border-radius: 5px; background-image: repeating-linear-gradient(135deg, hsl(0 0.0% 10.5% / 0.28) 0px, hsl(0 0.0% 10.5% / 0.28) 3px, transparent 3px, transparent 6px) }
+:root .pj .dsh-gauge-v small { color: var(--pj-muted) }
+:root .pj .dsh-nota { color: var(--pj-muted) }
+:root .pj .dsh-meta-t small { color: var(--pj-muted) }
+:root .pj .dsh-falta { color: var(--pj-muted) }
+:root .pj .er-topo small { color: var(--pj-muted) }
+:root .pj .er-desc { color: var(--pj-muted) }
+:root .pj .er .msg.ok { background: hsl(147 26.2% 16.0%); color: hsl(156 59.5% 70.0%); border-radius: 8px }
+:root .pj .fa-card { border-radius: 14px }
+:root .pj .fa-card.retro { border-left: 3px solid var(--pj-warn) }
+:root .pj .fa-quem small { color: var(--pj-muted) }
+:root .pj .fa-nota { color: var(--pj-muted) }
+:root .pj .fa-conf { border: 1px solid var(--pj-line); border-radius: 10px; background: hsl(220 21.4% 15.3%) }
+:root .pj .fa-conf textarea { border: 1px solid var(--pj-line); border-radius: 9px; background: hsl(0 0.0% 10.5%) }
+:root .kb-card.mo-fech:hover { box-shadow: none }
+:root .mo-nf-compl-item { border: 1px solid var(--pj-line, hsl(220 0.0% 24.1%)); border-radius: 10px; background: var(--pj-surface2, hsl(210 20.0% 15.5%)) }
+:root .hnf-lista { border-left: 2px solid var(--pj-line, hsl(220 0.0% 24.1%)) }
+:root .hnf-lista li::before { border-radius: 50%; background: hsl(215 0.0% 38.4%); border: 2px solid hsl(0 0.0% 20.0%) }
+:root .hnf-lista li.hnf-nf::before { background: rgb(37, 99, 235) }
+:root .hnf-lista li.hnf-devolvida::before { background: rgb(217, 119, 6) }
+:root .hnf-lista li.hnf-complemento::before { background: rgb(124, 58, 237) }
+:root .hnf-quando { color: var(--pj-muted, hsl(215 0.0% 60.0%)) }
+:root .hnf-corpo small { color: var(--pj-muted, hsl(215 0.0% 60.0%)) }
+:root .pj .gt-mes { color: var(--text-muted) }
+:root .pj .ot-g small { color: var(--text-muted) }
+:root .pn-mais summary { color: var(--primary) }
+:root .pn-acoes { background: hsl(0 0.0% 10.5%); border-top: 1px solid var(--border-light, var(--border)) }
+:root .pn-menu { background: hsl(0 0.0% 10.5%); border: 1px solid var(--border); border-radius: 8px; box-shadow: hsl(222 47.4% 5.0% / 0.308) 0px 6px 18px }
+:root .pn-menu button { border: 0px; background: none }
+:root .pn-menu button:hover { background: hsl(223 23.3% 15.7%) }
+:root .nos-passos li:not(:last-child)::after { background: var(--border) }
+:root .nos-passos button { border: 0px; background: transparent; color: var(--text-muted) }
+:root .nos-passos b { border-radius: 50%; border: 1px solid var(--border); background: var(--surface) }
+:root .nos-passos strong { color: var(--text) }
+:root .nos-passos .atual b, :root .nos-passos .feito b { background: var(--primary); border-color: var(--primary); color: var(--on-primary) }
+:root .nos-cadastro input[readonly] { background: var(--bg, hsl(220 0.0% 12.9%)) }
+:root .nos-cont { color: var(--text-muted) }
+:root .nos-dica-topo button { border: 0px; background: transparent; color: var(--text-muted) }
+:root .nos-dica-topo .nos-usar { color: var(--primary-ink) }
+:root .nos-dica p { color: var(--text-muted) }
+:root .nos-rev, :root .pj .nos-rev { border-left: 4px solid var(--warning-text) }
+:root .nos-rev.ok { border-left-color: var(--success-text) }
+:root .nos-rev.crit { border-left-color: var(--danger-text) }
+:root .nos-rev-sel { border-radius: 999px; background: var(--warning-bg); color: var(--warning-text) }
+:root .nos-rev-sel.ok { background: var(--success-bg); color: var(--success-text) }
+:root .nos-rev-sel.crit { background: var(--danger-bg); color: var(--danger-text) }
+:root .nos-rev-aviso { color: var(--warning-text) }
+:root .nos-rev-pontos li span { color: var(--text-muted) }
+:root .nos-rev-sug { border: 1px solid var(--border); border-radius: 8px }
+:root .nos-rev-sug small { color: var(--text-muted) }
+:root .nos-rev-sug .nos-usar { border: 0px; background: transparent; color: var(--primary-ink) }
+:root .nos-rev-sug.edita textarea, :root .nos-rev-sug.edita input { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); outline: none }
+:root .nos-rev-sug.edita textarea:focus, :root .nos-rev-sug.edita input:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .nos-rev-sug .nos-rev-aviso { color: var(--warning-text) }
+:root .nos-rev-sug .nos-rev-ok { color: var(--success-text) }
+:root .nos-editar { border: 0px; background: transparent; color: var(--primary-ink) }
+:root .nos-editar:hover { text-decoration: underline }
+:root .nos-resumo dt { color: var(--text-muted) }
+:root .nos-rodape .btn-enviar { background: rgb(22, 163, 74); color: rgb(255, 255, 255) }
+:root .nos-rodape .btn-enviar:hover:not(:disabled) { background: var(--success-text) }
+:root .evm-card { border: 1px solid var(--pj-line, var(--border)); border-radius: 12px; background: var(--surface) }
+:root .evm-t small { color: var(--text-muted) }
+:root .evm-ent { border: 1px solid var(--pj-line, var(--border)); border-radius: 10px }
+:root .evm-ent.sel { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.55) 0px 0px 0px 2px }
+:root .evm-ok { border-radius: 50%; border: 1.5px solid var(--border); background: var(--surface); color: rgb(255, 255, 255) }
+:root .evm-ok.on { background: rgb(22, 163, 74); border-color: rgb(22, 163, 74) }
+:root .evm-ent-t { border: 0px; background: transparent; color: inherit }
+:root .evm-ent-t i { color: var(--text-muted) }
+:root .evm-modos button { border: 1px solid var(--border); background: var(--surface); border-radius: 9px; color: var(--text) }
+:root .evm-modos button.on { background: var(--primary-light); border-color: var(--primary); color: var(--primary-ink) }
+:root .evm-drop { border: 1.5px dashed var(--border); border-radius: 12px; background: var(--bg) }
+:root .evm-drop.over, :root .evm-drop:hover, :root .evm-drop:focus-visible { border-color: var(--primary); background: var(--primary-light); outline: 0px }
+:root .evm-drop small, :root .evm-arq small { color: var(--text-muted) }
+:root .evm-nuv { border-radius: 50%; background: var(--primary-light); color: var(--primary-ink) }
+:root .evm-drive { border: 1.5px solid var(--primary); border-radius: 12px; background: var(--primary-light); color: inherit }
+:root .evm-drive:hover, :root .evm-drive:focus-visible { box-shadow: 0 0 0 3px var(--primary-light); outline: 0px }
+:root .evm-drive small { color: var(--text-muted) }
+:root .evm-arq { border: 1px solid var(--border); border-radius: 12px }
+:root .evm-arq button { border: 0px; background: transparent; color: var(--text-muted) }
+:root .evm-ico { background: hsl(0 45.0% 16.5%); color: hsl(0 73.7% 70.0%); border-radius: 6px }
+:root .evm-cont { color: var(--text-muted) }
+:root .evm-obs { color: var(--text-muted) }
+:root .evm-liberar { border: 1px solid hsl(48 53.2% 30.0%); background: hsl(48 45.0% 16.0%); border-radius: 10px }
+:root .evm-liberar small { color: var(--text-muted) }
+:root .evm-ajuda { background: hsl(48 45.0% 16.0%); border: 1px solid hsl(48 53.2% 30.0%); border-radius: 12px }
+:root .evm-ajuda-t button { border: 0px; background: transparent; color: var(--text-muted) }
+:root .evm-ajuda hr { border-width: 1px 0px 0px; border-style: solid none none; border-color: hsl(48 53.2% 30.0%) currentcolor currentcolor; border-image: none }
+:root .evm-ajuda p { color: var(--text-muted) }
+:root .pj .ca-card { border-radius: 12px }
+:root .pj .ca-card.retro { box-shadow: inset 3px 0 0 var(--pj-warn) }
+:root .pj .ca-card.marcada { outline: 2px solid var(--pj-accent); outline-offset: -1px }
+:root .pj .ca-chk, :root .pj .ca-lote input { accent-color: var(--pj-accent) }
+:root .pj .ca-av { background: hsl(219 29.3% 16.4%); color: hsl(219 55.1% 70.0%) }
+:root .pj .ca-quem small { color: var(--pj-muted) }
+:root .pj .ca-sep { background: var(--pj-line) }
+:root .pj .ca-id { color: var(--pj-muted); text-decoration: none }
+:root .pj .ca-id:hover { color: var(--pj-accent); text-decoration: underline }
+:root .pj .ca-solic small { color: var(--pj-muted) }
+:root .pj .ca-solic-mail { color: var(--pj-muted) }
+:root .pj .cv-tab { border-collapse: collapse }
+:root .pj .cv-tab th, :root .pj .cv-tab td { border-bottom: 1px solid var(--pj-line) }
+:root .pj .cv-tab thead th { color: var(--pj-muted) }
+:root .pj .cv-tab tbody th { color: var(--pj-muted) }
+:root .pj .cv-orig summary { color: var(--pj-muted) }
+:root .pj .cv-orig .k { color: var(--pj-muted) }
+:root .pj .ca-desc svg { color: var(--pj-muted) }
+:root .pj .ca-resumo { border-radius: 10px; background: var(--pj-surface2) }
+:root .pj .ca-resumo small { color: var(--pj-muted) }
+:root .pj .ca-ia { --ia-fundo: hsl(43 45.0% 16.5%); --ia-borda: hsl(41 43.6% 30.0%); --ia-cor: hsl(39 75.0% 70.0%); border-radius: 10px; background: var(--ia-fundo); border: 1px solid var(--ia-borda) }
+:root .pj .ca-ia.ok { --ia-fundo: hsl(147 26.2% 16.0%); --ia-borda: hsl(148 24.1% 30.0%); --ia-cor: hsl(140 72.1% 70.0%) }
+:root .pj .ca-ia.crit { --ia-fundo: hsl(0 39.5% 15.9%); --ia-borda: hsl(0 36.9% 30.0%); --ia-cor: hsl(0 73.1% 70.0%) }
+:root .pj .ca-ia-extra { border-top: 1px solid var(--ia-borda) }
+:root .pj .ca-ia-ic { color: var(--ia-cor) }
+:root .pj .ca-ia-acao { color: var(--ia-cor) }
+:root .pj .ca-confianca { border-radius: 999px; color: var(--ia-cor); background: hsl(0 0.0% 10.5% / 0.65) }
+:root .pj .ca-ver { border: 1px solid var(--pj-line); border-radius: 7px; background: var(--surface); color: var(--pj-fg); text-decoration: none }
+:root .pj .ca-ver:hover { border-color: var(--pj-accent) }
+:root .pj .ca-ia-t { color: var(--pj-muted) }
+:root .pj .ca-conf-lista { border-top: 1px solid var(--ia-borda) }
+:root .pj .ca-bol { border-radius: 50%; color: rgb(255, 255, 255); background: rgb(47, 158, 107) }
+:root .pj .ca-conf-lista li.warn .ca-bol { background: rgb(224, 161, 0) }
+:root .pj .ca-conf-lista li.crit .ca-bol { background: rgb(211, 58, 58) }
+:root .pj .ca-lote { color: var(--pj-muted) }
+:root .pj .ca-conf { border: 1px solid var(--pj-line); border-radius: 10px; background: hsl(220 21.4% 15.3%) }
+:root .pj .ca-conf.neg { border-color: hsl(0 33.9% 30.0%); background: hsl(0 45.0% 15.3%) }
+:root .pj .ca-conf textarea { border: 1px solid var(--pj-line); border-radius: 9px; background: hsl(0 0.0% 10.5%) }
+:root .pj .ca-incluir { border: 1px solid hsl(44 35.6% 30.0%); background: var(--pj-warn-soft); border-radius: 9px }
+:root .pj .ca-incluir.on { border-color: hsl(146 13.3% 29.3%); background: hsl(147 26.2% 16.0%) }
+:root .pj .ca-incluir small { color: var(--pj-muted) }
+:root .pj .ca-barra { color: var(--text-muted) }
+:root .pj .fa .pn-ia-bloco .pn-txt li::before { color: var(--pj-muted) }
+:root .pj .ot-g .ot-prox { color: var(--text-muted) }
+:root .gos-btn { border-radius: 999px; border: 1.5px solid var(--primary); background: var(--primary-light); color: var(--primary-ink) }
+:root .gos-btn > span { border-radius: 50%; background: var(--primary); color: rgb(255, 255, 255) }
+:root .gos-btn:not(.com-rotulo) > span { background: transparent; color: inherit }
+:root .gos-btn:hover, :root .gos-btn:focus-visible { box-shadow: 0 0 0 3px var(--primary-light); outline: 0px }
+:root .gos-fundo { background: hsl(222 37.9% 18.2% / 0.4) }
+:root .gos { background: var(--surface, hsl(0 0.0% 10.5%)); color: var(--text); box-shadow: hsl(222 47.4% 5.0% / 0.55) -12px 0px 40px }
+:root .gos-topo { border-bottom: 1px solid var(--border) }
+:root .gos-topo small { color: var(--text-muted) }
+:root .gos-x { border: 0px; background: transparent; color: var(--text-muted) }
+:root .gos-trilha { border-bottom: 1px solid var(--border) }
+:root .gos-trilha button { border: 0px; border-radius: 8px; background: transparent; color: inherit }
+:root .gos-trilha button:hover { background: var(--bg) }
+:root .gos-trilha li.on button { background: var(--primary-light) }
+:root .gos-n { border-radius: 50%; border: 1.5px solid var(--border); background: var(--surface, hsl(0 0.0% 10.5%)) }
+:root .gos-trilha li.on .gos-n { border-color: var(--primary); background: var(--primary); color: rgb(255, 255, 255) }
+:root .gos-trilha li.feito .gos-n { border-color: rgb(21, 128, 61); color: hsl(142 71.8% 70.0%) }
+:root .gos-t em { border-radius: 999px; background: hsl(142 57.4% 30.0%); color: rgb(255, 255, 255) }
+:root .gos-onde { color: var(--text-muted) }
+:root .gos-dica { border-radius: 10px; background: hsl(47 45.0% 16.2%); border: 1px solid hsl(45 44.1% 30.0%) }
+:root .gos-pe { border-top: 1px solid var(--border) }
+:root .gos-tour { border-radius: 12px; border: 1.5px solid var(--primary); background: var(--primary-light); color: inherit }
+:root .gos-tour > span:first-child { border-radius: 50%; background: var(--primary); color: rgb(255, 255, 255) }
+:root .gos-tour small { color: var(--text-muted) }
+:root .gos-tour:hover, :root .gos-tour:focus-visible { box-shadow: 0 0 0 3px var(--primary-light); outline: 0px }
+:root .tos-fundo { background: hsl(222 37.9% 18.2% / 0.6) }
+:root .tos-luz { border-radius: 12px; box-shadow: 0 0 0 9999px hsl(222 47.4% 5.0% / 0.6),0 0 0 3px var(--primary) }
+:root .tos-balao { background: var(--surface, hsl(0 0.0% 10.5%)); color: var(--text); border-radius: 14px; box-shadow: hsl(222 47.4% 5.0% / 0.6) 0px 18px 50px }
+:root .tos-cont { color: var(--primary-ink) }
+:root .tos-balao p { color: var(--text) }
+:root .tos-barra { border-radius: 4px; background: var(--border) }
+:root .tos-barra span { background: var(--primary) }
+:root .tos-sair { border: 0px; background: transparent; color: var(--text-muted); text-decoration: underline }
+:root .fb { border-radius: 12px }
+:root .card .fb, :root .panel .fb { border: 0px; border-radius: 0px; background: transparent }
+:root .fb .fb-busca input:not([type="checkbox"]), :root .fb .fb-periodo input:not([type="checkbox"]) { border: 0px; border-radius: 0px; background: transparent; box-shadow: none; color: var(--text) }
+:root .fb .fb-busca input:not([type="checkbox"]):focus-visible, :root .fb .fb-periodo input:not([type="checkbox"]):focus-visible { outline: 0px }
+:root .fb-chk { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text) }
+:root .fb-chk:hover { border-color: hsl(217 0.0% 28.4%) }
+:root .fb-chk:focus-within { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .fb-chk.on { background: var(--primary-light, hsl(46 45.0% 16.5%)); border-color: var(--primary) }
+:root .cs-com-ico .cs-ico { color: var(--text-muted) }
+:root .fb .fb-acoes .btn { border-radius: 10px }
+:root .fc-ponto { border-radius: 50%; background: var(--primary) }
+:root .fc-etapa { border: 1px solid var(--border-light); border-radius: 14px; background: var(--surface) }
+:root .fc-etapa-n { color: var(--text-muted) }
+:root .fc-etapa-cab label span { color: var(--text-muted) }
+:root .fc-recolher span { color: var(--text-muted) }
+:root .fc-cols { color: var(--text-muted) }
+:root .fc-campo { border: 1px solid var(--border-light); border-radius: 10px; background: var(--bg, hsl(0 0.0% 10.5%)) }
+:root .fc-campo.aberto { border-color: var(--primary) }
+:root .fc-tipo { color: var(--text-muted) }
+:root .fc-tag { border-radius: 999px }
+:root .fc-tag.mudou { background: var(--primary-light); color: var(--primary-ink) }
+:root .fc-tag.novo { background: hsl(218 45.0% 16.2%); color: hsl(220 74.6% 70.0%) }
+:root .fc-tag.trava { background: var(--bg, hsl(220 0.0% 13.8%)); color: var(--text-muted); border: 1px solid var(--border-light) }
+:root .fc-det { border-top: 1px dashed var(--border-light) }
+:root .fc-det label span { color: var(--text-muted) }
+:root .fc-remover { color: var(--danger-text) }
+:root .fc-barra { background: hsl(0 0.0% 10.5%); border: 1px solid var(--border); border-radius: 12px; box-shadow: hsl(222 47.4% 5.0% / 0.396) 0px 8px 28px }
+@container (max-width: 640px) {
+:root .fc-cel::before { color: var(--text-muted) }
+}
+:root .fc-aba-nova { color: var(--primary-ink) }
+:root .fc-form-cab label > span, :root .fc-criar label > span, :root .fc-form-ativo > span { color: var(--text-muted) }
+:root .fc-criar { border: 1px dashed var(--primary); border-radius: 12px; background: var(--primary-light) }
+:root .fc-previa-cab span { color: var(--text-muted) }
+:root .pj .fe .panel { border-radius: 16px; box-shadow: hsl(222 47.4% 5.0% / 0.088) 0px 1px 2px }
+:root .pj .fe-sub { color: var(--pj-muted) }
+:root .pj .fe-btn { border: 1px solid var(--pj-line); border-radius: 10px; background: var(--surface); color: var(--text) }
+:root .pj .fe-btn:hover:not(:disabled) { border-color: hsl(217 0.0% 28.4%) }
+:root .pj .fe-btn:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 2px }
+:root .pj .fe-btn.escuro { background: var(--sidebar-bg); border-color: var(--sidebar-bg); color: rgb(255, 255, 255) }
+:root .pj .fe-btn.escuro:hover:not(:disabled) { background: hsl(221 31.4% 18.0%); border-color: rgb(17, 24, 39) }
+:root .pj .fe-btn.peq { border-radius: 9px }
+:root .pj .fe-info { color: var(--pj-muted) }
+:root .pj .fe-info:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 2px; border-radius: 50% }
+:root .pj .fe-kpi { --kb: hsl(214 0.0% 14.7%) }
+:root .pj .fe-kpi.azul { --k: hsl(221 75.0% 70.0%); --kb: hsl(218 45.0% 16.2%) }
+:root .pj .fe-kpi.verde { --k: hsl(142 71.8% 70.0%); --kb: hsl(141 42.1% 16.9%) }
+:root .pj .fe-kpi.cinza { --k: hsl(215 0.0% 68.1%); --kb: hsl(218 0.0% 15.2%) }
+:root .pj .fe-kpi.verm { --k: hsl(0 73.7% 70.0%); --kb: hsl(0 45.0% 16.5%) }
+:root .pj .fe-kpi.laranja { --k: hsl(17 75.0% 70.0%); --kb: hsl(34 45.0% 17.1%) }
+:root .pj .fe-kpi-ico { border-radius: 12px; background: var(--kb); color: var(--k) }
+:root .pj .fe-kpi-r { color: var(--text) }
+:root .pj .fe-kpi-sub { color: var(--pj-muted) }
+:root .pj .fe-sec-sub { color: hsl(218 0.0% 60.9%) }
+:root .pj .fe-rodape { color: var(--pj-muted) }
+:root .pj .fe-contador { border-radius: 999px; background: var(--pj-surface2); color: var(--pj-muted) }
+:root .pj .fe-contador::before { border-radius: 50%; background: currentcolor }
+:root .pj .fe-contador.crit { background: var(--pj-crit-soft); color: var(--pj-crit) }
+:root .pj .fe-contador.warn { background: var(--pj-warn-soft); color: var(--pj-warn) }
+:root .pj .fe-contador.ok { background: var(--pj-ok-soft); color: var(--pj-ok) }
+:root .pj .fe-aba { border: 0px; border-radius: 10px; background: hsl(218 0.0% 15.2%); color: hsl(215 0.0% 68.1%) }
+:root .pj .fe-aba.crit { background: hsl(0 45.0% 16.1%); color: hsl(0 73.7% 70.0%) }
+:root .pj .fe-aba.warn { background: hsl(38 44.6% 16.8%); color: hsl(26 75.0% 70.0%) }
+:root .pj .fe-aba.on { box-shadow: currentcolor 0px 0px 0px 1.5px inset }
+:root .pj .fe-aba:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 2px }
+:root .pj .fe-aba .n { border-radius: 6px; color: rgb(255, 255, 255) }
+:root .pj .fe-aba.crit .n { background: rgb(239, 68, 68) }
+:root .pj .fe-aba.warn .n { background: rgb(245, 158, 11) }
+:root .pj .fe-tab .sc { border-radius: 8px }
+:root .pj .fe-comp { color: var(--pj-muted) }
+:root .pj .fe-corr.ok { color: var(--pj-ok) }
+:root .pj .fe-link { border: 0px; background: none; color: hsl(221 75.0% 70.0%); text-decoration: none }
+:root .pj .fe-link:hover { text-decoration: underline }
+:root .pj .fe-kebab-b { border: 0px; border-radius: 8px; background: transparent; color: var(--pj-muted) }
+:root .pj .fe-kebab-b:hover, :root .pj .fe-kebab-b[aria-expanded="true"] { background: var(--pj-surface2); color: var(--text) }
+:root .pj .fe-kebab-menu { background: hsl(0 0.0% 10.5%); border: 1px solid var(--pj-line); border-radius: 12px; box-shadow: hsl(222 47.4% 5.0% / 0.352) 0px 12px 30px }
+:root .pj .fe-kebab-menu a { border-radius: 8px; color: var(--text); text-decoration: none }
+:root .pj .fe-kebab-menu a:hover { background: hsl(220 0.0% 14.0%) }
+:root .pj .fe-hp td small { color: var(--pj-muted) }
+:root .pj .fe-hp tbody tr.sel td, :root .pj .fe-and tbody tr.sel td { background: var(--pj-accent-soft, hsl(217 31.0% 16.0%)) }
+:root .pj .fe-pend .al { border-radius: 0px 8px 8px 0px; background: hsl(220 0.0% 13.8%) }
+:root .pj .fe-pend .al .t { color: var(--pj-warn) }
+:root .pj .fe-pend .al.crit .t { color: var(--pj-crit) }
+:root .pj .fe-pend-mais { border: 0px; background: none; color: hsl(221 75.0% 70.0%) }
+:root .pj .fe-barra { border-radius: 6px; background: hsl(220 18.3% 17.0%) }
+:root .pj .fe-barra i, :root .pj .fe-barra b { border-radius: 6px }
+:root .pj .fe-barra i { background: hsl(220 19.9% 19.1%) }
+:root .pj .fe-barra b { background: rgb(57, 116, 93) }
+:root .pj .fe-vistas .fe-aba.on { background: var(--sidebar-bg); color: rgb(255, 255, 255); box-shadow: none }
+:root .pj .fe-fc td small { color: var(--pj-muted) }
+:root .pj .fe-fc tr.marcada td { background: var(--pj-accent-soft, hsl(217 31.0% 16.0%)) }
+:root .pj .fe-previa { border: 1px solid var(--pj-line); border-radius: 10px }
+:root .pj .fe-previa-cab { background: var(--pj-surface2); border-bottom: 1px solid var(--pj-line) }
+:root .pj .fe-previa-cab dt { color: var(--pj-muted) }
+:root .pj .fe-previa iframe { border: 0px; background: hsl(0 0.0% 10.5%) }
+:root .pj .fe-editor input, :root .pj .fe-editor textarea { border: 1px solid var(--pj-line); border-radius: 10px; background: var(--surface); color: var(--text) }
+:root .pj .fe-editor input:focus-visible, :root .pj .fe-editor textarea:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 1px }
+:root .pj .fe-chips { color: var(--pj-muted) }
+:root .pj .fe-chip { border: 1px solid var(--pj-line); border-radius: 999px; background: var(--pj-surface2); color: var(--text) }
+:root .pj .fe-chip:hover:not(:disabled) { border-color: var(--pj-accent); color: var(--pj-accent) }
+:root .pj .fe-dica { color: var(--pj-muted) }
+:root .pj .fe-fc-botoes a.fe-btn { text-decoration: none }
+:root .pj .fe-subabas .fe-aba { border: 1px solid var(--pj-line); background: var(--surface) }
+:root .pj .fe-subabas .fe-aba.on { background: var(--sidebar-bg); border-color: var(--sidebar-bg); color: rgb(255, 255, 255); box-shadow: none }
+:root .pj .fe-av { border-radius: 50%; background: hsl(218 45.0% 16.2%); color: hsl(221 75.0% 70.0%) }
+:root .pj .fe-os-toggle { border: 0px; background: none; color: var(--text) }
+:root .pj .fe-os-toggle:hover { color: var(--pj-accent) }
+:root .pj .fe-os-toggle:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 2px; border-radius: 6px }
+:root .pj .fe-fc tr.fe-det > td { background: hsl(210 20.0% 15.5%); border-top: 0px }
+:root .pj .fe-fc tr.marcada + tr.fe-det > td { background: var(--pj-accent-soft, hsl(217 31.0% 16.0%)) }
+:root .pj .fe-det-card { border: 1px solid var(--pj-line); border-radius: 12px; background: hsl(0 0.0% 10.5%) }
+:root .pj .fe-link.fe-fora { color: hsl(26 75.0% 70.0%) }
+:root .pj .fe-det-fora { border-color: rgb(245, 158, 11); background: hsl(48 45.0% 16.0%) }
+:root .pj .fe-opcao { border: 1px solid var(--pj-line); border-radius: 12px; background: hsl(0 0.0% 10.5%) }
+:root .pj .fe-opcao:hover:not(.off) { border-color: var(--pj-accent) }
+:root .pj .fe-opcao.on { border-color: var(--pj-accent); background: var(--pj-accent-soft, hsl(217 31.0% 16.0%)); box-shadow: 0 0 0 1px var(--pj-accent) }
+:root .pj .fe-opcao.off { background: var(--pj-surface2) }
+:root .pj .fe-opcao-corpo small { color: var(--pj-muted) }
+:root .pj .fe-resumo > div { border-bottom: 1px solid var(--pj-line) }
+:root .pj .fe-resumo > div:last-child { border-bottom: 0px }
+:root .pj .fe-resumo dt { color: var(--pj-muted) }
+:root .pj .msg.info { background: hsl(218 45.0% 16.2%); color: hsl(224 75.0% 70.0%) }
+:root .pj .fe-btn.amarelo { background: var(--primary); border-color: var(--primary); color: var(--on-primary) }
+:root .pj .fe-btn.amarelo:hover:not(:disabled) { background: var(--primary-hover); border-color: var(--primary-hover) }
+:root .pj .fe-btn.atencao { border-color: rgb(245, 158, 11); color: hsl(26 75.0% 70.0%); background: hsl(41 45.0% 16.2%) }
+:root .pj .fe-kebab-menu button { border: 0px; border-radius: 8px; background: none; color: var(--text) }
+:root .pj .fe-kebab-menu button:hover { background: hsl(220 0.0% 14.0%) }
+:root .pj .fe-selecao { background: hsl(0 0.0% 10.5%); border: 1px solid var(--pj-line); border-radius: 12px; box-shadow: hsl(222 47.4% 5.0% / 0.396) 0px 8px 28px }
+:root .pj .fe-selecao-info span { color: var(--pj-muted) }
+:root .pj .hp-topo p { color: var(--pj-muted) }
+:root .pj .hp-x { border: 0px; border-radius: 8px; background: transparent; color: var(--pj-muted) }
+:root .pj .hp-x:hover { background: var(--pj-surface2); color: var(--text) }
+:root .pj .hp-x:focus-visible, :root .pj .hp-os-cab:focus-visible { outline: 2px solid var(--pj-accent); outline-offset: 2px }
+:root .pj .hp-nums > div { border: 1px solid var(--pj-line); border-radius: 10px }
+:root .pj .hp-nums small { color: var(--pj-muted) }
+:root .pj .hp-nf { color: var(--pj-muted) }
+:root .pj .hp-nf b { color: var(--text) }
+:root .pj .hp-sec-t small, :root .pj .hp-ev-t small { color: var(--pj-muted) }
+:root .pj .hp-os { border: 1px solid var(--pj-line); border-radius: 12px; background: var(--surface) }
+:root .pj .hp-os.on { border-color: hsl(219 28.7% 30.0%) }
+:root .pj .hp-os-cab { border: 0px; background: none; color: inherit }
+:root .pj .hp-os-cab:hover { background: hsl(210 20.0% 15.5%) }
+:root .pj .hp-seta { color: var(--pj-muted) }
+:root .pj .hp-os-meta small, :root .pj .hp-os-h small { color: var(--pj-muted) }
+:root .pj .hp-os-corpo { border-top: 1px solid var(--pj-line); background: hsl(220 21.4% 15.3%) }
+:root .pj .hp-info small { color: var(--pj-muted) }
+:root .pj .hp-ev { border-bottom: 1px solid var(--pj-line) }
+:root .pj .hp-ev:last-of-type { border-bottom: 0px }
+:root .pj .hp-ev small { color: var(--pj-muted) }
+:root .pj .hp-dot { border-radius: 50%; background: var(--pj-accent, #2563eb) }
+:root .pj .hp-dot.com { background: rgb(180, 83, 9) }
+:root .fbia { border-top: 1px dashed rgba(15, 23, 42, 0.14) }
+:root .fbia-rot { color: var(--text-muted) }
+:root .fbia-b { border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text) }
+:root .fbia-b:hover:not(:disabled) { border-color: hsl(216 0.0% 30.8%) }
+:root .fbia-b:focus-visible, :root .fbia-sec:focus-visible, :root .fbia-pri:focus-visible { outline: rgb(51, 65, 85) solid 2px; outline-offset: 2px }
+:root .fbia-b.certo.on { background: var(--success-bg); border-color: var(--success-text); color: var(--success-text) }
+:root .fbia-b.errado.on { background: var(--danger-bg); border-color: var(--danger-text); color: var(--danger-text) }
+:root .fbia-b.obs.tem, :root .fbia-b.obs.on { background: hsl(219 34.0% 16.2%); border-color: hsl(220 24.7% 30.0%); color: hsl(224 64.3% 70.0%) }
+:root .fbia-ta { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text) }
+:root .fbia-ta:focus { outline: none; border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+:root .fbia-acoes small { color: var(--text-muted) }
+:root .fbia-sec, :root .fbia-pri { border-radius: 8px }
+:root .fbia-sec { border: 1px solid var(--border); background: var(--surface); color: var(--text) }
+:root .fbia-pri { border: 0px; background: var(--primary); color: var(--on-primary, hsl(215 0.0% 81.4%)) }
+:root .fbia-lida { border-left: 3px solid hsl(220 24.7% 30.0%); border-radius: 0px 6px 6px 0px; background: hsl(220 22.5% 22.3% / 0.14); color: var(--text) }
+:root .fbia-erro { color: var(--danger-text) }
+:root .fbia.compacto { border-top: 0px }
+@container (max-width: 1199px) {
+:root .mo:not(.com-painel) .ot-fin .ot-g > .c-sol::before, :root .mo:not(.com-painel) .ot-fin .ot-g > .c-cri::before { color: var(--text-muted) }
+}
+:root .nc-aviso { border-radius: 12px; background: var(--warning-bg); color: var(--warning-text) }
+:root .nos-conf .nos-rodape { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: hsl(222 47.4% 5.0% / 0.176) 0px -4px 18px }
+:root .nc-pend { color: var(--warning-text) }
+:root .nc-pend-link { border: 0px; background: none; color: hsl(221 75.0% 70.0%); text-decoration: underline }
+:root .nc-card { border-radius: 16px }
+:root .nc-cab p { color: var(--text-muted) }
+:root .nc-ico { border-radius: 50% }
+:root .nc-ico.ia, :root .nc-ico.resumo { background: hsl(45 45.0% 17.8%); color: hsl(42 75.0% 70.0%) }
+:root .nc-ico.duvida { background: hsl(219 45.0% 16.4%); color: hsl(221 75.0% 70.0%) }
+:root .nc-btn-rev { border-radius: 10px }
+:root .nc-aviso-txt { color: var(--warning-text) }
+:root .nc-cont { color: var(--text-muted) }
+:root .nc-rev { border-left: 4px solid var(--warning-text) }
+:root .nc-rev.ok { border-left-color: var(--success-text) }
+:root .nc-rev.crit { border-left-color: var(--danger-text) }
+:root .nc-sel { border-radius: 999px; background: var(--warning-bg); color: var(--warning-text) }
+:root .nc-sel.ok { background: var(--success-bg); color: var(--success-text) }
+:root .nc-sel.crit { background: var(--danger-bg); color: var(--danger-text) }
+:root .nc-resumo-ia { color: var(--text) }
+:root .nc-pontos li span:not(.nc-ponto-ico) { color: var(--text-muted) }
+:root .nc-ponto-ico { border-radius: 50%; background: var(--warning-bg); color: var(--warning-text) }
+:root .nc-rev.crit .nc-ponto-ico { background: hsl(0 41.3% 16.1%); color: rgb(224, 82, 74) }
+:root .nc-rev.ok .nc-ponto-ico { background: var(--success-bg); color: var(--success-text) }
+:root .nc-sug { border: 1px solid var(--border); border-radius: 12px; background: var(--surface) }
+:root .nc-sug.aplicada { border-color: hsl(135 21.5% 30.0%); background: hsl(130 25.0% 15.6%) }
+:root .nc-sug-seta { border: 0px; background: none; color: var(--text-muted) }
+:root .nc-tag { border-radius: 6px; background: hsl(216 0.0% 15.8%); color: hsl(215 0.0% 68.1%) }
+:root .nc-tag.ia { background: var(--success-bg); color: var(--success-text) }
+:root .nc-sug-t { color: var(--text-muted) }
+:root .nc-usar { border: 0px; border-radius: 10px; background: hsl(45 45.0% 17.8%); color: var(--primary-ink) }
+:root .nc-usar:hover { background: hsl(46 45.0% 19.7%) }
+:root .nc-sug-campo { color: var(--text-muted) }
+:root .nc-sug-ok { color: var(--success-text) }
+:root .nc-perguntas b { border-radius: 7px; background: hsl(45 45.0% 18.6%); color: hsl(39 75.0% 70.0%) }
+:root .nc-resumo { border-radius: 16px }
+:root .nc-res-grade { border-top: 1px solid var(--border-light, hsl(210 12.3% 22.3%)) }
+:root .nc-res-item { border-bottom: 1px solid var(--border-light, hsl(210 12.3% 22.3%)) }
+:root .nc-res-grade .nc-res-item:nth-child(2n) { border-left: 1px solid var(--border-light, hsl(210 12.3% 22.3%)) }
+:root .nc-res-ico { color: hsl(217 0.0% 74.0%) }
+:root .nc-res-corpo > small { color: var(--text-muted) }
+:root .nc-horas small { color: var(--text-muted) }
+:root .nc-chip { border-radius: 10px; background: hsl(45 45.0% 17.8%); color: hsl(39 75.0% 70.0%) }
+:root .nc-entregaveis { border-radius: 12px; background: hsl(216 0.0% 13.5%) }
+:root .nc-ciencia { border-radius: 12px; background: hsl(217 34.6% 16.3%); color: hsl(217 0.0% 74.0%) }
+:root .nc-ciencia-ico { color: var(--warning-text) }
+:root .nc-ciencia.ok .nc-ciencia-ico { color: rgb(22, 163, 74) }
+:root .nc-ciencia.falta .nc-ciencia-ico { color: var(--danger-text) }
+:root .nc-ciencia.falta { background: hsl(0 39.5% 15.9%); outline: 2px solid var(--danger-text); outline-offset: -2px }
+:root .nc-ciencia-erro { color: var(--danger-text) }
+:root .nc-link { border: 0px; background: none; color: hsl(221 75.0% 70.0%) }
+:root .nc-link:hover { text-decoration: underline }
+:root .nc-resumo.editando { box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 2px }
+:root .page.nos .nc-resumo .nc-ctl, :root .page.nos .nc-sug .nc-ctl { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); outline: none }
+:root .page.nos .nc-resumo .nc-ctl:focus, :root .page.nos .nc-sug .nc-ctl:focus { border-color: var(--primary); box-shadow: hsl(44 100.0% 5.0% / 0.6) 0px 0px 0px 3px }
+@media (max-width: 760px) {
+:root .nc-res-grade .nc-res-item:nth-child(2n) { border-left: 0px }
+}
+:root .area-seta { color: var(--text-muted) }
+:root .area-lista li.nova { color: var(--primary-ink) }
+:root .ap-opc { color: var(--text-muted) }
+:root .ap-ajuda { color: var(--text-muted) }
+:root .ap-input { border: 0px }
+:root .ap-input:focus-visible + .ap-zona, :root .ap-input:focus-visible + .ap-arquivo { outline: 2px solid var(--primary); outline-offset: 2px }
+:root .ap-zona { border: 1.5px dashed var(--border); border-radius: 12px; background: var(--surface); color: var(--text-muted) }
+:root .ap-zona.sobre { border-color: var(--primary); background: hsl(46 45.0% 16.2%) }
+:root .ap-arquivo { border: 1px solid var(--border); border-radius: 12px; background: var(--surface) }
+:root .ap-ico { border-radius: 10px; background: hsl(219 45.0% 16.4%); color: hsl(221 75.0% 70.0%) }
+:root .ap-nome small { color: var(--text-muted) }
+:root .ap-link { border: 0px; background: none; color: hsl(221 75.0% 70.0%) }
+:root .ap-link:hover:not(:disabled) { text-decoration: underline }
+:root .ap-link:disabled { color: var(--text-muted) }
+:root .ap-lendo { color: var(--primary-ink) }
+:root .ap-cartao { border-top: 1px solid hsl(46 41.6% 30.0%); border-right: 1px solid hsl(46 41.6% 30.0%); border-bottom: 1px solid hsl(46 41.6% 30.0%); border-image: none; border-left: 4px solid var(--primary); border-radius: 12px; background: hsl(46 45.0% 15.8%) }
+:root .ap-cartao.aviso { border-top-color: ; border-right-color: ; border-bottom-color: ; border-left-color: var(--warning-text); background: var(--warning-bg); color: var(--warning-text) }
+:root .ap-cartao.aplicada { border-top-color: hsl(135 21.5% 30.0%); border-right-color: hsl(135 21.5% 30.0%); border-bottom-color: hsl(135 21.5% 30.0%); border-left-color: var(--success-text); background: hsl(130 25.0% 15.6%) }
+:root .ap-cab p { color: var(--text-muted) }
+:root .ap-sel { border-radius: 50%; background: hsl(45 45.0% 17.8%); color: hsl(42 75.0% 70.0%) }
+:root .ap-bloco p { border-radius: 8px; background: var(--surface); border: 1px solid var(--border) }
+:root .ap-bloco ol, :root .ap-bloco ul { border-radius: 8px; background: var(--surface); border: 1px solid var(--border) }
+:root .ap-tag { border-radius: 6px; background: var(--success-bg); color: var(--success-text) }
+:root .ap-tag.neutro { background: hsl(216 0.0% 15.8%); color: hsl(215 0.0% 68.1%) }
+:root .ap-nota { color: var(--text-muted) }
+:root .ap-ok { color: var(--success-text) }
+:root .ap-aviso { color: var(--warning-text) }
+:root .pj .fe.cd .method { border-radius: 16px }
+:root .pj .fe.cd .ccard { border-radius: 16px }
+:root .pj .fe.cd .cc-head { border-left-width: 4px }
+:root .pj .fe.cd .day { border-radius: 10px }
+:root .pj .fe.cd .alerts .al { border-radius: 0px 8px 8px 0px }

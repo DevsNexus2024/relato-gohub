@@ -217,6 +217,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .icon-btn:disabled { opacity: .25; cursor: default; background: transparent; }
 .icon-btn:focus { outline: none; }
 .icon-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+#theme { margin-bottom: 2px; }
+#theme svg { transition: transform .35s cubic-bezier(.22, 1, .36, 1); }
+#theme:active svg { transform: rotate(-30deg) scale(.9); }
 #reload.loading svg { animation: spin .9s linear infinite; color: var(--accent); }
 #reload.attention { color: var(--danger); opacity: 1; }
 @keyframes spin { to { transform: rotate(360deg); } }

@@ -8,6 +8,9 @@ contextBridge.exposeInMainWorld('desk', {
   reload: () => ipcRenderer.send('tab:reload'),
   onTabState: (cb) => ipcRenderer.on('tab:state', (_e, s) => cb(s)),
   onActiveTab: (cb) => ipcRenderer.on('tab:active', (_e, id) => cb(id)),
+  onZoom: (cb) => ipcRenderer.on('zoom', (_e, z) => cb(z)),
+  onSkin: (cb) => ipcRenderer.on('skin', (_e, st) => cb(st)),
+  toggleTheme: () => ipcRenderer.send('skin:toggle-theme'),
   notes: {
     load: () => ipcRenderer.invoke('notes:load'),
     save: (data) => ipcRenderer.invoke('notes:save', data),

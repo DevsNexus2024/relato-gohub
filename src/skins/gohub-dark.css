@@ -1,0 +1,70 @@
+/* =============================================================================
+   Relato — tema escuro do GoHub (cinzas neutros puros, sem matiz)
+   As cores fixas do site são traduzidas em gohub-dark.gen.css (gerado);
+   aqui ficam a paleta principal e os ajustes finos.
+   ========================================================================== */
+
+html:root { color-scheme: dark; }
+
+:root:root:root {
+  --bg: #0f0f0f;
+  --surface: #171717;
+  --border: #2b2b2b;
+  --border-light: #212121;
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --neutral-bg: #1f1f1f;
+  --neutral-text: #a3a3a3;
+  --primary: #f4b400;
+  --primary-hover: #ffc629;
+  --primary-light: rgba(244, 180, 0, .14);
+  --primary-ink: #f6c445;
+  --on-primary: #141414;
+  --success-bg: rgba(17, 192, 66, .14);
+  --success-text: #4ade80;
+  --danger-bg: rgba(239, 68, 68, .15);
+  --danger-text: #f87171;
+  --warning-bg: rgba(245, 158, 11, .15);
+  --warning-text: #fbbf24;
+  --sidebar-bg: #0b0b0b;
+  --sidebar-text: #d4d4d4;
+  --sidebar-hover: rgba(244, 180, 0, .12);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, .55);
+  --relato-ring: 0 0 0 3px rgba(244, 180, 0, .35);
+  --gohub-graphite: #1c1c1c;
+}
+:root:root:root .page,
+:root:root:root .vg {
+  --vg-forest: #2a2a2a;
+  --vg-forest2: #bdbdbd;
+  --vg-gold: #d7b46a;
+}
+:root:root:root .pj {
+  --pj-surface2: #1c1c1c;
+  --pj-accent: #e0e0e0;
+  --pj-accent-soft: #262626;
+}
+
+:root body { background: var(--bg) !important; color: var(--text); }
+
+/* Aba ativa dos submenus usava grafite (sumia no escuro) */
+:root:root:root .sdash-sub button.on,
+:root:root:root .sdash-sub [aria-selected=true] { color: var(--text) !important; border-color: var(--primary) !important; }
+
+/* Campos no escuro: fundo "afundado", como no TCR v3 */
+:root .page.nos .field :is(input:not([type=checkbox]):not([type=radio]), select, textarea),
+:root .page.nos .nc-ctl,
+:root .page.nos .cs-btn { background-color: var(--bg) !important; }
+:root .page.nos .field input[type=search] + div { background: #0b0b0b !important; }
+:root .page.nos .field input[type=search] + div > label:hover { background: var(--neutral-bg); }
+:root .page.nos .nos-rodape { box-shadow: 0 -8px 28px rgba(0, 0, 0, .45); }
+:root .page.nos .nos-passos li:not(.atual):not(.feito) b { background: var(--bg); }
+:root select option { background: var(--surface); color: var(--text); }
+
+:root .page.nos .field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23cfcfcf' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* fins de semana/feriados um pouco mais escuros que os dias úteis */
+:root .cal-dia.fds { background: #121212 !important; }

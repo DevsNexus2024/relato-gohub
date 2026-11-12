@@ -1,0 +1,783 @@
+/* GERADO AUTOMATICAMENTE por scripts/gen-gohub-skin.js — fontes.
+   Não edite à mão: ajustes vão em gohub.css / gohub-dark.css. */
+html:root { font-size: 17px }
+:root body { font-size: 17px }
+:root .sidebar-logo span { font-size: 0.7rem }
+:root .sidebar-logo h1 { font-size: 1rem }
+:root .nav-label { font-size: 0.65rem }
+:root .nav-link { font-size: 0.875rem }
+:root .sidebar-footer { font-size: 0.75rem }
+@media (min-width: 769px) {
+:root .sidebar.recolhida .nav-count { font-size: 0.6rem }
+}
+:root .page-title { font-size: 1.4rem }
+:root .page-subtitle { font-size: 0.85rem }
+:root .btn { font-size: 0.875rem }
+:root .btn-sm { font-size: 0.8rem }
+:root .card-title { font-size: 0.8rem }
+:root .badge { font-size: 0.75rem }
+:root table { font-size: 0.875rem }
+:root thead th { font-size: 0.72rem }
+:root input.filter.dp-input { font-size: 0.875rem }
+:root .dp-head { font-size: 0.875rem }
+:root .dp-head button { font-size: 1.1rem }
+:root .dp-dow { font-size: 0.7rem }
+:root .dp-dia { font-size: 0.8rem }
+:root .dp-foot button { font-size: 0.8rem }
+@supports (appearance: base-select) {
+:root select option { font-size: 0.875rem }
+}
+:root .pagination { font-size: 0.85rem }
+:root .pagination button { font-size: 0.85rem }
+:root .field label { font-size: 0.8rem }
+:root .field input, :root .field select, :root .field textarea { font-size: 0.875rem }
+:root .field .error { font-size: 0.78rem }
+:root .form-section-title { font-size: 0.8rem }
+:root .etapas-contagem { font-size: 0.85rem }
+:root .etapas-passo { font-size: 0.78rem }
+:root .etapas-passo b { font-size: 0.7rem }
+:root .detail-label { font-size: 0.72rem }
+:root .detail-value { font-size: 0.9rem }
+:root .timeline-meta { font-size: 0.78rem }
+:root .modal h3 { font-size: 1rem }
+:root .empty-state .icon { font-size: 2.5rem }
+:root .empty-state p { font-size: 0.9rem }
+:root .alert { font-size: 0.875rem }
+:root .sessao-aviso { font-size: 0.875rem }
+:root .login-title { font-size: 1.25rem }
+:root .login-subtitle { font-size: 0.85rem }
+:root .login-hint { font-size: 0.78rem }
+:root .user-badge-role { font-size: 0.62rem }
+:root .user-badge-name { font-size: 0.8rem }
+:root .user-badge-email { font-size: 0.7rem }
+:root .user-badge button { font-size: 0.78rem }
+@media (max-width: 768px) {
+:root .mobile-title { font-size: 0.95rem }
+}
+:root .vg-link { font-size: 0.78rem }
+:root .vg-chip { font-size: 0.78rem }
+:root .vg-card-head h3 { font-size: 1.2rem }
+:root .vg-card-head small { font-size: 0.76rem }
+:root .vg-tab { font-size: 0.76rem }
+:root .vg-th { font-size: 0.68rem }
+:root .vg-cell-item b, :root .vg-cell-msg strong { font-size: 0.85rem }
+:root .vg-cell-item small, :root .vg-cell-msg small { font-size: 0.74rem }
+:root .vg-cell-nivel em { font-size: 0.74rem }
+:root .vg-pill { font-size: 0.74rem }
+:root .vg-badge { font-size: 0.72rem }
+:root .vg-ringbox-t span { font-size: 0.72rem }
+:root .vg-ringbox-t small { font-size: 0.68rem }
+:root .vg-metrics span { font-size: 0.68rem }
+:root .vg-metrics small { font-size: 0.74rem }
+:root .vg-pend-total span { font-size: 0.8rem }
+:root .vg-pend-row { font-size: 0.82rem }
+:root .vg-insight-txt { font-size: 0.9rem }
+:root .vg-mod-name b { font-size: 0.85rem }
+:root .vg-mod-name small { font-size: 0.74rem }
+:root .vg-empty { font-size: 0.85rem }
+:root .vg-actitem b { font-size: 0.82rem }
+:root .vg-actitem small, :root .vg-actitem time { font-size: 0.74rem }
+:root .kb-sum span { font-size: 0.85rem }
+:root .kb-sum small { font-size: 0.78rem }
+:root .kb-mini span { font-size: 0.68rem }
+:root .kb-mini small { font-size: 0.74rem }
+:root .kb-col-head { font-size: 0.82rem }
+:root .kb-card p { font-size: 0.76rem }
+:root .kb-tag { font-size: 0.7rem }
+:root .kb-mais { font-size: 0.72rem }
+:root .kb-detalhes { font-size: 0.74rem }
+:root .kb-card-foot { font-size: 0.74rem }
+:root .kb-own { font-size: 0.7rem }
+:root .kb-resp .resp-btn { font-size: 0.72rem }
+:root .kb-move { font-size: 0.72rem }
+:root .kb-empty { font-size: 0.76rem }
+:root .pf-user b { font-size: 1.05rem }
+:root .pf-user span { font-size: 0.85rem }
+:root .pf-section h3 { font-size: 1.05rem }
+:root .pf-section > p { font-size: 0.82rem }
+:root .pf-row b { font-size: 0.9rem }
+:root .pf-row small { font-size: 0.78rem }
+:root .pf-nivel { font-size: 0.8rem }
+:root .cf-h { font-size: 1.05rem }
+:root .cf-legend { font-size: 0.85rem }
+:root .cf-note { font-size: 0.8rem }
+:root .cf-chip { font-size: 0.8rem }
+:root .cf-user-id b { font-size: 0.92rem }
+:root .cf-user-id small { font-size: 0.76rem }
+:root .cf-ativo { font-size: 0.82rem }
+:root .cf-mod span { font-size: 0.72rem }
+:root .mn-note { font-size: 0.8rem }
+:root .mn-modelo-head h3 { font-size: 1.05rem }
+:root .mn-modelo-head small { font-size: 0.78rem }
+:root .mn-chip { font-size: 0.72rem }
+:root .mn-versao { font-size: 0.85rem }
+:root .mn-versao-info { font-size: 0.76rem }
+:root .mn-campos legend { font-size: 0.8rem }
+:root .mn-campos-grid span, :root .mn-field span { font-size: 0.7rem }
+:root .mn-meta { font-size: 0.8rem }
+:root .mn-doc-bar label { font-size: 0.8rem }
+:root .mn-doc-bar small { font-size: 0.76rem }
+:root .mn-dirty { font-size: 0.8rem }
+:root .mn-side h3 { font-size: 0.95rem }
+:root .form-control { font-size: 0.875rem }
+:root .form-group > label { font-size: 0.8rem }
+:root .cf-prazos span { font-size: 0.72rem }
+:root .sd-back { font-size: 0.9rem }
+:root .sd-title h1 { font-size: 1.6rem }
+:root .sd-meta { font-size: 0.85rem }
+:root .sd-tab { font-size: 0.92rem }
+:root .sd-kpi small { font-size: 0.72rem }
+:root .sd-kpi b { font-size: 0.95rem }
+:root .sd-card h3 { font-size: 1.05rem }
+:root .sd-vazio { font-size: 0.875rem }
+:root .sd-dl small { font-size: 0.72rem }
+:root .sd-dl span { font-size: 0.9rem }
+:root .sd-log { font-size: 0.9rem }
+:root .sd-log small { font-size: 0.78rem }
+:root .sd-log small.sd-log-obs { font-size: 0.85rem }
+:root .sd-link { font-size: 0.88rem }
+:root .sd-form label { font-size: 0.8rem }
+:root .sd-form select, :root .sd-form input, :root .sd-form textarea { font-size: 0.9rem }
+:root .sd-log small.sd-log-publica { font-size: 0.72rem }
+:root .sd-aviso { font-size: 0.82rem }
+:root .sd-card.pj > .pn-sec .pn-sec-t b { font-size: 1.05rem }
+@media (max-width: 560px) {
+:root .sd-title h1 { font-size: 1.3rem }
+}
+:root .kb-item-nivel em { font-size: 0.82rem }
+:root .kb-item-main strong { font-size: 1.05rem }
+:root .kb-item-main small { font-size: 0.8rem }
+:root .kb-item-col small, :root .kb-item-data small { font-size: 0.72rem }
+:root .kb-item-col b { font-size: 0.9rem }
+:root .kb-item-data b { font-size: 0.9rem }
+:root .kb-item-seta { font-size: 1.4rem }
+:root .resp-btn { font-size: 0.88rem }
+:root .resp-btn em { font-size: 0.75rem }
+:root .resp-menu-titulo { font-size: 0.68rem }
+:root .resp-op { font-size: 0.9rem }
+:root .resp-vazio { font-size: 0.85rem }
+:root .cg-busca input[type="search"] { font-size: 1rem }
+:root .cg-arq { font-size: 0.82rem }
+:root .cg-chip { font-size: 0.82rem }
+:root .cg-item-tipo { font-size: 0.7rem }
+:root .cg-item-main small, :root .cg-item-data { font-size: 0.78rem }
+:root .cg-item-id, :root .cg-mono { font-size: 0.78rem }
+:root .cg-pag { font-size: 0.82rem }
+:root .cg-selo { font-size: 0.74rem }
+:root .cg-head h2 { font-size: 1.45rem }
+:root .cg-head p { font-size: 0.9rem }
+:root .cg-aba { font-size: 0.95rem }
+:root .cg-kpi small { font-size: 0.78rem }
+:root .cg-kpi b { font-size: 1.05rem }
+:root .cg-resumo-dados small { font-size: 0.74rem }
+:root .cg-nota { font-size: 0.76rem }
+:root .cg-tempo p { font-size: 0.88rem }
+:root .pt-nota { font-size: 0.85rem }
+:root .pt-nota-meta { font-size: 0.74rem }
+:root .cg-ph3a-hist { font-size: 0.85rem }
+:root .sdash-card > p { font-size: 0.76rem }
+:root .sdash-tip { font-size: 0.7rem }
+:root .sdash-leg { font-size: 0.72rem }
+:root .sdash-bar { font-size: 0.78rem }
+:root .sdash-bar b small { font-size: 0.68rem }
+:root .sdash-nota { font-size: 0.74rem }
+:root .sdash-cmp span { font-size: 0.64rem }
+:root .sdash-sub button { font-size: 0.8rem }
+:root .sdash-aten b { font-size: 0.82rem }
+:root .sdash-aten small { font-size: 0.72rem }
+:root .sdash-aten em { font-size: 0.68rem }
+:root .as-brief-cap { font-size: 0.6rem }
+:root .as-brief h3 { font-size:  }
+:root .as-brief p { font-size: 0.9rem }
+:root .as-brief-side small { font-size: 0.75rem }
+:root .as-kpi .cap { font-size: 0.62rem }
+:root .as-kpi b { font-size: 1.75rem }
+:root .as-kpi small { font-size: 0.78rem }
+:root .as-quick .tit { font-size: 0.65rem }
+:root .as-chip { font-size: 0.72rem }
+:root .as-quick .meta { font-size: 0.72rem }
+:root .as-badge { font-size: 0.7rem }
+:root .as-sub { font-size: 0.72rem }
+:root .as-dhead .close { font-size: 1.6rem }
+:root .as-sbox small { font-size: 0.6rem }
+:root .as-sbox b { font-size: 0.9rem }
+:root .as-sec h4 { font-size: 0.85rem }
+:root .as-signer select { font-size: 0.68rem }
+:root .as-hint { font-size: 0.78rem }
+:root .as-tl > div { font-size: 0.85rem }
+:root .cf-grupo-nome { font-size: 1.35rem }
+:root .cf-ok { font-size: 0.85rem }
+:root .cf-logs { font-size: 0.85rem }
+:root .cf-logs th { font-size: 0.72rem }
+:root .cf-logs td small { font-size: 0.74rem }
+:root .cf-rota { font-size: 0.76rem }
+:root .gs-eixo { font-size: 0.72rem }
+:root .etq { font-size: 0.75rem }
+:root .etq button { font-size: inherit }
+:root .ph3a-bloco h4 { font-size: 0.78rem }
+:root .ph3a-rotulo { font-size: 0.75rem }
+:root .ph3a-valor { font-size: 0.9rem }
+:root .ph3a-res .table-wrap table { font-size: 0.85rem }
+:root .page-title { font-size: 1.45rem }
+:root .page-subtitle { font-size: 0.84rem }
+:root .sd-tab { font-size: 0.8rem }
+:root .sd-title h1 { font-size: 1.45rem }
+:root .sidebar-logo h1 { font-size: 0.9rem }
+:root .brand span { font-size: 0.62rem }
+:root .login-title { font-size: 1.8rem }
+:root .brand span { font-size: 0.72rem }
+:root .carregando b { font-size: 0.95rem }
+:root .carregando span { font-size: 0.82rem }
+:root .carregando.compacto b { font-size: 0.85rem }
+:root .carregando.compacto span { font-size: 0.76rem }
+:root .pg .fb-btn { font-size: 0.82rem }
+:root .pj h2, :root .pj h3 { font-size: 18.21px }
+:root .pj .eyebrow { font-size: 13.36px }
+:root .pj .proto { font-size: 15.79px }
+:root .pj .pill { font-size: 14.57px }
+:root .pj .p-evid::before { font-size: 13.36px }
+:root .pj .p-evid-st { font-size: 13.36px }
+:root .pj .sc { font-size: 14.57px }
+:root .pj .b { font-size: 15.79px }
+:root .pj input:not([type="checkbox"]), :root .pj select, :root .pj textarea { font-size: 15.79px }
+:root .pj .filters label { font-size: 13.36px }
+:root .pj .filters .chk { font-size: 15.79px }
+:root .pj .chipf { font-size: 14.57px }
+:root .pj .kpi .v { font-size: 31.57px }
+:root .pj .kpi .s { font-size: 14.57px }
+:root .pj .kpi-bar .v { font-size: 31.57px }
+:root .pj .kpi-bar .s { font-size: 14.57px }
+:root .pj table { font-size: 15.79px }
+:root .pj th { font-size: 13.36px }
+:root .pj td .sub { font-size: 14.57px }
+:root .pj .bk { font-size: 14.57px }
+:root .pj .scale { font-size: 14.57px }
+:root .pj .al { font-size: 15.79px }
+:root .pj .cmp .ln { font-size: 15.79px }
+:root .pj .legend { font-size: 14.57px }
+:root .pj .flag { font-size: 13.36px }
+:root .pj details.ia { font-size: 14.57px }
+:root .pj .c-head .who .sub { font-size: 14.57px }
+:root .pj .fact .k { font-size: 13.36px }
+:root .pj .fact .v { font-size: 15.79px }
+:root .pj .fact .v.big { font-size: 24.29px }
+:root .pj .scope .txt { font-size: 15.79px }
+:root .pj .ia-box { font-size: 15.79px }
+:root .pj .people { font-size: 15.79px }
+:root .pj .sel { font-size: 14.57px }
+:root .pj .dec label, :root .pj .dec4 label, :root .pj .altbox label { font-size: 13.36px }
+:root .pj .hint { font-size: 14.57px }
+:root .pj .confirm { font-size: 15.79px }
+:root .pj .state { font-size: 15.79px }
+:root .pj .evid a { font-size: 15.79px }
+:root .pj .msg { font-size: 15.79px }
+:root .pj .bulk { font-size: 15.79px }
+:root .pj .toast { font-size: 15.79px }
+:root .pj footer.nota { font-size: 14.57px }
+:root .pj .method { font-size: 15.79px }
+:root .pj .stat .k { font-size: 13.36px }
+:root .pj .stat .v { font-size: 21.86px }
+:root .pj .c-body h3 { font-size: 14.57px }
+:root .pj .day summary { font-size: 15.79px }
+:root .pj .day li { font-size: 15.79px }
+:root .pj .day li .d { font-size: 14.57px }
+:root .pj .tag { font-size: 13.36px }
+:root .pj .eval { font-size: 15.79px }
+:root .pj .chip { font-size: 14.57px }
+:root .pj .lane-h { font-size: 15.79px }
+:root .pj .n span { font-size: 14.57px }
+:root .pj .step, :root .pj .decision { font-size: 15.79px }
+:root .pj .step .tag-l { font-size: 13.36px }
+:root .pj .step h3 { font-size: 17px }
+:root .pj .mail { font-size: 14.57px }
+:root .pj .hintbox { font-size: 14.57px }
+:root .pj .br { font-size: 15.79px }
+:root .pj .br .end { font-size: 14.57px }
+:root .pj .kpi .eyebrow { font-size: 0.64rem }
+:root .pj .kpi .v { font-size: 1.35rem }
+:root .pj .eyebrow { font-size: 0.72rem }
+:root .pj th { font-size: 0.72rem }
+:root .pj h2 { font-size: 1.1rem }
+:root .pj .pill { font-size: 0.75rem }
+:root .pj .b { font-size: 0.85rem }
+:root .pj .kpi-bar .v { font-size: 1.35rem }
+:root .pj .filters label { font-size: 0.64rem }
+:root .pj input:not([type="checkbox"]), :root .pj select, :root .pj textarea { font-size: 0.85rem }
+:root .pj .eyebrow, :root .pj th, :root .pj .kpi .eyebrow, :root .pj .filters label, :root .pj .dec label, :root .pj .dec4 label, :root .pj .altbox label, :root .pj .fact .k, :root .pj .stat .k, :root .pj .step .tag-l, :root .pj .c-body h3 { font-size: var(--t-rot) }
+:root .pj .tag, :root .pj .flag { font-size: var(--t-rot) }
+:root .pj td .sub, :root .pj .kpi .s, :root .pj .kpi-bar .s, :root .pj .legend, :root .pj .scale, :root .pj .hint, :root .pj .mail, :root .pj .hintbox, :root .pj footer.nota, :root .pj .br .end, :root .pj .bk, :root .pj .sel, :root .pj .chip, :root .pj .chipf, :root .pj .pill, :root .pj .sc, :root .pj .day li .d, :root .pj .c-head .who .sub, :root .pj details.ia, :root .pj .n span { font-size: var(--t-apoio) }
+:root .pj table, :root .pj .proto, :root .pj .b, :root .pj .msg, :root .pj .al, :root .pj .confirm, :root .pj .state, :root .pj .bulk, :root .pj .toast, :root .pj .people, :root .pj .method, :root .pj .step, :root .pj .decision, :root .pj .br, :root .pj .eval, :root .pj .cmp .ln, :root .pj .fact .v, :root .pj .scope .txt, :root .pj .ia-box, :root .pj .day summary, :root .pj .day li, :root .pj .evid a, :root .pj .lane-h, :root .pj input:not([type="checkbox"]), :root .pj select, :root .pj textarea, :root .pj .filters .chk { font-size: var(--t-texto) }
+:root .pj .stat .v, :root .pj .fact .v.big { font-size: 1.1rem }
+:root .pj h2 { font-size: var(--t-titulo) }
+:root .pj h3, :root .pj .step h3 { font-size: 0.95rem }
+:root .pj .kpi .v, :root .pj .kpi-bar .v { font-size: var(--t-num) }
+:root .fb-busca input { font-size: 0.82rem }
+:root .fb-sel { font-size: 0.82rem }
+:root .fb-btn { font-size: 0.82rem }
+:root .fb-ativos-t { font-size: 0.8rem }
+:root .fb-chip { font-size: 0.78rem }
+:root .fb-chip button { font-size: 1rem }
+:root .fb-limpar-todos { font-size: 0.8rem }
+:root .pj.compacto .c-head strong { font-size: 0.92rem }
+:root .pj.compacto .pill { font-size: 0.7rem }
+:root .pj.compacto .fact .k, :root .pj.compacto .dec label { font-size: 0.64rem }
+:root .pj.compacto .fact .v, :root .pj.compacto .scope .txt { font-size: 0.8rem }
+:root .pj.compacto .fact .v.big { font-size: 0.9rem }
+:root .pj.compacto .alert, :root .pj.compacto .al { font-size: 0.75rem }
+:root .pj.compacto .dec select, :root .pj.compacto .dec input, :root .pj.compacto .dec textarea { font-size: 0.8rem }
+:root .pj.compacto .dec button, :root .pj.compacto .dec .btn { font-size: 0.78rem }
+:root .pj.compacto .c-head strong { font-size: 0.85rem }
+:root .pj.compacto .c-head .who .sub { font-size: 0.7rem }
+:root .pj.compacto .fact .k { font-size: 0.6rem }
+:root .pj.compacto .fact .v, :root .pj.compacto .fact .v.big { font-size: 0.76rem }
+:root .pj.compacto .scope .txt { font-size: 0.74rem }
+:root .pj.compacto .alert, :root .pj.compacto .al { font-size: 0.7rem }
+:root .pj.compacto .dec label { font-size: 0.58rem }
+:root .pj.compacto .dec button, :root .pj.compacto .dec .btn { font-size: 0.74rem }
+:root .pj.compacto .queue > .card > div[style] > div[style] > .alert { font-size: 0.7rem !important }
+:root .pj.compacto .c-head .os-id { font-size: 0.74rem }
+:root .pj.compacto .c-head .os-h { font-size: 0.8rem }
+:root .pj.compacto .cols-h { font-size: 0.64rem }
+:root .pj.compacto .c-row { font-size: 0.8rem }
+:root .pj.compacto .c-row .who .sub { font-size: 0.68rem }
+:root .pj.compacto .c-row .mono { font-size: 0.74rem }
+:root .pj.compacto .cols-h { font-size: 0.78rem }
+:root .pj.compacto .acts-sel select { font-size: 0.78rem }
+:root .pj.compacto .acts-sel { font-size: 0.78rem }
+:root .pj.compacto .acts-sel select { font-size: 0.88rem }
+:root .dica i { font-size: 0.6rem }
+:root .dica::after { font-size: 0.74rem }
+:root .pj.compacto .dec > label, :root .pj.compacto .acts-sel { font-size: 0.78rem }
+:root .pj.compacto .dec select, :root .pj.compacto .dec textarea, :root .pj.compacto .acts-sel select { font-size: 0.88rem }
+:root .pj.compacto .dec .b, :root .pj.compacto .dec button { font-size: 0.84rem }
+:root .pj.compacto .dec small { font-size: 0.74rem }
+:root .fb-f > span { font-size: 0.68rem }
+:root .fb-f select { font-size: 0.84rem }
+:root .fb-periodo input { font-size: 0.84rem }
+:root .fb-ord { font-size: 0.8rem }
+:root .fb-ord select { font-size: 0.82rem }
+:root .pj .ot { font-size: 0.8rem }
+:root .pj .ot th { font-size: 0.74rem }
+:root .pj .ot-pess small { font-size: 0.68rem }
+:root .pj .ot-av { font-size: 0.66rem }
+:root .pj .ot-ord { font-size: 0.72rem }
+:root .pj .ot-seta { font-size: 0.95rem }
+:root .pj .ot-escopo .k { font-size: 0.72rem }
+:root .pj .ot-escopo p { font-size: 0.8rem }
+:root .pj .ot-obs { font-size: 0.8rem }
+:root .pj .ot-abas button { font-size: 0.8rem }
+:root .pj .ot-com { font-size: 0.8rem }
+:root .pj .ot-vazio { font-size: 0.8rem }
+:root .pj .ot-novo input { font-size: 0.84rem }
+:root .pj .ot-nota { font-size: 0.7rem }
+:root .pj .ot { font-size: 0.8rem }
+:root .pj .ot td, :root .pj .ot th { font-size: 0.8rem }
+:root .pj .ot th { font-size: 0.74rem }
+:root .pj .ot .pill { font-size: 0.72rem }
+:root .pj.compacto .ot-det .dec select { font-size: 0.84rem }
+:root .pj.compacto .ot-det .confirm { font-size: 0.8rem }
+:root .pj.compacto .ot-det .confirm strong { font-size: 0.84rem }
+:root .pj .ot .ot-av { font-size: 0.62rem }
+:root .pj .ot-escopo .k { font-size: 0.72rem }
+:root .pj .ot-escopo p { font-size: 0.76rem }
+:root .pj .ot-cab { font-size: 0.76rem }
+:root .pj .ot-topo { font-size: 0.8rem }
+:root .pj-pag .alert { font-size: 0.78rem }
+:root .pj-pag .sdash-sub button { font-size: 0.8rem }
+:root .pj-pag .fb-f select { font-size: 0.8rem }
+:root .pj .ot-criada small { font-size: 0.68rem }
+:root .pj.compacto .ot-det-in .dec select { font-size: 0.84rem }
+:root .pj.compacto .ot-det-in .confirm { font-size: 0.8rem }
+:root .pj .ot-cab { font-size: 0.8rem }
+:root .pj .ot-escopo p { font-size: 0.78rem }
+:root .pj .ot-mais { font-size: 0.76rem }
+:root .cal-titulo { font-size: 1.15rem }
+:root .cal-sub { font-size: 0.78rem }
+:root .cal-nav strong { font-size: 0.9rem }
+:root .cal-nav .fb-btn { font-size: 1.1rem }
+:root .cal-resumo { font-size: 0.8rem }
+:root .cal-sem { font-size: 0.76rem }
+:root .cal-num { font-size: 0.86rem }
+:root .sl { font-size: 0.66rem }
+:root .cal-qtd { font-size: 0.7rem }
+:root .cal-chip { font-size: 0.72rem }
+:root .cal-chips small { font-size: 0.68rem }
+:root .cal-rodape { font-size: 0.68rem }
+:root .cal-detalhe h3 { font-size: 0.95rem }
+:root .cal-vazio { font-size: 0.82rem }
+:root .cal-item { font-size: 0.84rem }
+:root .cal-feriado { font-size: 0.66rem }
+:root .gt-cab { font-size: 0.72rem }
+:root .gt-rot { font-size: 0.8rem }
+:root .pj .pc-abas button { font-size: 0.86rem }
+:root .pj .pc-topo h3 { font-size: 1.05rem }
+:root .pj .pc-topo p { font-size: 0.84rem }
+:root .pj .pc-campos .k { font-size: 0.68rem }
+:root .pj .pc-campos .v { font-size: 0.92rem }
+:root .pj .pc-obs { font-size: 0.82rem }
+:root .pj .pc-det summary { font-size: 0.84rem }
+:root .pj .pc-det p { font-size: 0.82rem }
+:root .pj .pc-rodape { font-size: 0.78rem }
+:root .pj .cal-num b { font-size: 0.86rem }
+:root .pj .cc-topo h4 { font-size: 0.98rem }
+:root .pj .cc-grade label, :root .pj .cc-campo { font-size: 0.78rem }
+:root .pj .cc-ro { font-size: 0.95rem }
+:root .pj .cc-prog { font-size: 0.78rem }
+:root .pj .cc-prog b { font-size: 0.95rem }
+:root .pj .cc-lista legend { font-size: 0.78rem }
+:root .pj .cc-chk { font-size: 0.84rem }
+:root .pj .cc textarea, :root .pj .cc-add input:not([type="file"]), :root .pj .cc-add select { font-size: 0.84rem }
+:root .pj .cc-ev { font-size: 0.82rem }
+:root .pj .ot-ia { font-size: 0.78rem }
+:root .ac { font-size: 0.8rem }
+:root .ac b { font-size: 0.84rem }
+:root .ac-metricas small { font-size: 0.68rem }
+@container (max-width: 980px) {
+:root .pj .ot-topo, :root .pj .ot-cab { font-size: 0.72rem }
+:root .pj .ot-av { font-size: 0.58rem }
+:root .pj .ot-topo .pill { font-size: 0.66rem }
+}
+:root .pn { font-size: 0.8rem }
+:root .pn h3 { font-size: 1.05rem }
+:root .pn-x { font-size: 1.5rem }
+:root .pn-av { font-size: 0.9rem }
+:root .pn-sec-t .fb-btn { font-size: 0.76rem }
+:root .pn-info .k { font-size: 0.68rem }
+:root .pn-sinal > span:last-child { font-size: 0.74rem }
+:root .pn-chk { font-size: 0.78rem }
+:root .pn-chk-l small { font-size: 0.72rem }
+:root .pn-i { font-size: 0.6rem }
+:root .pn-obs { font-size: 0.74rem }
+:root .pn-obs textarea { font-size: 0.8rem }
+:root .mo.com-painel .pj .ot-topo, :root .mo.com-painel .pj .ot-cab { font-size: 0.76rem }
+:root .pn .confirm { font-size: 0.78rem }
+:root .pn-ia-topo span { font-size: 0.7rem }
+:root .pn-ia-t { font-size: 0.88rem }
+:root .pn-ia ul { font-size: 0.78rem }
+:root .pn-chave small { font-size: 0.66rem }
+:root .pn-chave b { font-size: 0.8rem }
+:root .pn-txt .k { font-size: 0.66rem }
+:root .pn-txt p { font-size: 0.78rem }
+:root .pn-ver { font-size: 0.74rem }
+:root .pn-abrir { font-size: 0.72rem }
+:root .fb-barra .fb-ord select { font-size: 0.84rem }
+:root .pj .ot-pop { font-size: 0.8rem }
+:root .pj .ot-pop b { font-size: 0.86rem }
+:root .pj .ot-pop .ot-pop-l { font-size: 0.78rem }
+:root .pj.kb-dec { font-size: 0.86rem }
+:root .pj.kb-dec .ot-pop-l { font-size: 0.78rem }
+:root .pj.kb-dec .ot-pop-sec small:not(.hp-t) { font-size: 0.74rem }
+:root .pj .ot-g .ot-pop small:not(.hp-t), :root .pj .ot-pop small:not(.hp-t) { font-size: 0.72rem }
+:root .pg-num button { font-size: 0.84rem }
+:root .pg-info { font-size: 0.76rem }
+:root .pj .ot-ia-col ul { font-size: 0.76rem }
+:root .pj .cp-dica { font-size: 0.76rem }
+:root .pj .cp-nota { font-size: 0.8rem }
+:root .pj .cp-add select, :root .pj .cp-add input, :root .pj .cp-add textarea { font-size: 0.82rem }
+:root .ei-n { font-size: 0.72rem }
+:root .ei-x { font-size: 1.2rem }
+:root .ei-mais { font-size: 1.4rem }
+:root .pj .ve-dica { font-size: 0.74rem }
+:root .pj .ve-tab { font-size: 0.78rem }
+:root .pj .ve-tab th { font-size: 0.68rem }
+:root .pj .ve-g { font-size: 0.72rem }
+:root .pj .cp-nota .cp-txt, :root .pj .cc-ev .cc-ev-t { font-size: 0.8rem }
+:root .pj .cp-nota > .b, :root .pj .cc-ev > .b { font-size: 0.74rem }
+:root .pj .cp-pend > b { font-size: 0.8rem }
+:root .pj .cp-ok { font-size: 0.82rem }
+:root .pj .cp-pend-i { font-size: 0.8rem }
+:root .pj .cp-pend-m .b { font-size: 0.74rem }
+:root .pj .hp-sel option { font-size: 0.76rem }
+:root .pj .hp-t { font-size: 0.72rem }
+:root .kb-card .kb-status { font-size: 0.72rem }
+:root .kb-card .kb-status .kb-status-seta { font-size: 0.62rem }
+:root .kb-ia { font-size: 0.72rem }
+:root .kb-ia b { font-size: 0.72rem }
+:root .cs-rot { font-size: 0.68rem }
+:root .cs-val { font-size: 0.84rem }
+:root .cs-lista li { font-size: 0.84rem }
+:root .cs-lista li b { font-size: 0.8rem }
+:root .cs-lista li.cs-busca input { font-size: 0.84rem }
+:root .cs-simples .cs-val { font-size: 0.84rem }
+:root .fb-barra .fb-ord { font-size: 0.8rem }
+:root .pn-resumo2 small { font-size: 0.7rem }
+:root .pn-resumo2 b { font-size: 1.15rem }
+:root .pn-conf { font-size: 0.8rem }
+:root .pn-conf textarea { font-size: 0.8rem }
+:root .pn-resumo2 .cs-val { font-size: 0.82rem }
+:root .pj.co { font-size: 0.8rem }
+:root .pj .co-t { font-size: 0.88rem }
+:root .pj .co-item small { font-size: 0.72rem }
+:root .pj .co-form label { font-size: 0.74rem }
+:root .pj .co-form textarea, :root .pj .co-form select { font-size: 0.82rem }
+:root .pj .co-aviso { font-size: 0.76rem }
+:root .pj .co-form .co-ajuda { font-size: 0.72rem }
+:root .pj .dsh-kpi b { font-size: 1.8rem }
+:root .pj .dsh-kpi small { font-size: 0.76rem }
+:root .pj .dsh-kpis.compactos .dsh-kpi b { font-size: 1.2rem }
+:root .pj .dsh-kpis.compactos .dsh-kpi .eyebrow { font-size: 0.66rem }
+:root .pj .dsh-kpis.compactos .dsh-kpi small { font-size: 0.7rem }
+:root .pj .dsh-grande { font-size: 2rem }
+:root .pj .dsh-sub { font-size: 0.78rem }
+:root .pj .dsh-cab-dir { font-size: 0.76rem }
+:root .pj .dsh-limite em { font-size: 0.66rem }
+:root .pj .dsh-x b { font-size: 0.72rem }
+:root .pj .dsh-x small { font-size: 0.62rem }
+:root .pj .dsh-balao { font-size: 0.72rem }
+:root .pj .dsh-lado small { font-size: 0.76rem }
+:root .pj .dsh-lado b { font-size: 1.9rem }
+:root .pj .dsh-trend { font-size: 0.72rem }
+:root .pj .dsh-t b { font-size: 1rem }
+:root .pj .dsh-t small { font-size: 0.74rem }
+:root .pj .dsh-prog-rot { font-size: 0.76rem }
+:root .pj .dsh-dica b { font-size: 1rem }
+:root .pj .dsh-dica b small { font-size: 0.7rem }
+:root .pj .dsh-dica ul { font-size: 0.8rem }
+:root .pj .dsh-link { font-size: 0.8rem }
+:root .pj .dsh-leg2 { font-size: 0.78rem }
+:root .pj .dsh-nums .dsh-grande { font-size: 1.8rem }
+:root .pj .dsh-gauge-v b { font-size: 1.6rem }
+:root .pj .dsh-gauge-v small { font-size: 0.7rem }
+:root .pj .dsh-nota { font-size: 0.76rem }
+:root .pj .dsh-meta-t { font-size: 0.8rem }
+:root .pj .dsh-falta { font-size: 0.7rem }
+:root .pj .er-topo h3 { font-size: 1.05rem }
+:root .pj .er-desc { font-size: 0.8rem }
+:root .pj .fa-quem small { font-size: 0.76rem }
+:root .pj .fa-dir b { font-size: 1.05rem }
+:root .pj .fa-desc { font-size: 0.82rem }
+:root .pj .fa-nota { font-size: 0.78rem }
+:root .pj .fa-conf textarea { font-size: 0.82rem }
+:root .mo-fech-nf { font-size: 0.82rem }
+:root .mo-nf-emp { font-size: 0.84rem }
+:root .hnf-det summary { font-size: 0.84rem }
+:root .hnf-t { font-size: 0.84rem }
+:root .hnf-lista li { font-size: 0.82rem }
+:root .pj .gt-mes { font-size: 0.55rem }
+:root .mo.com-painel .pj .ot-g { font-size: 0.74rem }
+:root .pj .ot-g small { font-size: 0.68rem }
+:root .pj .ot-g .c-os { font-size: 0.76rem }
+:root .pn-mais summary { font-size: 0.78rem }
+:root .pn-menu button { font-size: 0.82rem }
+:root .dsh .dsh-kpis.compactos .dsh-kpi b { font-size: 1.2rem }
+:root .dsh .dsh-kpis.compactos .dsh-kpi .eyebrow { font-size: 0.66rem }
+:root .dsh .dsh-kpis.compactos .dsh-kpi small { font-size: 0.7rem }
+:root .nos-passos b { font-size: 0.9rem }
+:root .nos-passos strong { font-size: 0.88rem }
+:root .nos-passos small { font-size: 0.78rem }
+:root .nos-sec h2 { font-size: 1rem }
+:root .nos-sec > p { font-size: 0.85rem }
+:root .nos-dica { font-size: 0.85rem }
+:root .nos-dica-topo button { font-size: 1.1rem }
+:root .nos-dica-topo .nos-usar { font-size: 0.82rem }
+:root .nos-rev, :root .pj .nos-rev { font-size: 0.9rem }
+:root .nos-rev-sel { font-size: 0.78rem }
+:root .nos-rev-sug .nos-usar { font-size: 0.82rem }
+:root .nos-rev-sug.edita textarea, :root .nos-rev-sug.edita input { font-size: 0.875rem }
+:root .nos-editar { font-size: 0.75rem }
+:root .nos-resumo dt { font-size: 0.75rem }
+:root .pj.evm .evm-st { font-size: 0.72rem }
+:root .evm-ok { font-size: 0.8rem }
+:root .evm-ent-t { font-size: 0.85rem }
+:root .evm-ent-t i { font-size: 1.1rem }
+:root .evm-modos button { font-size: 0.8rem }
+:root .evm-drop { font-size: 0.85rem }
+:root .evm-drop small, :root .evm-arq small { font-size: 0.75rem }
+:root .evm-nuv { font-size: 1.3rem }
+:root .evm-drive { font-size: 0.85rem }
+:root .evm-drive small { font-size: 0.75rem }
+:root .evm-arq { font-size: 0.85rem }
+:root .evm-arq button { font-size: 1.2rem }
+:root .evm-ico { font-size: 0.65rem }
+:root .evm-liberar { font-size: 0.84rem }
+:root .evm-liberar small { font-size: 0.78rem }
+:root .evm-envia label { font-size: 0.82rem }
+:root .evm-ajuda { font-size: 0.82rem }
+:root .evm-ajuda-t button { font-size: 1.2rem }
+:root .pj .ca-av { font-size: 0.76rem }
+:root .pj .ca-quem b { font-size: 0.98rem }
+:root .pj .ca-quem small { font-size: 0.8rem }
+:root .pj .ca-horas { font-size: 1.05rem }
+:root .pj .ca-id { font-size: 0.9rem }
+:root .pj .ca-desc { font-size: 0.86rem }
+:root .pj .ca-feito, :root .pj .ca-solic { font-size: 0.86rem }
+:root .pj .cv-tab { font-size: 0.84rem }
+:root .pj .cv-tab thead th { font-size: 0.78rem }
+:root .pj .cv-orig summary { font-size: 0.84rem }
+:root .pj .cv-orig .k { font-size: 0.74rem }
+:root .pj .cv-txt { font-size: 0.84rem }
+:root .pj .ca-chips .pill { font-size: 13.96px }
+:root .pj .ca-resumo small { font-size: 0.72rem }
+:root .pj .ca-resumo b { font-size: 0.9rem }
+:root .pj .ca-ev .ev-btns .b { font-size: 15.18px }
+:root .pj .ca-ia-horas { font-size: 0.8rem }
+:root .pj .ca-ia-linha { font-size: 0.88rem }
+:root .pj .ca-ia-acao { font-size: 0.95rem }
+:root .pj .ca-confianca { font-size: 0.72rem }
+:root .pj .ca-ver { font-size: 0.74rem }
+:root .pj .ca-ia-t { font-size: 0.8rem }
+:root .pj .ca-conf-lista { font-size: 0.78rem }
+:root .pj .ca-bol { font-size: 0.58rem }
+:root .pj .ca-lote { font-size: 0.8rem }
+:root .pj .ca-botoes .b { font-size: 15.18px }
+:root .pj .ca-conf textarea { font-size: 0.85rem }
+:root .pj .ca-incluir { font-size: 0.85rem }
+:root .pj .ca-incluir small { font-size: 0.78rem }
+:root .pj .fa .pn-ia-bloco .pn-ia-topo .b { font-size: 15.18px }
+:root .pj .fa .pn-ia-bloco .pn-txt ul { font-size: 0.78rem }
+:root .pj .ot-g .ot-prox { font-size: 0.72rem }
+:root .pj .ot-g .ot-prox-b { font-size: 0.7rem }
+:root .gos-btn { font-size: 0.95rem }
+:root .gos-btn.com-rotulo { font-size: 0.84rem }
+:root .gos-btn > span { font-size: 0.82rem }
+:root .gos-btn:not(.com-rotulo) > span { font-size: 1rem }
+:root .gos-topo b { font-size: 1.05rem }
+:root .gos-topo small { font-size: 0.8rem }
+:root .gos-x { font-size: 1.4rem }
+:root .gos-trilha button { font-size: 0.86rem }
+:root .gos-n { font-size: 0.75rem }
+:root .gos-t em { font-size: 0.7rem }
+:root .gos-passo { font-size: 0.88rem }
+:root .gos-passo h4 { font-size: 1rem }
+:root .gos-onde { font-size: 0.8rem }
+:root .gos-dica { font-size: 0.82rem }
+:root .gos-tour > span:first-child { font-size: 0.8rem }
+:root .gos-tour b { font-size: 0.9rem }
+:root .gos-tour small { font-size: 0.78rem }
+:root .tos-cont { font-size: 0.72rem }
+:root .tos-balao h4 { font-size: 1.02rem }
+:root .tos-balao p { font-size: 0.86rem }
+:root .tos-sair { font-size: 0.8rem }
+:root .fb .fb-busca input:not([type="checkbox"]), :root .fb .fb-periodo input:not([type="checkbox"]) { font-size: 0.84rem }
+:root .fb-chk { font-size: 0.84rem }
+:root .fc-etapa-n { font-size: 0.72rem }
+:root .fc-etapa-cab label span { font-size: 0.72rem }
+:root .fc-recolher span { font-size: 0.68rem }
+:root .fc-cols { font-size: 0.68rem }
+:root .fc-tipo { font-size: 0.8rem }
+:root .fc-tag { font-size: 0.68rem }
+:root .fc-det label span { font-size: 0.72rem }
+:root .fc-barra { font-size: 0.88rem }
+@container (max-width: 640px) {
+:root .fc-cel::before { font-size: 0.82rem }
+}
+:root .fc-form-cab label > span, :root .fc-criar label > span, :root .fc-form-ativo > span { font-size: 0.72rem }
+:root .fc-previa-cab span { font-size: 0.85rem }
+:root .pj .fe-titulo { font-size: 1.7rem }
+:root .pj .fe-sub { font-size: 0.95rem }
+:root .pj .fe-btn { font-size: 0.88rem }
+:root .pj .fe-btn.peq { font-size: 0.8rem }
+:root .pj .fe-kpi-v { font-size: 2rem }
+:root .pj .fe-kpi-r { font-size: 0.86rem }
+:root .pj .fe-kpi-sub { font-size: 0.76rem }
+:root .pj .fe-sec-cab h3 { font-size: 1.2rem }
+:root .pj .fe-sec-sub { font-size: 0.82rem }
+:root .pj .fe-rodape { font-size: 0.8rem }
+:root .pj .fe-contador { font-size: 0.78rem }
+:root .pj .fe-aba { font-size: 0.9rem }
+:root .pj .fe-aba .n { font-size: 0.76rem }
+:root .pj .fe-tab .sc { font-size: 0.88rem }
+:root .pj .fe-comp { font-size: 0.78rem }
+:root .pj .fe-parecer { font-size: 0.84rem }
+:root .pj .fe-link { font-size: 0.78rem }
+:root .pj .fe-kebab-menu a { font-size: 0.84rem }
+:root .pj .fe-trio .fe-sec-cab h3 { font-size: 1.05rem }
+:root .pj .fe-hp th, :root .pj .fe-hp td { font-size: 0.8rem }
+:root .pj .fe-hp th { font-size: 0.62rem }
+:root .pj .fe-hp td small { font-size: 0.72rem }
+:root .pj .fe-and td small { font-size: 0.74rem }
+:root .pj .fe-pend-mais { font-size: 0.84rem }
+:root .pj .fe-emp-l { font-size: 0.9rem }
+:root .pj .fe-fc td small { font-size: 0.74rem }
+:root .pj .fe-fc-os { font-size: 0.8rem }
+:root .pj .fe-modal h3 { font-size: 1.1rem }
+:root .pj .fe-campo { font-size: 0.82rem }
+:root .pj .fe-previa-cab { font-size: 0.8rem }
+:root .pj .fe-editor input, :root .pj .fe-editor textarea { font-size: 0.86rem }
+:root .pj .fe-chips { font-size: 0.78rem }
+:root .pj .fe-chip { font-size: 0.72rem }
+:root .pj .fe-dica { font-size: 0.76rem }
+:root .pj .fe-subabas .fe-aba { font-size: 0.84rem }
+:root .pj .fe-av { font-size: 0.78rem }
+:root .pj .fe-os-toggle { font-size: 0.86rem }
+:root .pj .fe-det-card h4 { font-size: 0.92rem }
+:root .pj .fe-opcao-corpo b { font-size: 0.92rem }
+:root .pj .fe-opcao-horas { font-size: 1.15rem }
+:root .pj .fe-resumo > div { font-size: 0.84rem }
+:root .pj .fe-kebab-menu button { font-size: 0.84rem }
+:root .pj .fe-selecao-info { font-size: 0.9rem }
+:root .pj .hp-topo h3 { font-size: 1.2rem }
+:root .pj .hp-topo p { font-size: 0.84rem }
+:root .pj .hp-x { font-size: 1.5rem }
+:root .pj .hp-nums small { font-size: 0.72rem }
+:root .pj .hp-nums b { font-size: 1.1rem }
+:root .pj .hp-nf { font-size: 0.84rem }
+:root .pj .hp-sec-t { font-size: 1rem }
+:root .pj .hp-sec-t small, :root .pj .hp-ev-t small { font-size: 0.78rem }
+:root .pj .hp-seta { font-size: 0.8rem }
+:root .pj .hp-os-meta { font-size: 0.86rem }
+:root .pj .hp-os-meta small, :root .pj .hp-os-h small { font-size: 0.72rem }
+:root .pj .hp-os-h { font-size: 0.8rem }
+:root .pj .hp-os-h b { font-size: 0.95rem }
+:root .pj .hp-info { font-size: 0.84rem }
+:root .pj .hp-info small { font-size: 0.72rem }
+:root .pj .hp-ev { font-size: 0.84rem }
+:root .pj .hp-ev small { font-size: 0.74rem }
+:root .fbia { font-size: 0.8rem }
+:root .fbia-b { font-size: 0.78rem }
+:root .fbia-ta { font-size: 0.84rem }
+:root .fbia-sec, :root .fbia-pri { font-size: 0.78rem }
+:root .fbia-lida { font-size: 0.8rem }
+:root .fbia.compacto .fbia-rot { font-size: 0.72rem }
+:root .fbia.compacto .fbia-b { font-size: 0.72rem }
+@container (max-width: 1199px) {
+:root .mo:not(.com-painel) .ot-fin .ot-g > .c-sol::before, :root .mo:not(.com-painel) .ot-fin .ot-g > .c-cri::before { font-size: 0.66rem }
+}
+:root .nc-pend { font-size: 0.84rem }
+:root .nc-pend-link { font-size: 0.84rem }
+:root .nc-cab h2 { font-size: 1.15rem }
+:root .nc-cab p { font-size: 0.85rem }
+:root .nc-aviso-txt { font-size: 0.85rem }
+:root .nc-sel { font-size: 0.78rem }
+:root .nc-resumo-ia { font-size: 0.88rem }
+:root .nc-pontos b { font-size: 0.9rem }
+:root .nc-pontos li span:not(.nc-ponto-ico) { font-size: 0.84rem }
+:root .nc-sug-rot { font-size: 0.9rem }
+:root .nc-tag { font-size: 0.68rem }
+:root .nc-sug-t { font-size: 0.84rem }
+:root .nc-usar { font-size: 0.82rem }
+:root .nc-sug-cmp p { font-size: 0.86rem }
+:root .nc-sug-campo { font-size: 0.8rem }
+:root .nc-perguntas li { font-size: 0.88rem }
+:root .nc-perguntas b { font-size: 0.78rem }
+:root .nc-res-corpo > small { font-size: 0.78rem }
+:root .nc-res-corpo > b { font-size: 0.92rem }
+:root .nc-chip { font-size: 1.25rem }
+:root .nc-texto { font-size: 0.88rem }
+:root .nc-entregaveis { font-size: 0.88rem }
+:root .nc-ciencia { font-size: 0.8rem }
+:root .nc-ciencia-erro { font-size: 0.8rem }
+:root .nc-link { font-size: 0.8rem }
+:root .page.nos .nc-resumo .nc-ctl, :root .page.nos .nc-sug .nc-ctl { font-size: 0.86rem }
+@media (max-width: 640px) {
+:root .nos-conf .nc-pend { font-size: 0.76rem }
+}
+:root .ap-zona { font-size: 0.86rem }
+:root .ap-nome b { font-size: 0.9rem }
+:root .ap-link { font-size: 0.84rem }
+:root .ap-lendo { font-size: 0.86rem }
+:root .ap-cartao.aviso p { font-size: 0.86rem }
+:root .ap-cab b { font-size: 0.95rem }
+:root .ap-cab p { font-size: 0.84rem }
+:root .ap-bloco p { font-size: 0.86rem }
+:root .ap-bloco ol, :root .ap-bloco ul { font-size: 0.86rem }
+:root .ap-tag { font-size: 0.68rem }
+:root .ap-ok { font-size: 0.86rem }
+:root .ap-aviso { font-size: 0.85rem }
+:root .pj .fe.cd .method { font-size: 0.86rem }
+:root .pj .fe.cd .method summary { font-size: 0.95rem }
+:root .pj .fe.cd .cc-head .who strong { font-size: 1.05rem }
+:root .pj .fe.cd .cc-head .who .muted { font-size: 0.8rem }
+:root .pj .fe.cd .stat .k { font-size: 0.66rem }
+:root .pj .fe.cd .stat .v { font-size: 1.1rem }
+:root .pj .fe.cd .c-body h3 { font-size: 0.7rem }

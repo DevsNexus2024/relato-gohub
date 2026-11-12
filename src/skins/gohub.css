@@ -1,0 +1,305 @@
+/* =============================================================================
+   Relato — visual do GoHub (tema claro e base dos dois temas)
+   Só CSS: nenhum campo, botão ou lógica do site é alterado.
+   Para desligar: menu Exibir → GoHub: visual melhorado.
+   ========================================================================== */
+
+:root {
+  --relato-font: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI Variable Text", "Segoe UI", Roboto, sans-serif;
+  --relato-accent: #f4b400;
+  --relato-ring: 0 0 0 3px rgba(244, 180, 0, .28);
+  --relato-ctl-h: 42px;
+}
+
+/* Paleta clara: cinzas neutros puros (sem o azulado "slate" original) */
+:root:root:root {
+  --font: var(--relato-font);
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --border: #e3e3e3;
+  --border-light: #eeeeee;
+  --text: #171717;
+  --text-muted: #5e5e5e;
+  --neutral-bg: #f0f0f0;
+  --neutral-text: #5e5e5e;
+  --sidebar-bg: #161616;
+  --sidebar-text: #d4d4d4;
+  --gohub-graphite: #1c1c1c;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 1px 3px rgba(0, 0, 0, .06);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, .12);
+}
+:root:root:root .page,
+:root:root:root .vg {
+  --vg-forest: #1c1c1c;
+  --vg-forest2: #404040;
+}
+:root:root:root .pj {
+  --pj-surface2: #f0f0f0;
+  --pj-accent: #262626;
+  --pj-accent-soft: #ebebeb;
+}
+
+/* Tipografia: o site inteiro usa rem sobre 14px; 17px deixa tudo ~21% maior */
+html:root {
+  font-size: 17px !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+:root body {
+  font-family: var(--relato-font);
+  font-size: .9rem;
+  letter-spacing: -.003em;
+}
+
+/* Largura: usa toda a área disponível */
+:root .page,
+:root .vg,
+:root .sd,
+:root .pj,
+:root .mn-page,
+:root .fc,
+:root .cf,
+:root .sdash-topo-jur,
+:root .page.vg.pj-pag {
+  max-width: none !important;
+}
+@media (min-width: 900px) {
+  :root .main-content > .page { padding: 28px clamp(24px, 2.6vw, 48px) 56px !important; }
+}
+
+/* Foco visível e consistente */
+:root :is(input, select, textarea, button):focus-visible {
+  outline: none !important;
+  box-shadow: var(--relato-ring) !important;
+}
+
+/* Botões: altura confortável e cantos modernos */
+:root .btn {
+  min-height: 40px;
+  padding: 0 18px !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background .15s, border-color .15s, box-shadow .15s, transform .05s;
+}
+:root .btn:active:not(:disabled) { transform: translateY(1px); }
+:root .btn:disabled { opacity: .45; }
+
+/* =============================================================================
+   NOVA ORDEM DE SERVIÇO (/minhas-os/nova)
+   Mesmos campos e botões do site, só reorganizados visualmente.
+   ========================================================================== */
+
+/* página interna repetia o espaçamento da externa */
+:root .page .page.nos { padding: 0 !important; }
+:root .page.nos .page-header { margin-bottom: 20px; }
+
+/* Etapas: barra de progresso segmentada */
+:root .page.nos .nos-passos {
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+:root .page.nos .nos-passos li {
+  padding: 4px 4px 14px;
+  border-bottom: 3px solid var(--border-light);
+  border-radius: 2px;
+  transition: border-color .25s;
+}
+:root .page.nos .nos-passos li::after { display: none !important; }
+:root .page.nos .nos-passos li.feito { border-bottom-color: color-mix(in srgb, var(--primary) 55%, transparent); }
+:root .page.nos .nos-passos li.atual { border-bottom-color: var(--primary); }
+:root .page.nos .nos-passos button { width: 100%; gap: 12px; }
+:root .page.nos .nos-passos b {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-size: .85rem;
+  background: var(--bg);
+}
+:root .page.nos .nos-passos .atual b {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+:root .page.nos .nos-passos strong { font-size: .9rem; font-weight: 650; }
+:root .page.nos .nos-passos small { font-size: .76rem; opacity: .85; }
+:root .page.nos .nos-passos li:not(.atual):not(.feito) strong { color: var(--text-muted); }
+
+/* etapa atual/concluída: número em destaque (precisa vencer o fundo acima) */
+:root .page.nos .nos-passos :is(.atual, .feito) b {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--on-primary) !important;
+  font-weight: 750;
+}
+
+/* Corpo: seções em cards com respiro */
+:root .page.nos .nos-corpo { gap: 18px; }
+:root .page.nos .nos-main { gap: 18px; }
+:root .page.nos .nos-sec {
+  padding: 26px 30px 28px !important;
+  border-radius: 14px !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+}
+:root .page.nos .nos-sec > h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+:root .page.nos .nos-sec > p {
+  margin: 4px 0 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: .86rem;
+}
+
+/* Campos */
+:root .page.nos .field { gap: 7px; }
+:root .page.nos .field label {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: .82;
+}
+:root .page.nos .field :is(input:not([type=checkbox]):not([type=radio]), select, textarea),
+:root .page.nos .nc-ctl {
+  min-height: var(--relato-ctl-h);
+  padding: 10px 14px;
+  font-size: .9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+:root .page.nos .field textarea { min-height: 120px; line-height: 1.55; }
+:root .page.nos .field :is(input, select, textarea):hover:not(:focus):not([readonly]) { border-color: color-mix(in srgb, var(--text) 25%, var(--border)); }
+:root .page.nos .field :is(input, select, textarea):focus {
+  border-color: var(--primary) !important;
+  box-shadow: var(--relato-ring) !important;
+}
+:root .page.nos .field input[readonly] {
+  background: var(--neutral-bg) !important;
+  color: var(--text-muted);
+  border-style: dashed;
+}
+:root .page.nos .field small,
+:root .page.nos .nos-sec small.muted {
+  font-size: .76rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+:root .page.nos .cs-btn {
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 14px;
+}
+:root .page.nos .cs-rot { font-size: .7rem; }
+:root .page.nos .cs-val { font-size: .9rem; }
+
+/* select nativo com a mesma seta dos outros campos */
+:root .page.nos .field select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  cursor: pointer;
+}
+
+/* Grades: blocos de dados em colunas, usando a largura toda */
+:root .page.nos .nos-cadastro { gap: 14px 18px; margin-top: 14px; }
+:root .page.nos .form-grid { gap: 14px 18px; }
+:root .page.nos .nos-linha { margin-top: 20px; }
+
+/* "Outras pessoas": lista vira grade de opções clicáveis */
+:root .page.nos .field input[type=search] + div {
+  max-height: 264px !important;
+  padding: 8px !important;
+  border-radius: 10px !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2px 8px;
+  align-content: start;
+  background: var(--bg);
+}
+:root .page.nos .field input[type=search] + div > label {
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: .84rem;
+  color: var(--text) !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+  gap: 10px !important;
+  transition: background .12s;
+}
+:root .page.nos .field input[type=search] + div > label:hover { background: var(--surface); }
+:root .page.nos .field input[type=search] + div > label:has(input:checked) {
+  background: color-mix(in srgb, var(--primary) 16%, transparent);
+  font-weight: 650 !important;
+}
+:root .page.nos input[type=checkbox] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Rodapé de ações fixo na parte de baixo da tela */
+:root .page.nos .nos-rodape {
+  position: sticky;
+  bottom: 0;
+  z-index: 30;
+  margin-top: 6px;
+  padding: 12px 16px !important;
+  align-items: center;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 -6px 24px rgba(15, 23, 42, .08);
+}
+:root .page.nos .nos-rodape .btn-primary,
+:root .page.nos .nos-rodape .btn-enviar { min-width: 160px; justify-content: center; }
+
+/* Revisão / confirmação (etapa 4) */
+:root .page.nos .nos-resumo { gap: 16px 28px; }
+:root .page.nos .nos-resumo dt { font-size: .72rem; letter-spacing: .06em; }
+:root .page.nos .nos-resumo dd { font-size: .92rem; margin-top: 4px; }
+
+/* Barras de progresso com cor escrita direto no HTML */
+:root [style*="background: rgb(236, 239, 244)"] { background: var(--border-light) !important; }
+
+/* =============================================================================
+   CALENDÁRIO: dia atual em destaque com a cor primária
+   ========================================================================== */
+:root .cal-dia.hoje {
+  border-color: color-mix(in srgb, var(--primary) 70%, var(--border)) !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 45%, transparent);
+}
+:root .cal-dia.hoje .cal-num b {
+  background: var(--primary) !important;
+  color: var(--on-primary) !important;
+  font-weight: 750;
+  padding: 2px 10px !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+:root .cal-dia.sel { outline-color: var(--primary) !important; }
+:root .gt-cel.hoje { background: color-mix(in srgb, var(--primary) 14%, var(--surface)) !important; }
+/* fins de semana/feriados: cinza neutro levemente "afundado" */
+:root .cal-dia.fds { background: #f7f7f7 !important; }
+
+/* Respiro entre título/descrição da página e as abas logo abaixo */
+:root .page-header:has(+ .sdash-topo) { margin-bottom: 26px !important; }
+:root .page-header .page-subtitle { margin-top: 6px; }

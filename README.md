@@ -40,6 +40,8 @@ O que faz diferença no dia a dia:
 - **Trocar de aba não recarrega nada.** Você pode ir ao Gmail pegar o código e voltar ao GoHub, e a tela continua exatamente onde estava.
 - **O login fica salvo.** Você não precisa entrar de novo toda vez que abrir o app. O Relato **não guarda senhas**, só a sessão (os mesmos "cookies" que um navegador guarda).
 - **Um único login Google** vale para as duas abas.
+- **GoHub com visual moderno:** largura total, fontes maiores, formulário de Nova OS reorganizado e **tema claro/escuro** (botão ☀/☾ na barra lateral). É só aparência: nenhum campo ou regra do GoHub muda.
+- **Zoom por aba**, lembrado entre aberturas.
 
 ![Tela de notas](docs/notas.png)
 
@@ -126,6 +128,24 @@ Faça o login **nesta ordem**, porque o código do GoHub chega no seu e-mail:
 
 > Quanto tempo o GoHub aceita antes de pedir um novo código é definido pelo administrador do GoHub, e não pelo Relato. O Relato guarda a sessão até ela expirar, então ele **não pede código a cada abertura do app**, só quando a sessão do GoHub vence.
 
+### Visual do GoHub e tema claro/escuro
+
+Com a aba GoHub aberta, aparece um botão **☀/☾** na barra lateral, logo acima do ⟳. Ele alterna o GoHub entre tema claro e escuro **sem recarregar a página**, então nada do que estiver preenchendo se perde. O atalho é `Ctrl/⌘ + Shift + L`.
+
+O Relato também deixa o GoHub mais confortável de usar:
+- usa a largura toda da tela;
+- aumenta as fontes;
+- reorganiza o formulário de **Nova Ordem de Serviço**: etapas em barra de progresso, campos maiores, lista de pessoas em grade e botões Cancelar/Voltar/Continuar fixos no rodapé;
+- destaca o dia atual no calendário.
+
+Se algum dia o GoHub mudar e algo ficar estranho, desligue em **Exibir → GoHub: visual melhorado** para voltar ao visual original na hora.
+
+### Zoom
+
+Use `Ctrl/⌘ +` e `Ctrl/⌘ -`, `Ctrl/⌘ + rolagem do mouse` ou o gesto de pinça no trackpad. `Ctrl/⌘ + 0` volta a 100%.
+
+Cada aba guarda o próprio zoom (o GoHub pode ficar em 125% e o Gmail em 100%), e ele é lembrado nas próximas aberturas. O zoom atual aparece no título da janela.
+
 ### Botão de recarregar
 
 O botão discreto **⟳** no rodapé da barra lateral recarrega **só a aba atual**. O mesmo atalho funciona no teclado: `Ctrl + R` no Windows ou `⌘ + R` no Mac. Use quando alguma página travar.
@@ -182,7 +202,8 @@ As notas ficam **só no seu computador**. Para não perder nada:
 | Nova nota | `Ctrl + N` | `⌘ + N` |
 | Buscar nas notas | `Ctrl + F` | `⌘ + F` |
 | Voltar para a lista de notas | `Esc` | `Esc` |
-| Zoom + / − / normal | `Ctrl + =` / `-` / `0` | `⌘ + =` / `-` / `0` |
+| Zoom + / − / normal (por aba) | `Ctrl + =` / `-` / `0` ou `Ctrl + rolagem` | `⌘ + =` / `-` / `0`, `⌘ + rolagem` ou pinça |
+| Tema claro/escuro do GoHub | `Ctrl + Shift + L` | `⌘ + Shift + L` |
 
 ---
 
@@ -203,6 +224,9 @@ Sim. Links para sites de fora abrem no seu navegador padrão. Só as janelas de 
 
 **O Google disse que o navegador não é seguro.**
 Isso não deveria acontecer, porque o Relato se apresenta como um Chrome comum. Se acontecer, avise quem administra o projeto e mande um print da tela.
+
+**O GoHub ficou com algo esquisito (cor, espaçamento).**
+O GoHub é mantido por outra empresa e pode mudar a qualquer momento. Desmarque **Exibir → GoHub: visual melhorado** para voltar ao original e avise quem administra o Relato, mandando um print.
 
 **Preciso atualizar o Relato?**
 Quando sair uma versão nova em [Releases](https://github.com/DevsNexus2024/relato-gohub/releases), baixe e substitua o arquivo antigo. Seus logins e notas **não se perdem**, porque ficam na pasta de dados e não no executável.
@@ -234,6 +258,9 @@ Para publicar uma versão nova: aumente o `version` no `package.json`, gere os a
 src/main.js            processo principal: janela, abas (WebContentsView), sessão, menu
 src/preload.js         ponte segura entre a interface e o processo principal
 src/renderer/          barra lateral e tela de Notas (HTML/CSS/JS puro)
+src/skins/             visual do GoHub (CSS injetado), claro e escuro
+scripts/gen-gohub-skin.js  gera as cores/fontes automáticas do visual do GoHub
+scripts/inspect-hook.js    modo de captura para desenvolvimento (RELATO_INSPECT_DIR)
 scripts/make-icon.js   gera build/icon.png a partir de um SVG  (npm run icon)
 scripts/snapshot.js    teste visual: tira screenshots de cada aba
 build/icon.png         ícone usado nos executáveis
@@ -244,6 +271,27 @@ build/icon.png         ícone usado nos executáveis
 - **Trocar ou adicionar sites:** edite a lista `SITES` no topo de `src/main.js`.
 - **Tempo que a sessão fica salva:** `SESSION_COOKIE_DAYS` em `src/main.js` (padrão: 30 dias).
 - **Rotação do favicon nas abas:** variável `--fav-rotate` em `src/renderer/styles.css`.
+
+### Visual do GoHub (`src/skins/`)
+
+| Arquivo | O que é |
+|---|---|
+| `gohub.css` | Ajustes feitos à mão: paleta clara, tipografia, largura, Nova OS, calendário. Vale para os dois temas. |
+| `gohub-dark.css` | Paleta escura (cinzas neutros) e ajustes finos do escuro. |
+| `gohub.gen.css` / `gohub-dark.gen.css` | **Gerados automaticamente** a partir do CSS do GoHub. Não edite à mão. |
+
+É tudo CSS injetado só em `gohub.goritektools.com`, e o Gmail não é afetado. O CSS injetado perde para o do site em caso de empate. Por isso, as regras usam `:root` na frente do seletor e, quando precisa, `!important`.
+
+**Quando o GoHub mudar o CSS deles**, regere os arquivos automáticos:
+
+```bash
+# 1. abra o app em modo de captura, faça login no GoHub e navegue pelas telas
+RELATO_INSPECT_DIR=/tmp/relato-inspect npm start
+# 2. gere de novo a partir do CSS capturado
+node scripts/gen-gohub-skin.js /tmp/relato-inspect/site.css
+```
+
+No modo de captura, salvar qualquer arquivo de `src/skins/` reaplica o visual na hora. A pasta de captura guarda prints e a estrutura das páginas, inclusive nomes de pessoas: apague-a ao terminar.
 
 ### Decisões técnicas
 
